@@ -1,0 +1,4 @@
+[Proyect]
+python_version = "^1.12.4"
+
+[Dependencies]
