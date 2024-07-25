@@ -12,7 +12,22 @@ def merge_css_1():
                            converters={" COSTE TOTAL ": lambda x: x.replace(".", "")},
                            encoding='utf-8')
 
+    # Dropping unnecessary columns and adjusting the data
+    disaster_df.drop(
+        columns=['ID RMC', 'ID CAUSA SINIESTRO', 'MUNICIPIO', 'POBLACION',
+                 'CODIGO POSTAL', 'CLASE RIESGO N1', 'CLASE RIESGO N2'],
+        inplace=True
+    )
+
+    # Renaming Remaining Collumns for conviniency
+    disaster_df.rename(columns={"FECHA SINIESTRO": "date",
+                                "CAUSA SINIESTRO": "disaster",
+                                "PROVINCIA": "province",
+                                " COSTE TOTAL ": "total_cost"},
+                       inplace=True)
+
     # Replacing specific province names for consistency
+    disaster_df['date'] = pd.to_datetime(disaster_df['date'], dayfirst=True)
     disaster_df = disaster_df.replace({'province': {'Alicante/Alacant': 'Alicante',
                                               'Araba/Álava': 'Araba',
                                               'Balears, Illes': 'Illes Balears',
@@ -21,19 +36,6 @@ def merge_css_1():
                                               'Palmas, Las': 'Las Palmas',
                                               'Castellón/Castelló': 'Castellón',
                                               'Valencia/València': 'Valencia'}})
-
-    # Dropping unnecessary columns and adjusting the data
-    disaster_df = disaster_df.drop(
-        columns=['ID RMC', 'ID CAUSA SINIESTRO', 'MUNICIPIO', 'POBLACION',
-                 'CODIGO POSTAL', 'CLASE RIESGO N1', 'CLASE RIESGO N2']
-    )
-    disaster_df.rename(columns={"FECHA SINIESTRO": "date",
-                                "CAUSA SINIESTRO": "disaster",
-                                "PROVINCIA": "province",
-                                " COSTE TOTAL ": "total_cost"},
-                       inplace=True)
-
-    disaster_df['date'] = pd.to_datetime(disaster_df['date'], dayfirst=True)
     disaster_df['province'] = disaster_df['province'].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode(
         'utf-8')
     disaster_df['claims'] = disaster_df['province']
