@@ -3,7 +3,7 @@ import numpy as np
 import datetime
 
 
-# A sligth modification of the script provided by matheus.
+# A sligth modification of the script provided by matheus. Merges by disaster type, date and location
 
 def merge_css_1():
     # Importing the disaster data
