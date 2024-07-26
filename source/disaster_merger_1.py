@@ -114,7 +114,7 @@ def merge_css_1():
     df = df.loc[df['duration'] != '']
     df = df.drop(columns=['dif', 'notes'])
 
-    df.to_csv("../input-output/merged_expedients.csv")
+    df.to_csv("../input-output/merged_expedients_1.csv")
     print("INFO: Merge by disaster type and date completed succesfully")
 
 
