@@ -1,5 +1,6 @@
 from __future__ import annotations
 import pandas as pd
+from json import load as jsonload
 
 
 class Disaster:
@@ -8,6 +9,9 @@ class Disaster:
 
     expedients = pd.read_csv("../input-output/merged_expedients_1.csv")
     adjacencies = pd.read_csv("../data/provinces_adjacency/adjacency_table.csv")
+
+    with open("../config/disaster_merger_2/config.json") as fstream:
+        CONFIG = jsonload(fstream)
 
     def __init__(self, indexes: list[int]):
         self.indexes = indexes
@@ -19,7 +23,20 @@ class Disaster:
         return [Disaster([n]) for n in range(n_of_rows)]
 
     def is_compatible_with(self, other) -> bool:
-        """Check if two instances represent the same disaster in a different place"""
+        """Check if two instances represent the same disaster in a different place
+
+        For 2 disasters to be considered compatible, all the following conditions must be met:
+
+        - The disaster type must be the same
+
+        - The time elapsed between the two disasters must be less than the speficied in the config
+
+        - At least 2 of the provinces in the disasters must be adjacent
+        """
+        raise NotImplemented
+
+    def get_total_duration(self):
+        """Get the total duration of a disaster by taking into account all the rows contained in the instance"""
         raise NotImplemented
 
     def merge_with(self, other: Disaster) -> Disaster:
