@@ -9,6 +9,8 @@ def add_adjacencies(df, names, current_province) -> None:
     done = False
     while done is False:
         print(f"Possible names: \n {names}")
+        print(f"Currently the provinces adjacent to {current_province} are "
+              f"{list(df.loc[df[current_province] == True].index)}")
         prompt = input(f"Input Provinces adjacent to {current_province}:\n").split(", ")
         if all([province in names for province in prompt]):
             df.loc[current_province, prompt] = True
@@ -20,7 +22,7 @@ def add_adjacencies(df, names, current_province) -> None:
     print("Success")
 
 
-def update_df(df, current_province):
+def update_df(df, current_province) -> None:
     """Ensures the symmetry of the table"""
     df.loc[:, current_province] = df.loc[current_province, :]
     pass
@@ -45,7 +47,6 @@ def generate_map():
         adjacency_table.at[province, province] = True
         add_adjacencies(adjacency_table, names, province)
         update_df(adjacency_table, province)
-        print(f"\n The final adjacency table is:\n {adjacency_table}")
 
     adjacency_table.to_csv(path_or_buf="../data/provinces_adjacency/adjacency_table.csv")
     print("Adjacency table saved")
