@@ -1,4 +1,6 @@
 [Proyect]
+name = "Disaster_Scraper"
+version = "1.0.0"
 python_version = "^1.12.4"
 
 [Dependencies]
