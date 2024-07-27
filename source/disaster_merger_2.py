@@ -45,10 +45,9 @@ class Disaster:
             return False
         # Check the disasters overlap time-wise
         self_duration = self.get_total_duration()
-        self_duration[1] = self_duration[1] + pd.Timedelta(days=self.CONFIG["days_leniency"])
         other_duration = other.get_total_duration()
-        other_duration[1] = other_duration[1] + pd.Timedelta(days=other.CONFIG["days_leniency"])
-        if other_duration[0] > self_duration[1] or self_duration[0] > other_duration[1]:
+        if (other_duration[0] > self_duration[1] + pd.Timedelta(days=self.CONFIG["days_leniency"])
+                or self_duration[0] > other_duration[1] + pd.Timedelta(days=self.CONFIG["days_leniency"])):
             return False
         # Check the disasters are adjacent space-wise
         if not self.is_adjacent_with(other):
@@ -97,6 +96,8 @@ class Disaster:
         """Merges two instances that represent the same disaster.
         :except Nothing: Even though this method doesn't check, it is expected that *self* and *other* are compatible
         (in other words, 'self.is_compatible_with(other)' must return True)"""
+        # TODO performace can be inprove in this method by using the attributes of the 2 instances to generate the
+        #   attributes of the new instace more efficiently
         return Disaster(self.indexes + other.indexes)
 
     @staticmethod
