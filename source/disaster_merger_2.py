@@ -10,7 +10,7 @@ class Disaster:
 
     expedients = pd.read_csv("../input-output/merged_expedients_1.csv")
     expedients['date'] = pd.to_datetime(expedients['date'], errors='raise')
-    adjacencies = pd.read_csv("../data/provinces_adjacency/adjacency_table.csv")
+    adjacencies = pd.read_csv("../data/provinces_adjacency/adjacency_table.csv", index_col=0)
 
     with open("../config/disaster_merger_2/config.json") as fstream:
         CONFIG = jsonload(fstream)
@@ -117,4 +117,3 @@ if __name__ == '__main__':
     test_instace = Disaster([1, 2])
     duration = test_instace.get_total_duration()
     type = test_instace.get_disaster_type()
-    print(type)
