@@ -1,5 +1,6 @@
 from __future__ import annotations
 import pandas as pd
+import numpy as np
 from json import load as jsonload
 
 
@@ -8,6 +9,7 @@ class Disaster:
     that are considered to be the same disaster"""
 
     expedients = pd.read_csv("../input-output/merged_expedients_1.csv")
+    expedients['date'] = pd.to_datetime(expedients['date'], errors='raise')
     adjacencies = pd.read_csv("../data/provinces_adjacency/adjacency_table.csv")
 
     with open("../config/disaster_merger_2/config.json") as fstream:
@@ -22,7 +24,7 @@ class Disaster:
         n_of_rows = self.expedients.shape[0]
         return [Disaster([n]) for n in range(n_of_rows)]
 
-    def is_compatible_with(self, other) -> bool:
+    def is_compatible_with(self, other: Disaster) -> bool:
         """Check if two instances represent the same disaster in a different place
 
         For 2 disasters to be considered compatible, all the following conditions must be met:
@@ -33,17 +35,52 @@ class Disaster:
 
         - At least 2 of the provinces in the disasters must be adjacent
         """
-        raise NotImplemented
+        # Check the disasters are of the same type
+        if self.get_disaster_type() != other.get_disaster_type():
+            return False
+        # Check the disasters overlap time-wise
+        self_duration = self.get_total_duration()
+        self_duration[1] = self_duration[1] + pd.Timedelta(days=self.CONFIG["days_leniency"])
+        other_duration = other.get_total_duration()
+        other_duration[1] = other_duration[1] + pd.Timedelta(days=other.CONFIG["days_leniency"])
+        if other_duration[0] > self_duration[1] or self_duration[0] > other_duration[1]:
+            return False
+        # Check the disasters are adjacent space-wise
+        if not self.is_adjacent_with(other):
+            return False
+        return True
 
-    def get_total_duration(self):
-        """Get the total duration of a disaster by taking into account all the rows contained in the instance"""
+    def get_disaster_type(self) -> str:
+        """
+        Get the disaster type of self
+        Note that this method doesn't check whether the disaster types are consistent whithin the instance
+        """
+        return self.expedients.loc[self.indexes[0], "disaster"]
+
+    def get_total_duration(self) -> [np.datetime64, np.datetime64]:
+        """
+        Get the total duration of a disaster by taking into account all the rows contained in the instance
+        Note that this method doesn't check whether the dates are consistent whithin the instance
+
+        :return: A list containing the start and end time of the Disaster
+        """
+        dates = self.expedients.loc[self.indexes, ["date", "duration"]]
+        dates.rename(columns={"date": "start_date"}, inplace=True)
+        dates["end_date"] = dates["start_date"]
+        for index in dates.index:
+            dates.loc[index, "end_date"] = (
+                    dates.loc[index, "end_date"] + pd.Timedelta(days=dates.loc[index, "duration"]))
+        return [min(dates["start_date"]), max(dates["end_date"])]
+
+    def is_adjacent_with(self, other:Disaster) -> bool:
+        """Check whether at least a pair of provinces covered by the disasters are adjacent"""
         raise NotImplemented
 
     def merge_with(self, other: Disaster) -> Disaster:
         """Merges two instances that represent the same disaster.
         :except Nothing: Even though this method doesn't check, it is expected that *self* and *other* are compatible
         (in other words, 'self.is_compatible_with(other)' must return True)"""
-        return Disaster(self.indexes+other.indexes)
+        return Disaster(self.indexes + other.indexes)
 
     @staticmethod
     def collapse_disaster_list(disasters: list[Disaster]) -> list[Disaster]:
@@ -74,3 +111,10 @@ class Disaster:
                 return other_disaster_index
         # If it cannot be combined with any other disaster, return -1
         return -1
+
+
+if __name__ == '__main__':
+    test_instace = Disaster([1, 2])
+    duration = test_instace.get_total_duration()
+    type = test_instace.get_disaster_type()
+    print(type)
