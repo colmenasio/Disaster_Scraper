@@ -10,6 +10,7 @@ class Disaster:
 
     expedients = pd.read_csv("../input-output/merged_expedients_1.csv")
     expedients['date'] = pd.to_datetime(expedients['date'], errors='raise')
+    expedients.drop("Unnamed: 0", axis=1, inplace=True)
     adjacencies = pd.read_csv("../data/provinces_adjacency/adjacency_table.csv", index_col=0)
 
     with open("../config/disaster_merger_2/config.json") as fstream:
