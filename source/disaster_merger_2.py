@@ -18,11 +18,15 @@ class Disaster:
 
     def __init__(self, indexes: list[int]):
         self.indexes = indexes
+        self.total_duration = None
+        self.disaster_type = None
+        self.province_list = None
 
-    def build_initial_disaster_pool(self) -> list[Disaster]:
+    @classmethod
+    def build_initial_disaster_pool(cls) -> list[Disaster]:
         """Factory method creating an initial list of disaster instances by considering each row in 'expedients'
         a different disaster"""
-        n_of_rows = self.expedients.shape[0]
+        n_of_rows = cls.expedients.shape[0]
         return [Disaster([n]) for n in range(n_of_rows)]
 
     def is_compatible_with(self, other: Disaster) -> bool:
@@ -56,7 +60,9 @@ class Disaster:
         Get the disaster type of self
         Note that this method doesn't check whether the disaster types are consistent whithin the instance
         """
-        return self.expedients.loc[self.indexes[0], "disaster"]
+        if self.disaster_type is None:
+            self.disaster_type = self.expedients.loc[self.indexes[0], "disaster"]
+        return self.disaster_type
 
     def get_total_duration(self) -> [np.datetime64, np.datetime64]:
         """
@@ -65,17 +71,27 @@ class Disaster:
 
         :return: A list containing the start and end time of the Disaster
         """
-        dates = self.expedients.loc[self.indexes, ["date", "duration"]]
-        dates.rename(columns={"date": "start_date"}, inplace=True)
-        dates["end_date"] = dates["start_date"]
-        for index in dates.index:
-            dates.loc[index, "end_date"] = (
-                    dates.loc[index, "end_date"] + pd.Timedelta(days=dates.loc[index, "duration"]))
-        return [min(dates["start_date"]), max(dates["end_date"])]
+        if self.total_duration is None:
+            dates = self.expedients.loc[self.indexes, ["date", "duration"]]
+            dates.rename(columns={"date": "start_date"}, inplace=True)
+            dates["end_date"] = dates["start_date"]
+            for index in dates.index:
+                dates.loc[index, "end_date"] = (
+                        dates.loc[index, "end_date"] + pd.Timedelta(days=dates.loc[index, "duration"]))
+            self.total_duration = [min(dates["start_date"]), max(dates["end_date"])]
+        return self.total_duration
 
-    def is_adjacent_with(self, other:Disaster) -> bool:
+    def get_province_list(self) -> list[str]:
+        """Return a list of the provinces covered by a self"""
+        if self.province_list is None:
+            self.province_list = list(set(self.expedients.loc[self.indexes, "province"].values))
+        return self.province_list
+
+    def is_adjacent_with(self, other: Disaster) -> bool:
         """Check whether at least a pair of provinces covered by the disasters are adjacent"""
-        raise NotImplemented
+        self_provinces_list = self.get_province_list()
+        other_provinces_list = other.get_province_list()
+        return self.adjacencies.loc[self_provinces_list, other_provinces_list].values.any()
 
     def merge_with(self, other: Disaster) -> Disaster:
         """Merges two instances that represent the same disaster.
@@ -100,6 +116,8 @@ class Disaster:
             else:
                 # No compatible disaster was found. Add the current disaster to the final list
                 new_list.append(current_disaster)
+            print(f"Remaining Disasters: {len(disasters)}")
+            print(f"Length of the new list: {len(new_list)}")
         return new_list
 
     def find_compatible_disasters(self, other_disasters: list[Disaster]) -> int:
@@ -113,8 +131,12 @@ class Disaster:
         # If it cannot be combined with any other disaster, return -1
         return -1
 
+    def __repr__(self):
+        return f"|Indexes: {self.indexes}|"
+
 
 if __name__ == '__main__':
-    test_instace = Disaster([1, 2])
-    duration = test_instace.get_total_duration()
-    type = test_instace.get_disaster_type()
+    og_disasters = Disaster.build_initial_disaster_pool()
+    collapsed_disasters = Disaster.collapse_disaster_list(og_disasters)
+    print(collapsed_disasters)
+    print(len(collapsed_disasters))
