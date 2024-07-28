@@ -86,6 +86,14 @@ class Disaster:
             self.province_list = list(set(self.expedients.loc[self.indexes, "province"].values))
         return self.province_list
 
+    def get_total_claims(self) -> int:
+        total_claims = self.expedients.loc[self.indexes, "claims"].sum()
+        return total_claims
+
+    def get_total_cost(self) -> float:
+        total_cost = self.expedients.loc[self.indexes, "total_cost"].sum()
+        return total_cost
+
     def is_adjacent_with(self, other: Disaster) -> bool:
         """Check whether at least a pair of provinces covered by the disasters are adjacent"""
         self_provinces_list = self.get_province_list()
@@ -96,9 +104,17 @@ class Disaster:
         """Merges two instances that represent the same disaster.
         :except Nothing: Even though this method doesn't check, it is expected that *self* and *other* are compatible
         (in other words, 'self.is_compatible_with(other)' must return True)"""
-        # TODO performace can be inprove in this method by using the attributes of the 2 instances to generate the
-        #   attributes of the new instace more efficiently
-        return Disaster(self.indexes + other.indexes)
+        # Join the disasters
+        new_disaster = Disaster(self.indexes + other.indexes)
+        # Most of this is just preformace improvements by taking advantage of the DP nature of the class
+        # Dynamically generating the attributes from the new disaster instance
+        new_disaster.disaster_type = self.get_disaster_type()
+        new_disaster.province_list = list(set(self.get_province_list()).union(set(other.get_province_list())))
+        self_durations = self.get_total_duration()
+        other_durations = other.get_total_duration()
+        new_disaster.total_duration = [min(self_durations[0], other_durations[0]),
+                                       max(self_durations[1], other_durations[1])]
+        return new_disaster
 
     @staticmethod
     def collapse_disaster_list(disasters: list[Disaster]) -> list[Disaster]:
@@ -133,6 +149,36 @@ class Disaster:
         # If it cannot be combined with any other disaster, return -1
         return -1
 
+    def generate_data_dict(self) -> dict:
+        """From a given instance, generates a dict of various values ready to be appended to a dataframe"""
+        # total_cost,claims,losses_day
+        data_dict = dict()
+        # Calculate the date and the duration
+        disaster_time_frame = self.get_total_duration()
+        data_dict["date"] = disaster_time_frame[0]
+        data_dict["duration"] = (disaster_time_frame[1] - disaster_time_frame[0]).days
+        # Get the disaster type
+        data_dict["disaster"] = self.get_disaster_type()
+        # Get the list of provinces
+        data_dict["provinces"] = self.get_province_list()
+        # Get total amount of claims
+        data_dict["claims"] = self.get_total_claims()
+        # Get the total cost of the disaster
+        data_dict["total_cost"] = self.get_total_cost()
+        # Calculate the loss/day ratio
+        data_dict["losses_per_day"] = data_dict.get("total_cost") / data_dict.get("duration")
+        return data_dict
+
+    @staticmethod
+    def to_dataframe(instances: list[Disaster]) -> pd.DataFrame:
+        disasters_df = pd.DataFrame(
+            columns=["date", "duration", "disaster", "provinces", "claims", "total_cost", "losses_per_day"]
+        )
+        for df_index, disaster in enumerate(instances):
+            data_dict = disaster.generate_data_dict()
+            disasters_df.loc[df_index] = data_dict
+        return disasters_df
+
     def __repr__(self):
         return f"|Indexes: {self.indexes}|"
 
@@ -142,5 +188,9 @@ if __name__ == '__main__':
     collapsed_disasters = Disaster.collapse_disaster_list(og_disasters)
     print(collapsed_disasters)
     print(len(collapsed_disasters))
+    final_df = Disaster.to_dataframe(collapsed_disasters)
+    print(final_df)
+
+
     # TODO add method to convert list of Disaster instances into a dataframe
-    #  (shouldnt be too dificult as most methods required for this are already inmplemented)
+    #  (shouldnt be too dificult as most methods required for this are already implemented)
