@@ -117,9 +117,12 @@ class Disaster:
         return new_disaster
 
     @staticmethod
-    def collapse_disaster_list(disasters: list[Disaster]) -> list[Disaster]:
-        """Takes a list of Disaster instances, groups them using the adjacency table and returns a new list
-        of instances"""
+    def collapse_disaster_list(disasters: list[Disaster]) -> None:
+        """
+        Takes a list of Disaster instances, groups them using the adjacency table and returns a new list
+        of instances
+        Mutates the list in-place
+        """
         new_list = []
         while len(disasters) > 0:
             # Take a disaster from the list and check if it can be combined with any other disaster
@@ -136,7 +139,9 @@ class Disaster:
             if Disaster.CONFIG["debug_messages_on"]:
                 print(f"Remaining Disasters: {len(disasters)}")
                 print(f"Length of the new list: {len(new_list)}")
-        return new_list
+        # Mutate the original list instead of returning a new list
+        # (to make clear the list gets mutated anyways during the collapsing)
+        disasters.extend(new_list)
 
     def find_compatible_disasters(self, other_disasters: list[Disaster]) -> int:
         """
@@ -185,15 +190,16 @@ class Disaster:
 
 if __name__ == '__main__':
     # Script setup
-    og_disasters = Disaster.build_initial_disaster_pool()
+    disaster_list = Disaster.build_initial_disaster_pool()
+    n_of_og_disasters = len(disaster_list)
 
     # Collapse the disaster list by merging related disasters
-    print(f"Collapsing {len(og_disasters)} disasters")
-    collapsed_disasters = Disaster.collapse_disaster_list(og_disasters)
-    print(f"{len(og_disasters)} disasters were collapsed into {len(collapsed_disasters)} disasters")
+    print(f"Collapsing {n_of_og_disasters} disasters")
+    Disaster.collapse_disaster_list(disaster_list)
+    print(f"{n_of_og_disasters} disasters were collapsed into {len(disaster_list)} disasters")
 
     # Convert the final disaster list to a dataframe, sort by damages for convenience
-    final_df = Disaster.to_dataframe(collapsed_disasters)
+    final_df = Disaster.to_dataframe(disaster_list)
     final_df.sort_values(by=["total_cost"], inplace=True, ignore_index=True)
 
     # Save the results as a csv file.
