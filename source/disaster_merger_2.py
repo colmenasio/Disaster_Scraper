@@ -186,11 +186,8 @@ class Disaster:
 if __name__ == '__main__':
     og_disasters = Disaster.build_initial_disaster_pool()
     collapsed_disasters = Disaster.collapse_disaster_list(og_disasters)
-    print(collapsed_disasters)
-    print(len(collapsed_disasters))
+    print(f"{len(og_disasters)} disasters were collapsed into {len(collapsed_disasters)} disasters")
     final_df = Disaster.to_dataframe(collapsed_disasters)
-    print(final_df)
-
-
-    # TODO add method to convert list of Disaster instances into a dataframe
-    #  (shouldnt be too dificult as most methods required for this are already implemented)
+    RESULT_PATH = "../input-output/merged_expedients_2.csv"
+    print(f"Saving collapsed df to '{RESULT_PATH}'")
+    final_df.to_csv(path_or_buf = RESULT_PATH)
