@@ -184,10 +184,19 @@ class Disaster:
 
 
 if __name__ == '__main__':
+    # Script setup
     og_disasters = Disaster.build_initial_disaster_pool()
+
+    # Collapse the disaster list by merging related disasters
+    print(f"Collapsing {len(og_disasters)} disasters")
     collapsed_disasters = Disaster.collapse_disaster_list(og_disasters)
     print(f"{len(og_disasters)} disasters were collapsed into {len(collapsed_disasters)} disasters")
+
+    # Convert the final disaster list to a dataframe, sort by damages for convenience
     final_df = Disaster.to_dataframe(collapsed_disasters)
+    final_df.sort_values(by=["total_cost"], inplace=True, ignore_index=True)
+
+    # Save the results as a csv file.
     RESULT_PATH = "../input-output/merged_expedients_2.csv"
     print(f"Saving collapsed df to '{RESULT_PATH}'")
-    final_df.to_csv(path_or_buf = RESULT_PATH)
+    final_df.to_csv(path_or_buf=RESULT_PATH, index=False)
