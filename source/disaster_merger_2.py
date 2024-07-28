@@ -117,8 +117,9 @@ class Disaster:
             else:
                 # No compatible disaster was found. Add the current disaster to the final list
                 new_list.append(current_disaster)
-            print(f"Remaining Disasters: {len(disasters)}")
-            print(f"Length of the new list: {len(new_list)}")
+            if Disaster.CONFIG["debug_messages_on"]:
+                print(f"Remaining Disasters: {len(disasters)}")
+                print(f"Length of the new list: {len(new_list)}")
         return new_list
 
     def find_compatible_disasters(self, other_disasters: list[Disaster]) -> int:

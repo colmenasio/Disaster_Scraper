@@ -1,3 +1,4 @@
 {
-  "days_leniency": 1
+  "days_leniency": 1,
+  "debug_messages_on": false
 }
