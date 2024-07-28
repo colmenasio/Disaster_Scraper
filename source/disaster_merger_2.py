@@ -141,3 +141,5 @@ if __name__ == '__main__':
     collapsed_disasters = Disaster.collapse_disaster_list(og_disasters)
     print(collapsed_disasters)
     print(len(collapsed_disasters))
+    # TODO add method to convert list of Disaster instances into a dataframe
+    #  (shouldnt be too dificult as most methods required for this are already inmplemented)
