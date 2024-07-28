@@ -177,7 +177,7 @@ class Disaster:
     @staticmethod
     def to_dataframe(instances: list[Disaster]) -> pd.DataFrame:
         disasters_df = pd.DataFrame(
-            columns=["date", "duration", "disaster", "provinces", "claims", "total_cost", "losses_per_day"]
+            columns=["date", "duration", "disaster", "claims", "total_cost", "losses_per_day", "provinces"]
         )
         for df_index, disaster in enumerate(instances):
             data_dict = disaster.generate_data_dict()
@@ -200,7 +200,7 @@ if __name__ == '__main__':
 
     # Convert the final disaster list to a dataframe, sort by damages for convenience
     final_df = Disaster.to_dataframe(disaster_list)
-    final_df.sort_values(by=["total_cost"], inplace=True, ignore_index=True)
+    final_df.sort_values(by=["total_cost"], inplace=True, ignore_index=True, ascending=False)
 
     # Save the results as a csv file.
     RESULT_PATH = "../input-output/merged_expedients_2.csv"
