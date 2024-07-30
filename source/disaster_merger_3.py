@@ -4,6 +4,8 @@ import numpy as np
 from json import load as jsonload
 
 
+# Third step of the merging process. Merge groups of disasters by spatial adjacency
+
 class Disaster:
     """Each instance represents a cluster of rows in the 'expedients' dataframe
     that are considered to be the same disaster"""
@@ -12,6 +14,9 @@ class Disaster:
     expedients['date'] = pd.to_datetime(expedients['date'], errors='raise')
     expedients.drop("Unnamed: 0", axis=1, inplace=True)
     adjacencies = pd.read_csv("../data/provinces_adjacency/adjacency_table.csv", index_col=0)
+
+    INPUT_PATH = "../input-output/merged_expedients_1.csv"
+    OUTPUT_PATH = "../input-output/merged_expedients_2.csv"
 
     with open("../config/disaster_merger_2/config.json") as fstream:
         CONFIG = jsonload(fstream)
@@ -203,6 +208,5 @@ if __name__ == '__main__':
     final_df.sort_values(by=["total_cost"], inplace=True, ignore_index=True, ascending=False)
 
     # Save the results as a csv file.
-    RESULT_PATH = "../input-output/merged_expedients_2.csv"
-    print(f"Saving collapsed df to '{RESULT_PATH}'")
-    final_df.to_csv(path_or_buf=RESULT_PATH, index=False)
+    print(f"Saving collapsed df to '{Disaster.OUTPUT_PATH}'")
+    final_df.to_csv(path_or_buf=Disaster.OUTPUT_PATH, index=False)
