@@ -5,7 +5,7 @@ import datetime
 
 # A sligth modification of the script provided by matheus. Merges by disaster type, date and location
 
-def merge_css_1():
+def merge_csv_1():
     # Importing the disaster data
     disaster_df = pd.read_csv(filepath_or_buffer="../input-output/raw_expedients.csv",
                            sep=";",
@@ -14,8 +14,7 @@ def merge_css_1():
 
     # Dropping unnecessary columns and adjusting the data
     disaster_df.drop(
-        columns=['ID RMC', 'ID CAUSA SINIESTRO', 'MUNICIPIO', 'POBLACION',
-                 'CODIGO POSTAL', 'CLASE RIESGO N1', 'CLASE RIESGO N2'],
+        columns=['ID RMC', 'ID CAUSA SINIESTRO', 'MUNICIPIO', 'POBLACION', 'CLASE RIESGO N1', 'CLASE RIESGO N2'],
         inplace=True
     )
 
@@ -23,7 +22,8 @@ def merge_css_1():
     disaster_df.rename(columns={"FECHA SINIESTRO": "date",
                                 "CAUSA SINIESTRO": "disaster",
                                 "PROVINCIA": "province",
-                                " COSTE TOTAL ": "total_cost"},
+                                " COSTE TOTAL ": "total_cost",
+                                "CODIGO POSTAL": "postal_codes"},
                        inplace=True)
 
     # Replacing specific province names for consistency
@@ -38,8 +38,11 @@ def merge_css_1():
                                               'Valencia/València': 'Valencia'}})
     disaster_df['province'] = disaster_df['province'].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode(
         'utf-8')
-    disaster_df['claims'] = disaster_df['province']
+    disaster_df['claims'] = 0
     disaster_df["total_cost"] = pd.to_numeric(disaster_df["total_cost"], errors="coerce")
+
+    # Transform the postal code column type from int to list
+    disaster_df["postal_codes"] = disaster_df["postal_codes"].apply(lambda x: [x])
 
     aggregation_dict = {"total_cost": "sum", "claims": "count"}
 
@@ -88,6 +91,7 @@ def merge_css_1():
     df['duration'] = ''
     df['losses_day'] = ''
     count = total_cost = claims = 0
+    postal_codes = []
 
     # Iterate over each row to calculate duration, total cost, and daily losses
     for i in range(0, len(df)):
@@ -95,21 +99,25 @@ def merge_css_1():
             count = count + 1
             total_cost = total_cost + df.loc[i, 'total_cost']
             claims = claims + df.loc[i, 'claims']
+            postal_codes = postal_codes + df.loc[i, 'postal_codes']
 
         elif df.loc[i, 'notes'] == 'Max':
             count = count + 1
             total_cost = total_cost + df.loc[i, 'total_cost']
             claims = claims + df.loc[i, 'claims']
+            postal_codes = postal_codes + df.loc[i, 'postal_codes']
 
-            df.loc[i, 'duration'] = count
-            df.loc[i, 'total_cost'] = total_cost
-            df.loc[i, 'claims'] = claims
-            df.loc[i, 'losses_day'] = total_cost / count
+            df.at[i, 'duration'] = count
+            df.at[i, 'total_cost'] = total_cost
+            df.at[i, 'claims'] = claims
+            df.at[i, 'postal_codes'] = list(set(postal_codes)) #To remove duplicates
+            df.at[i, 'losses_day'] = total_cost / count
             count = total_cost = claims = 0
+            postal_codes = []
         else:
             count = 0
-            df.loc[i, 'duration'] = 1
-            df.loc[i, 'losses_day'] = df.loc[i, 'total_cost']
+            df.at[i, 'duration'] = 1
+            df.at[i, 'losses_day'] = df.loc[i, 'total_cost']
 
     df = df.loc[df['duration'] != '']
     df = df.drop(columns=['dif', 'notes'])
@@ -119,4 +127,4 @@ def merge_css_1():
 
 
 if __name__ == '__main__':
-    merge_css_1()
+    merge_csv_1()
