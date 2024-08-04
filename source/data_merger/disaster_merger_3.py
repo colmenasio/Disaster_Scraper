@@ -1,4 +1,7 @@
 from __future__ import annotations
+
+from typing import Callable
+
 import pandas as pd
 import numpy as np
 from json import load as jsonload
@@ -6,19 +9,21 @@ from json import load as jsonload
 
 # Third step of the merging process. Merge groups of disasters by spatial adjacency
 
-class Disaster:
+class DisasterLinker:
     """Each instance represents a cluster of rows in the 'expedients' dataframe
     that are considered to be the same disaster"""
 
-    expedients = pd.read_csv("../input-output/merged_expedients_1.csv")
-    expedients['date'] = pd.to_datetime(expedients['date'], errors='raise')
-    expedients.drop("Unnamed: 0", axis=1, inplace=True)
-    adjacencies = pd.read_csv("../data/provinces_adjacency/adjacency_table.csv", index_col=0)
-
     INPUT_PATH = "../input-output/merged_expedients_1.csv"
     OUTPUT_PATH = "../input-output/merged_expedients_2.csv"
+    ADJACENCY_TABLE_PATH = "../data/provinces_adjacency/adjacency_table.csv"
+    CONFIG_PATH = "../config/disaster_merger_2/config.json"
 
-    with open("../config/disaster_merger_2/config.json") as fstream:
+    expedients = pd.read_csv(INPUT_PATH)
+    expedients['date'] = pd.to_datetime(expedients['date'], errors='raise')
+    expedients.drop("Unnamed: 0", axis=1, inplace=True)
+    adjacencies = pd.read_csv(ADJACENCY_TABLE_PATH, index_col=0)
+
+    with open(CONFIG_PATH) as fstream:
         CONFIG = jsonload(fstream)
 
     def __init__(self, indexes: list[int]):
@@ -28,13 +33,13 @@ class Disaster:
         self.province_list = None
 
     @classmethod
-    def build_initial_disaster_pool(cls) -> list[Disaster]:
+    def build_initial_disaster_pool(cls) -> list[DisasterLinker]:
         """Factory method creating an initial list of disaster instances by considering each row in 'expedients'
         a different disaster"""
         n_of_rows = cls.expedients.shape[0]
-        return [Disaster([n]) for n in range(n_of_rows)]
+        return [DisasterLinker([n]) for n in range(n_of_rows)]
 
-    def is_compatible_with(self, other: Disaster) -> bool:
+    def is_compatible_with(self, other: DisasterLinker) -> bool:
         """Check if two instances represent the same disaster in a different place
 
         For 2 disasters to be considered compatible, all the following conditions must be met:
@@ -73,7 +78,7 @@ class Disaster:
         Get the total duration of a disaster by taking into account all the rows contained in the instance
         Note that this method doesn't check whether the dates are consistent whithin the instance
 
-        :return: A list containing the start and end time of the Disaster
+        :return: A list containing the start and end time of the DisasterLinker
         """
         if self.total_duration is None:
             dates = self.expedients.loc[self.indexes, ["date", "duration"]]
@@ -99,18 +104,18 @@ class Disaster:
         total_cost = self.expedients.loc[self.indexes, "total_cost"].sum()
         return total_cost
 
-    def is_adjacent_with(self, other: Disaster) -> bool:
+    def is_adjacent_with(self, other: DisasterLinker) -> bool:
         """Check whether at least a pair of provinces covered by the disasters are adjacent"""
         self_provinces_list = self.get_province_list()
         other_provinces_list = other.get_province_list()
         return self.adjacencies.loc[self_provinces_list, other_provinces_list].values.any()
 
-    def merge_with(self, other: Disaster) -> Disaster:
+    def merge_with(self, other: DisasterLinker) -> DisasterLinker:
         """Merges two instances that represent the same disaster.
         :except Nothing: Even though this method doesn't check, it is expected that *self* and *other* are compatible
         (in other words, 'self.is_compatible_with(other)' must return True)"""
         # Join the disasters
-        new_disaster = Disaster(self.indexes + other.indexes)
+        new_disaster = DisasterLinker(self.indexes + other.indexes)
         # Most of this is just preformace improvements by taking advantage of the DP nature of the class
         # Dynamically generating the attributes from the new disaster instance
         new_disaster.disaster_type = self.get_disaster_type()
@@ -122,9 +127,9 @@ class Disaster:
         return new_disaster
 
     @staticmethod
-    def collapse_disaster_list(disasters: list[Disaster]) -> None:
+    def collapse_disaster_list(disasters: list[DisasterLinker]) -> None:
         """
-        Takes a list of Disaster instances, groups them using the adjacency table and returns a new list
+        Takes a list of DisasterLinker instances, groups them using the adjacency table and returns a new list
         of instances
         Mutates the list in-place
         """
@@ -141,14 +146,14 @@ class Disaster:
             else:
                 # No compatible disaster was found. Add the current disaster to the final list
                 new_list.append(current_disaster)
-            if Disaster.CONFIG["debug_messages_on"]:
+            if DisasterLinker.CONFIG["debug_messages_on"]:
                 print(f"Remaining Disasters: {len(disasters)}")
                 print(f"Length of the new list: {len(new_list)}")
         # Mutate the original list instead of returning a new list
         # (to make clear the list gets mutated anyways during the collapsing)
         disasters.extend(new_list)
 
-    def find_compatible_disasters(self, other_disasters: list[Disaster]) -> int:
+    def find_compatible_disasters(self, other_disasters: list[DisasterLinker]) -> int:
         """
         Returns the index of the first disaster in the provided list that can be merged with *self*
         :return: -1 if *self* cannot be merged with any disaster in the list
@@ -180,12 +185,14 @@ class Disaster:
         return data_dict
 
     @staticmethod
-    def to_dataframe(instances: list[Disaster]) -> pd.DataFrame:
-        disasters_df = pd.DataFrame(
-            columns=["date", "duration", "disaster", "claims", "total_cost", "losses_per_day", "provinces"]
-        )
+    def to_dataframe(instances: list[DisasterLinker],
+                     to_dict: Callable[[DisasterLinker], dict] = generate_data_dict) -> pd.DataFrame | None:
+        if len(instances) == 0:
+            return None
+        column_tags = list(to_dict(instances[0]).keys())
+        disasters_df = pd.DataFrame(columns=column_tags)
         for df_index, disaster in enumerate(instances):
-            data_dict = disaster.generate_data_dict()
+            data_dict = to_dict(disaster)
             disasters_df.loc[df_index] = data_dict
         return disasters_df
 
@@ -195,18 +202,18 @@ class Disaster:
 
 if __name__ == '__main__':
     # Script setup
-    disaster_list = Disaster.build_initial_disaster_pool()
+    disaster_list = DisasterLinker.build_initial_disaster_pool()
     n_of_og_disasters = len(disaster_list)
 
     # Collapse the disaster list by merging related disasters
     print(f"Collapsing {n_of_og_disasters} disasters")
-    Disaster.collapse_disaster_list(disaster_list)
+    DisasterLinker.collapse_disaster_list(disaster_list)
     print(f"{n_of_og_disasters} disasters were collapsed into {len(disaster_list)} disasters")
 
     # Convert the final disaster list to a dataframe, sort by damages for convenience
-    final_df = Disaster.to_dataframe(disaster_list)
+    final_df = DisasterLinker.to_dataframe(disaster_list)
     final_df.sort_values(by=["total_cost"], inplace=True, ignore_index=True, ascending=False)
 
     # Save the results as a csv file.
-    print(f"Saving collapsed df to '{Disaster.OUTPUT_PATH}'")
-    final_df.to_csv(path_or_buf=Disaster.OUTPUT_PATH, index=False)
+    print(f"Saving collapsed df to '{DisasterLinker.OUTPUT_PATH}'")
+    final_df.to_csv(path_or_buf=DisasterLinker.OUTPUT_PATH, index=False)
