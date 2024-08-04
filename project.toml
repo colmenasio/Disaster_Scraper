@@ -7,3 +7,5 @@ python_version = "^1.12.4"
 numpy = "^2.0.1"
 pandas = "^2.2.2
 bs4 = "^0.0.2"
+html5lib= "^1.1"
+lxml = "^5.2.2"
