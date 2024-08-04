@@ -3,3 +3,6 @@ class Article:
         self.title = title_arg
         self.link = link_arg
         self.date = date_arg
+
+    def __repr__(self):
+        return f"<__main__.Article object: {self.title}, {self.link}, {self.date}>"
