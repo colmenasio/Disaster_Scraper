@@ -1,0 +1,288 @@
+{
+    "sectores": [
+        {
+            "Sector 1": "Energ\u00eda",
+            "descripci\u00f3n": "La energ\u00eda es la capacidad que tienen los objetos o sustancias para realizar trabajo o producir cambios en el entorno",
+            "subsectores": [
+                {
+                    "Subsector 1": "Electricidad",
+                    "categorias_entidades": [
+                        {
+                            "nombre": "Empresa el\u00e9ctrica y suministro",
+                            "descripcion": "\u00abempresa el\u00e9ctrica\u00bb: cualquier persona f\u00edsica o jur\u00eddica que realice al menos una de las funciones siguientes: generaci\u00f3n, transporte, distribuci\u00f3n, agregaci\u00f3n, respuesta de demanda, almacenamiento de energ\u00eda, suministro o compra de electricidad, y que lleve a cabo las tareas comerciales, t\u00e9cnicas o de mantenimiento relacionadas con estas funciones, pero sin incluir a los clientes finales;                          \u00absuministro\u00bb: la venta y la reventa de electricidad a clientes;"
+                        },
+                        {
+                            "nombre": "Gestor de la red de distribuci\u00f3n",
+                            "descripcion": "\u00abgestor de la red de distribuci\u00f3n\u00bb: toda persona f\u00edsica o jur\u00eddica que sea responsable de la explotaci\u00f3n, el mantenimiento y, en caso necesario, el desarrollo de la red de distribuci\u00f3n en una zona determinada, as\u00ed como, en su caso, de sus interconexiones con otras redes, y de garantizar que la red tiene capacidad para asumir, a largo plazo, una demanda razonable de distribuci\u00f3n de electricidad;"
+                        },
+                        {
+                            "nombre": "Gestor de la red de transporte",
+                            "descripcion": "\u00abgestor de la red de transporte\u00bb: toda persona f\u00edsica o jur\u00eddica que sea responsable de la explotaci\u00f3n, el mantenimiento y, en caso necesario, el desarrollo de la red de transporte en una zona determinada, as\u00ed como, en su caso, de sus interconexiones con otras redes, y de garantizar que la red tiene capacidad para asumir, a largo plazo, una demanda razonable de transporte de electricidad;"
+                        },
+                        {
+                            "nombre": "Productor",
+                            "descripcion": "\u00abproductor\u00bb: toda persona f\u00edsica o jur\u00eddica que genere electricidad;"
+                        },
+                        {
+                            "nombre": "Operador designado para el mercado el\u00e9ctrico",
+                            "descripcion": "\u00aboperador designado para el mercado el\u00e9ctrico\u00bb o \u00abNEMO\u00bb, por sus siglas en ingl\u00e9s: operador del mercado designado por la autoridad competente para realizar funciones relacionadas con el acoplamiento \u00fanico diario o intradiario;"
+                        },
+                        {
+                            "nombre": "Participante en el mercado",
+                            "descripcion": "\u00abparticipante en el mercado\u00bb: persona f\u00edsica o jur\u00eddica que est\u00e1 generando, comprando o vendiendo electricidad, que participa en la agregaci\u00f3n o que es un gestor de la participaci\u00f3n activa de la demanda o servicios de almacenamiento de energ\u00eda, incluida la emisi\u00f3n de \u00f3rdenes de negociaci\u00f3n, en uno o varios de los mercados de la electricidad, entre ellos los mercados de la energ\u00eda de balance;"
+                        }
+                    ]
+                },
+                {
+                    "Subsector 2": "Sistemas urbanos de calefacci\u00f3n y de refrigeraci\u00f3n",
+                    "categorias_entidades": [
+                        {
+                            "nombre": "sistema urbano de calefacci\u00f3n o refrigeraci\u00f3n",
+                            "descripcion": "\u00absistema urbano de calefacci\u00f3n\u00bb o \u00absistema urbano de refrigeraci\u00f3n\u00bb: distribuci\u00f3n de energ\u00eda t\u00e9rmica en forma de vapor, agua caliente o fluidos refrigerantes, desde fuentes centrales o descentralizadas de producci\u00f3n a trav\u00e9s de una red hacia m\u00faltiples edificios o emplazamientos, para la calefacci\u00f3n o la refrigeraci\u00f3n de espacios o procesos;"
+                        }
+                    ]
+                },
+                {
+                    "Subsector 3": "Crudo",
+                    "categorias_entidades": [
+                        {
+                            "nombre": "Operadores de oleoductos",
+                            "descripcion": "Los operadores de oleoductos de transporte de crudo"
+                        },
+                        {
+                            "nombre": "Operadores de producci\u00f3n",
+                            "descripcion": "Los operadores de producci\u00f3n de crudo, instalaciones de refinado y tratamiento, almacenamiento y transporte"
+                        },
+                        {
+                            "nombre": "Entidad central de almacenamiento",
+                            "descripcion": "\u00abentidad central de almacenamiento\u00bb, el organismo o servicio al que podr\u00e1n conferirse poderes para actuar con vistas a la adquisici\u00f3n, mantenimiento o venta de reservas de petr\u00f3leo, incluidas las reservas de emergencia y las reservas espec\u00edficas;"
+                        }
+                    ]
+                },
+                {
+                    "Subsector 4": "Gas",
+                    "categorias_entidades": [
+                        {
+                            "nombre": "Empresa suministradora",
+                            "descripcion": "\u00abempresa suministradora\u00bb: cualquier persona f\u00edsica o jur\u00eddica que realice la actividad de suministro;"
+                        },
+                        {
+                            "nombre": "Gestor de la red de distribuci\u00f3n",
+                            "descripcion": "\u00abgestor de la red de distribuci\u00f3n\u00bb: toda persona f\u00edsica o jur\u00eddica que realice la actividad de distribuci\u00f3n y sea responsable de la explotaci\u00f3n, el mantenimiento y, en caso necesario, el desarrollo de la red de distribuci\u00f3n en una zona determinada, as\u00ed como, en su caso, de sus interconexiones con otras redes, y de garantizar que la red tiene capacidad para asumir, a largo plazo, una demanda razonable de distribuci\u00f3n de gas;"
+                        },
+                        {
+                            "nombre": "Gestor de la red de transporte",
+                            "descripcion": "\u00abgestor de la red de transporte\u00bb: toda persona f\u00edsica o jur\u00eddica que realice la actividad de transporte y sea responsable de la explotaci\u00f3n, el mantenimiento y, en caso necesario, el desarrollo de la red de transporte en una zona determinada, as\u00ed como, en su caso, de sus interconexiones con otras redes, y de garantizar que la red tiene capacidad para asumir, a largo plazo, una demanda razonable de transporte de gas;"
+                        },
+                        {
+                            "nombre": "Gestor de almacenamientos",
+                            "descripcion": "\u00abgestor de almacenamientos\u00bb: cualquier persona f\u00edsica o jur\u00eddica que realice la actividad de almacenamiento y sea responsable de la explotaci\u00f3n de una instalaci\u00f3n de almacenamiento;"
+                        },
+                        {
+                            "nombre": "Gestor de la red de GNL",
+                            "descripcion": "\u00abgestor de la red de GNL\u00bb: toda persona f\u00edsica o jur\u00eddica que realice la actividad de licuado de gas natural, o la importaci\u00f3n, la descarga y regasificaci\u00f3n de GNL y sea responsable de la explotaci\u00f3n de una instalaci\u00f3n de GNL;"
+                        },
+                        {
+                            "nombre": "Compa\u00f1\u00eda de gas natural",
+                            "descripcion": "\u00abcompa\u00f1\u00eda de gas natural\u00bb: cualquier persona f\u00edsica o jur\u00eddica que realice al menos una de las actividades siguientes: producci\u00f3n, transporte, distribuci\u00f3n, suministro, compra o almacenamiento de gas natural, incluido el GNL, y que lleve a cabo las tareas comerciales, t\u00e9cnicas o de mantenimiento relacionadas con estas funciones, pero sin incluir a los clientes finales;"
+                        },
+                        {
+                            "nombre": "Gestores de instalaciones de refinado y tratamiento de gas",
+                            "descripcion": "Gestores de instalaciones de refinado y tratamiento de gas"
+                        }
+                    ]
+                },
+                {
+                    "Subsector 5": "Hidr\u00f3geno",
+                    "categorias_entidades": [
+                        {
+                            "nombre": "Los operadores de producci\u00f3n, almacenamiento y transporte de hidr\u00f3geno",
+                            "descripcion": "Los operadores de producci\u00f3n, almacenamiento y transporte de hidr\u00f3geno"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Sector 2": "Transporte",
+            "descripci\u00f3n": "Sistema de medios para conducir personas y cosas de un lugar a otro.",
+            "subsectores": [
+                {
+                    "Subsector 1": "Transporte a\u00e9reo",
+                    "categorias_entidades": [
+                        {
+                            "nombre": "Compa\u00f1\u00eda a\u00e9rea",
+                            "descripcion": "\u00abcompa\u00f1\u00eda a\u00e9rea\u00bb: toda empresa de transporte a\u00e9reo titular de una licencia de explotaci\u00f3n v\u00e1lida o su equivalente;"
+                        },
+                        {
+                            "nombre": "Aeropuertos b\u00e1sicos de red b\u00e1sica",
+                            "descripcion": "aeropuertos b\u00e1sicos de red b\u00e1sica: Albertkanaal, Antwerpen, Bruselas, Gent, Kortrijk, Lieja, Namur, Ruse, Sof\u00eda, Vidin, Decin, M\u011bln\u00edk, Ostrava, Pardubice, Plze\u0148, Praga, P\u0159erov, Aarhus, K\u00f8benhavn, Taulov, Berlin, Braunschweig, Bremen, Dortmund, Duisburgo, D\u00fcsseldorf , Frankfurt, Hamburgo, Hamm, Hannover, Koblenz, Leipzig, L\u00fcbeck , Magdeburg, Mainz, Mannheim, Munich, Nuremberg, Regensburg, Rostock, Stuttgart, Wilhemshaven, Tallin, Corcaigh, Baile \u00c1tha  Cliath, Ath\u00edna, Heraklion, Ihoumenitsa, Patras, Thessaloniki, A Coru\u00f1a, Alc\u00e1zar de San Juan, Algeciras, Alicante, Antequera, Barcelona, Bilbao, Cartagena, C\u00f3rdoba, Gij\u00f3n, Huelva, Las Palmas, Madrid, M\u00e1laga, Murcia, Palma de Mallorca, Sevilla, Valencia, Valladolid, Zaragoza, Avignon, Bordeaux, Calais, Chalons-sur-Sa\u00f4ne, Dijon, Dunkerque, Le Havre, Lyon, Marseille, Metz, Nantes Saint-Nazaire, Paris, Rouen, Strasbourg, Toulouse, Rijeka, Slavonski Brod, Vukovar, Zagreb, Ancona, Augusta, Bari, Bologna, Cagliari, Cervignano, Cremona, Firenze, G\u00e9nova, Gioia Tauro, La Spezia, Livorno, Mantova, Milano, Napoli, Novara, Padova, Palermo, Ravenna, Roma, Taranto, Venezia, Larnaka, Lemesos,  R\u012bga, Ventspils, Kaunas, Klaip\u0117da, Vilnius, Luxembourg, Budapest, Kom\u00e1rom, Marsaxlokk, Valletta, Almelo, Amsterdam, Bergen op Zoom, Deventer, Hengelo, Moerdijk, Nijmegen, Rotterdam, Vlissingen, Utrecht, Werndorf, Enns, Wels, Schwechat, Gd\u00e1nsk, Pyrzowice, Slawkow, Krak\u00f3w , \u0141\u00f3d\u017a , Pozna\u0144 , Szczecin, \u015awinouj\u015bcie, Szczecin, Warszawa, Wroc\u0142aw , Lisboa, Porto, Poceir\u00e3o , Sines, Bucure\u0219ti, Calafat, Cernavod\u0103 , Constan\u021ba , Craiova , Drobeta Turnu Severin, Gala\u021bi , Giurgiu, Timi\u0219oara , Koper, Ljubljana, Bratislava, Kom\u00e1rno, \u017dilina , Helsinki, Kotka-Hamina, Kouvola, Turki-Naantali, G\u00f6teborg, Lule\u00e5, Malm\u00f6, Hallsberg, Stockholm, Arlanda, Trelleborg, Belfast, Birmingham, Bristol, Cardiff, Newport, Dover/Folkestone, Edinburgh, Felixstowe-Harwich, Glasgow, Grimsby, Leeds, London, Manchester, Milford Haven, Nottingham, Sheffield Doncaster TFC, Teesport."
+                        },
+                        {
+                            "nombre": "Entidad gestora del aeropuerto y aeropuerto",
+                            "descripcion": "\u00abentidad gestora del aeropuerto\u00bb: la entidad que, conjuntamente o no con otras actividades y en virtud de las disposiciones nacionales legales, reglamentarias o contractuales, tenga por misi\u00f3n la administraci\u00f3n y la gesti\u00f3n de las infraestructuras aeroportuarias o de redes aeroportuarias y la coordinaci\u00f3n y control de las actividades de los distintos operadores presentes en el aeropuerto o en la red aeroportuaria de que se trate;                          \u00abaeropuerto\u00bb: todo terreno espec\u00edficamente acondicionado para el aterrizaje, el despegue y las maniobras de aeronaves, con las instalaciones anexas que esas operaciones puedan comportar para las necesidades del tr\u00e1fico y el servicio de aeronaves, as\u00ed como las instalaciones necesarias para asistir a los servicios a\u00e9reos comerciales; las entidades que explotan instalaciones anexas dentro de los recintos de los aeropuertos"
+                        },
+                        {
+                            "nombre": "Servicio de control del tr\u00e1nsito a\u00e9reo",
+                            "descripcion": "servicio de control del tr\u00e1nsito a\u00e9reo: un servicio suministrado con el fin de:                          a) prevenir colisiones                          - entre aeronaves, y                          - en el \u00e1rea de maniobras, entre aeronaves y obst\u00e1culos, y de                          b) acelerar y mantener ordenado el movimiento del tr\u00e1nsito a\u00e9reo;"
+                        }
+                    ]
+                },
+                {
+                    "Subsector 2": "Transporte por ferrocarril",
+                    "categorias_entidades": [
+                        {
+                            "nombre": "Administrador de infraestructuras",
+                            "descripcion": "\u00abadministrador de infraestructuras\u00bb: todo organismo o empresa responsable, en particular, de la instalaci\u00f3n, administraci\u00f3n y mantenimiento de la infraestructura ferroviaria, incluida la gesti\u00f3n del tr\u00e1fico y el control-mando y se\u00f1alizaci\u00f3n. Las funciones de administrador de infraestructuras en una red o parte de una red pueden asignarse a distintos organismos o empresas;"
+                        },
+                        {
+                            "nombre": "Empresa ferroviaria",
+                            "descripcion": "\u00abempresa ferroviaria\u00bb: toda empresa p\u00fablica o privada, titular de una licencia con arreglo a la presente Directiva, cuya actividad principal consista en prestar servicios de transporte de mercanc\u00edas o viajeros por ferrocarril, debiendo ser dicha empresa en todo caso quien aporte la tracci\u00f3n. Se incluyen tambi\u00e9n en la definici\u00f3n las empresas que aportan exclusivamente la tracci\u00f3n; \u00abexplotador de la instalaci\u00f3n de servicio\u00bb: la entidad privada o p\u00fablica responsable de la gesti\u00f3n de una o varias instalaciones de servicio o de la prestaci\u00f3n a empresas ferroviarias, de uno o varios de los servicios mencionados en el anexo II, puntos 2 a 4;"
+                        }
+                    ]
+                },
+                {
+                    "Subsector 3": "Transporte mar\u00edtimo y fluvial",
+                    "categorias_entidades": [
+                        {
+                            "nombre": "REVISAR",
+                            "descripcion": "REVISAR"
+                        },
+                        {
+                            "nombre": "Puerto",
+                            "descripcion": "\u00abpuerto\u00bb: cualquier zona especificada de tierra y agua, con l\u00edmites definidos por el Estado miembro en el que est\u00e9 situado el puerto, dotada de unas obras y equipo que faciliten las operaciones de transporte mar\u00edtimo comercial; \u00abInstalaci\u00f3n portuaria\u00bb, lugar donde se realiza la interfaz buque-puerto. Incluye, seg\u00fan sea necesario, zonas como los fondeaderos, atracaderos de espera y accesos desde el mar; y las entidades que explotan obras y equipos en los puertos."
+                        },
+                        {
+                            "nombre": "Servicio de tr\u00e1fico de buques (STB)",
+                            "descripcion": "\u00abservicio de tr\u00e1fico de buques (STB)\u00bb: el servicio designado para mejorar la seguridad y la eficacia del tr\u00e1fico mar\u00edtimo y para proteger el medio ambiente, con la capacidad de actuar rec\u00edprocamente con el tr\u00e1fico y de responder a las situaciones de tr\u00e1fico que se plantean en la zona STB;"
+                        }
+                    ]
+                },
+                {
+                    "Subsector 4": "Transporte por carretera",
+                    "categorias_entidades": [
+                        {
+                            "nombre": "Autoridad viaria",
+                            "descripcion": "\u00abautoridad viaria\u00bb: una autoridad p\u00fablica responsable de la planificaci\u00f3n, el control o la gesti\u00f3n de las carreteras en el \u00e1mbito territorial de su competencia; responsables del control de la gesti\u00f3n del tr\u00e1fico, excluidas las entidades p\u00fablicas para las cuales la gesti\u00f3n del tr\u00e1fico o la explotaci\u00f3n de sistemas de transporte inteligentes es una parte no esencial de su actividad general"
+                        },
+                        {
+                            "nombre": "Sistemas de transporte inteligentes",
+                            "descripcion": "\u00absistemas de transporte inteligentes\u00bb o \u00abSTI\u00bb: los sistemas en los que se aplican tecnolog\u00edas de la informaci\u00f3n y las comunicaciones en el \u00e1mbito del transporte por carretera, incluidos infraestructuras, veh\u00edculos y usuarios, y en la gesti\u00f3n del tr\u00e1fico y de la movilidad, as\u00ed como para las interfaces con otros modos de transporte;"
+                        }
+                    ]
+                },
+                {
+                    "Subsector 5": "Transporte p\u00fablico",
+                    "categorias_entidades": [
+                        {
+                            "nombre": "operador de servicio p\u00fablico",
+                            "descripcion": "\u00aboperador de servicio p\u00fablico\u00bb: toda empresa o agrupaci\u00f3n de empresas de derecho p\u00fablico o privado que explote servicios p\u00fablicos de transporte de viajeros o todo organismo p\u00fablico que preste servicios p\u00fablicos de transporte de viajeros;"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Sector 5": "Sanidad",
+            "descripci\u00f3n": "La sanidad es fundamental para asegurar el bienestar de la poblaci\u00f3n. Incluye la prevenci\u00f3n, diagn\u00f3stico, tratamiento y rehabilitaci\u00f3n de enfermedades. La coordinaci\u00f3n entre diferentes entidades y el cumplimiento de est\u00e1ndares de calidad y seguridad son esenciales para una atenci\u00f3n sanitaria eficaz y equitativa. En la UE, la colaboraci\u00f3n entre laboratorios, entidades de investigaci\u00f3n y fabricantes de productos farmac\u00e9uticos y sanitarios, asegura una respuesta coordinada y efectiva ante desaf\u00edos de salud p\u00fablica.",
+            "categorias_entidades": [
+                {
+                    "nombre": "Prestador de asistencia sanitaria",
+                    "descripcion": "\u00abprestador de asistencia sanitaria\u00bb: toda persona f\u00edsica o jur\u00eddica que dispense legalmente asistencia sanitaria en el territorio de un Estado miembro;"
+                },
+                {
+                    "nombre": "Laboratorios de referencia de la UE",
+                    "descripcion": "Laboratorios de referencia de la UE                            1.   En el \u00e1mbito de la salud p\u00fablica o para \u00e1mbitos espec\u00edficos de la salud p\u00fablica pertinentes para la aplicaci\u00f3n del presente Reglamento o de los planes nacionales de prevenci\u00f3n, preparaci\u00f3n y respuesta, la Comisi\u00f3n podr\u00e1 designar, mediante actos de ejecuci\u00f3n, laboratorios de referencia de la UE que presten apoyo a los laboratorios nacionales de referencia a fin de promover las buenas pr\u00e1cticas y la armonizaci\u00f3n voluntaria por parte de los Estados miembros en cuanto a pruebas diagn\u00f3sticas, m\u00e9todos de ensayo y utilizaci\u00f3n de determinadas pruebas para la vigilancia, notificaci\u00f3n e informaci\u00f3n uniformes de las enfermedades por los Estados miembros. Dichos actos de ejecuci\u00f3n se adoptar\u00e1n de conformidad con el procedimiento de examen a que se refiere el art\u00edculo 29, apartado 2.                            2.   Los laboratorios de referencia de la UE ser\u00e1n responsables de la coordinaci\u00f3n de la red de laboratorios nacionales de referencia, en particular en los \u00e1mbitos siguientes:                            a) pruebas diagn\u00f3sticas de referencia, incluidos los protocolos de las pruebas;                            b)recursos materiales de referencia;                            c)evaluaciones de calidad externas;                            d)asesoramiento cient\u00edfico y asistencia t\u00e9cnica;                            e)colaboraci\u00f3n e investigaci\u00f3n;                            f)seguimiento, notificaciones de alerta y apoyo en la respuesta a los brotes, tambi\u00e9n en lo que se refiere a las enfermedades transmisibles emergentes y a bacterias y virus pat\u00f3genos, y                            g)formaci\u00f3n.                            3.   La red de laboratorios de referencia de la UE ser\u00e1 administrada y coordinada por el ECDC, en cooperaci\u00f3n con los laboratorios de referencia de la OMS. La estructura de gobernanza de dicha red comprender\u00e1 la cooperaci\u00f3n y la coordinaci\u00f3n con los laboratorios y las redes nacionales y regionales de referencia.                            4.   Las designaciones previstas en el apartado 1 seguir\u00e1n un proceso p\u00fablico de selecci\u00f3n, estar\u00e1n limitadas en el tiempo, tendr\u00e1n una duraci\u00f3n m\u00ednima de cuatro a\u00f1os, y se revisar\u00e1n peri\u00f3dicamente. Dichas designaciones establecer\u00e1n las responsabilidades y tareas de los laboratorios de referencia de la UE designados.                            Los laboratorios de referencia de la UE a que se refiere el apartado 1:                            a)ser\u00e1n imparciales, no tendr\u00e1n conflicto de intereses y, en particular, no se hallar\u00e1n en una situaci\u00f3n que, directa o indirectamente, pueda afectar a la imparcialidad de su conducta profesional en lo que respecta al ejercicio de sus tareas como laboratorios de referencia de la UE;                            b)tendr\u00e1n personal debidamente cualificado y con una formaci\u00f3n adecuada en su \u00e1mbito de competencia, o tendr\u00e1n acceso contractual a tal personal;                            c)poseer\u00e1n o tendr\u00e1n acceso a la infraestructura, el equipamiento y los productos necesarios para realizar las tareas que se les asignen;                            d)garantizar\u00e1n que su personal y cualquier otro personal contratado tenga un buen conocimiento de las normas y pr\u00e1cticas internacionales y que en su trabajo se tengan en cuenta los \u00faltimos avances en materia de investigaci\u00f3n a escala nacional, de la Uni\u00f3n e internacional;                            e)estar\u00e1n equipados o tendr\u00e1n acceso al equipo necesario para realizar sus tareas en situaciones de emergencia, y                            f)cuando proceda, estar\u00e1n equipados para cumplir las correspondientes normas de bioseguridad.                            Adem\u00e1s de los requisitos establecidos en el p\u00e1rrafo primero del presente apartado, los laboratorios de referencia de la UE tambi\u00e9n estar\u00e1n acreditados de conformidad con el Reglamento (CE) n.o 765/2008 del Parlamento Europeo y del Consejo (36).                            6.   Podr\u00e1n concederse subvenciones a los laboratorios de referencia de la UE mencionados en el apartado 1 para sufragar los gastos que soporten en la ejecuci\u00f3n de programas de trabajo anuales o plurianuales que se hayan establecido de conformidad con los objetivos y prioridades de los programas de trabajo adoptados por la Comisi\u00f3n con arreglo al programa UEproSalud."
+                },
+                {
+                    "nombre": "Las entidades que realizan actividades de investigaci\u00f3n y desarrollo sobre los medicamentos",
+                    "descripcion": "Las entidades que realizan actividades de investigaci\u00f3n y desarrollo sobre los medicamentos: Medicamento: toda sustancia o combinaci\u00f3n de sustancias que se presente como poseedora de propiedades curativas o preventivas con respecto a las enfermedades humanas; se considerar\u00e1n asimismo medicamentos todas las sustancias o combinaci\u00f3n de sustancias que puedan administrarse al hombre con el fin de establecer un diagn\u00f3stico m\u00e9dico o de restablecer, corregir o modificar las funciones fisiol\u00f3gicas del hombre"
+                },
+                {
+                    "nombre": "Las entidades que fabrican productos farmac\u00e9uticos de base y especialidades farmac\u00e9uticas",
+                    "descripcion": "Las entidades que fabrican productos farmac\u00e9uticos de base y especialidades farmac\u00e9uticas;  la fabricaci\u00f3n de productos farmac\u00e9uticos de base y preparados farmac\u00e9uticos. Se incluye en esta categor\u00eda la fabricaci\u00f3n de productos qu\u00edmicos y bot\u00e1nicos de uso medicinal.                            21.1 Fabricaci\u00f3n de productos farmac\u00e9uticos de base                            21.10 Fabricaci\u00f3n de productos farmac\u00e9uticos de base                            Esta clase comprende:                            - la producci\u00f3n de sustancias medicinales activas utilizadas por sus propiedades farmacol\u00f3gicas en la fabricaci\u00f3n de                            preparados farmac\u00e9uticos: antibi\u00f3ticos, vitaminas b\u00e1sicas, \u00e1cidos salic\u00edlico y O-acetilsalic\u00edlico, etc.                            - el tratamiento de la sangre                            Esta clase comprende tambi\u00e9n:                            - la fabricaci\u00f3n de az\u00facares qu\u00edmicamente puros                            - el procesado de gl\u00e1ndulas y la fabricaci\u00f3n de extractos glandulares, etc.                            - la fabricaci\u00f3n de probi\u00f3ticos (NUEVO)                            21.2 Fabricaci\u00f3n de especialidades farmac\u00e9uticas                            21.20 Fabricaci\u00f3n de especialidades farmac\u00e9uticas                            Esta clase comprende:                            - la fabricaci\u00f3n de medicamentos:                            \u2022 antisueros y otras fracciones sangu\u00edneas                            \u2022 vacunas                            \u2022 medicamentos diversos, incluidos los preparados homeop\u00e1ticos                            - la fabricaci\u00f3n de preparados qu\u00edmicos contraceptivos de uso externo medicamentos contraceptivos a base de                            hormonas                            - la fabricaci\u00f3n de preparados para el diagn\u00f3stico m\u00e9dico, incluidas las pruebas de embarazo                            - la fabricaci\u00f3n de sustancias radioactivas para el diagn\u00f3stico en vivo                            - la fabricaci\u00f3n de productos farmac\u00e9uticos biotecnol\u00f3gicos                            Esta clase comprende tambi\u00e9n:                            - la fabricaci\u00f3n de guatas, gasas, vendas, ap\u00f3sitos, etc. medicinales impregnados                            - la preparaci\u00f3n de productos bot\u00e1nicos (trituraci\u00f3n, cribado, molido) para uso farmac\u00e9utico. Esta clase no comprende:                            - la elaboraci\u00f3n de infusiones (menta, verbena, manzanilla, etc.) (v\u00e9ase 10.83)                            - la fabricaci\u00f3n de productos de obturaci\u00f3n dental y de cemento dental (v\u00e9ase 32.50)                            - la fabricaci\u00f3n de cementos para la reconstrucci\u00f3n de huesos (v\u00e9ase 32.50)                            - la fabricaci\u00f3n de s\u00e1banas quir\u00fargicas (v\u00e9ase 32.50)                            - el comercio al por mayor de productos farmac\u00e9uticos (v\u00e9ase 46.46)                            - el comercio al por menor de productos farmac\u00e9uticos (v\u00e9ase 47.73)                            - las actividades de investigaci\u00f3n y desarrollo relativas a los productos farmac\u00e9uticos y los productos farmac\u00e9uticos                            biotecnol\u00f3gicos (v\u00e9ase 72.1)                            - el empaquetado de productos farmac\u00e9uticos (v\u00e9ase 82.92)"
+                },
+                {
+                    "nombre": "Las entidades que fabrican productos sanitarios que se consideran indispensables durante una emergencia de salud p\u00fablica",
+                    "descripcion": "Las entidades que fabrican productos sanitarios que se consideran indispensables durante una emergencia de salud p\u00fablica (incluidos en 'la lista de productos sanitarios esenciales durante la emergencia de salud p\u00fablica') Listas de productos sanitarios esenciales e informaci\u00f3n que debe facilitarse\n                        1.   Inmediatamente despu\u00e9s del reconocimiento de una emergencia de salud p\u00fablica, el GDEPS consultar\u00e1 al grupo de trabajo mencionado en el art\u00edculo 21, apartado 5. Inmediatamente despu\u00e9s de dicha consulta, el GDEPS adoptar\u00e1 una lista de categor\u00edas de productos sanitarios esenciales que considere indispensables durante la emergencia de salud p\u00fablica (en lo sucesivo, 'lista de productos sanitarios esenciales durante la emergencia de salud p\u00fablica').\n                        En la medida de lo posible, la informaci\u00f3n pertinente sobre los productos sanitarios esenciales y los fabricantes correspondientes se obtendr\u00e1 de Eudamed, una vez que est\u00e9 plenamente operativa. La informaci\u00f3n tambi\u00e9n se obtendr\u00e1 de los importadores y los distribuidores, seg\u00fan corresponda. Hasta que Eudamed sea plenamente operativa, la informaci\u00f3n disponible se podr\u00e1 obtener tambi\u00e9n de bases de datos nacionales o de otras fuentes disponibles.El GDEPS actualizar\u00e1 la lista de productos sanitarios esenciales durante la emergencia de salud p\u00fablica siempre que sea necesario hasta que finalice el reconocimiento de la emergencia de salud p\u00fablica.\n                        2. A los efectos del art\u00edculo 25, apartado 2, el GDEPS adoptar\u00e1 y pondr\u00e1 a disposici\u00f3n del p\u00fablico el conjunto de informaci\u00f3n mencionado en el art\u00edculo 25, apartado 2, letras b) y c), que sea necesario para el seguimiento de la oferta y la demanda de los productos sanitarios incluidos en la lista de productos sanitarios esenciales durante la emergencia de salud p\u00fablica e informar\u00e1 de dicho conjunto de informaci\u00f3n al grupo de trabajo mencionado en el art\u00edculo 21, apartado 5.\n                        3. La Agencia publicar\u00e1 en una p\u00e1gina web dedicada a ello de su portal web:\n                        a) la lista de productos sanitarios esenciales durante la emergencia de salud p\u00fablica, as\u00ed como las actualizaciones de dicha lista, y\n                        b) informaci\u00f3n sobre la escasez real de los productos sanitarios esenciales incluidos en la lista de productos sanitarios esenciales durante la emergencia de salud p\u00fablica."
+                },
+                {
+                    "nombre": "Entidades con autorizaci\u00f3n de distribuci\u00f3n",
+                    "descripcion": "Entidades con autorizaci\u00f3n de distribuci\u00f3n: Para obtener la autorizaci\u00f3n de distribuci\u00f3n, el solicitante deber\u00e1 cumplir al menos los requisitos siguientes:\n                            a) disponer de locales, instalaciones y equipos adaptados y                            suficientes, de forma que queden garantizadas la buena                            conservaci\u00f3n y buena distribuci\u00f3n de los medicamentos;\n                            b) disponer de personal y en particular de una persona designada como responsable, cualificada en las condiciones establecidas por la legislaci\u00f3n del Estado miembro de que se trate;\n                            c) comprometerse a cumplir las obligaciones que le correspondan en virtud del art\u00edculo 80."
+                }
+            ]
+        },
+        {
+            "Sector 6": "Agua potable",
+            "descripci\u00f3n": "Agua apta para el consumo humano.",
+            "categorias_entidades": [
+                {
+                    "nombre": "Los suministradores y distribuidores de aguas destinadas al consumo humano",
+                    "descripcion": "Los suministradores y distribuidores de aguas destinadas al consumo humano , excluidos los distribuidores para los cuales la distribuci\u00f3n de aguas destinadas al consumo humano solo es una parte no esencial de su actividad general de distribuci\u00f3n de otros bienes y productos b\u00e1sicos: \u00abagua destinada al consumo humano\u00bb:\n                            a)todas aquellas aguas, ya sea en su estado original, ya sea despu\u00e9s del tratamiento, utilizadas para beber, cocinar, preparar alimentos y otros usos dom\u00e9sticos, en locales tanto p\u00fablicos como privados, sea cual fuere su origen e independientemente de que se suministren a trav\u00e9s de una red de distribuci\u00f3n, de una cisterna o envasadas en botellas u otros recipientes, incluidas las aguas de manantial;\n                            b)todas las aguas utilizadas en empresas alimentarias para fines de fabricaci\u00f3n, tratamiento, conservaci\u00f3n o comercializaci\u00f3n de productos o sustancias destinados al consumo humano;"
+                }
+            ]
+        },
+        {
+            "Sector 7": "Aguas residuales",
+            "descripci\u00f3n": "Aguas procedentes de procesos productivos o del consumo humano.",
+            "categorias_entidades": [
+                {
+                    "nombre": "empresas dedicadas a la recogida, la eliminaci\u00f3n o el tratamiento de aguas ",
+                    "descripcion": "Las empresas dedicadas a la recogida, la eliminaci\u00f3n o el tratamiento de aguas residuales urbanas, aguas residuales dom\u00e9sticas o aguas residuales industriales excluidas las empresas para las cuales la recogida, la eliminaci\u00f3n o el tratamiento de aguas residuales urbanas, aguas residuales dom\u00e9sticas o aguas residuales industriales es una parte no esencial de su actividad general.   \u00abAguas residuales urbanas\u00bb: las aguas residuales dom\u00e9sticas o la mezcla de las mismas con aguas residuales industriales y/o aguas de corrent\u00eda pluvial; \u00abAguas residuales dom\u00e9sticas\u00bb: las aguas residuales procedentes de zonas de vivienda y de servicios y generadas principalmente por el metabolismo humano y las actividades dom\u00e9sticas;  \u00abAguas residuales industriales\u00bb: todas las aguas residuales vertidas desde locales utilizados para efectuar cualquier actividad comercial o industrial, que no sean aguas residuales dom\u00e9sticas ni aguas de corrent\u00eda pluvial;"
+                }
+            ]
+        },
+        {
+            "Sector 8": "Comunicaci\u00f3n",
+            "descripci\u00f3n": "implica una compleja red de servicios y tecnolog\u00edas que soportan y facilitan el intercambio de informaci\u00f3n digital a trav\u00e9s de diversas plataformas y m\u00e9todos.",
+            "categorias_entidades": [
+                {
+                    "nombre": "Proveedores de punto de intercambio de internet",
+                    "descripcion": "Los proveedores de punto de intercambio de internet. \u00abpunto de intercambio de internet\u00bb: una instalaci\u00f3n de la red que permite interconectar m\u00e1s de dos redes independientes (sistemas aut\u00f3nomos), principalmente para facilitar el intercambio de tr\u00e1fico de internet, que solo permite interconectar sistemas aut\u00f3nomos y que no requiere que el tr\u00e1fico de internet que pasa entre cualquier par de sistemas aut\u00f3nomos participantes pase por un tercer sistema aut\u00f3nomo, ni modifica ni interfiere de otra forma en dicho tr\u00e1fico;"
+                },
+                {
+                    "nombre": "Proveedor de servicios de DNS",
+                    "descripcion": "\u00abproveedor de servicios de DNS\u00bb: una entidad que presta:\n                            a) servicios a disposici\u00f3n p\u00fablica de resoluci\u00f3n recursiva de nombres de dominio para usuarios finales de internet, o\n                            b) servicios de resoluci\u00f3n autoritativa de nombres de dominio para uso por terceros, con excepci\u00f3n de los servidores ra\u00edz;"
+                },
+                {
+                    "nombre": "Registro de nombres de dominio de primer nivel",
+                    "descripcion": "\u00abregistro de nombres de dominio de primer nivel\u00bb: una entidad en la que se ha delegado un dominio de primer nivel espec\u00edfico y que es responsable de administrar dicho dominio, incluido el registro de nombres de dominio en el dominio de primer nivel y el funcionamiento t\u00e9cnico del dominio de primer nivel, en particular la explotaci\u00f3n de sus servidores de nombre, el mantenimiento de sus bases de datos y la distribuci\u00f3n de los archivos de zona del dominio de primer nivel entre los servidores de nombre, independientemente de que cualquiera de esas operaciones sea realizada por la entidad o se haya externalizado, pero excluyendo las situaciones en las que los nombres de dominio de primer nivel sean utilizados por un registro \u00fanicamente para su propio uso;"
+                },
+                {
+                    "nombre": "Los proveedores de servicio de computaci\u00f3n en nube",
+                    "descripcion": "Los proveedores de servicio de computaci\u00f3n en nube: \u00abservicio de computaci\u00f3n en nube\u00bb: un servicio digital que hace posible la administraci\u00f3n bajo demanda y el acceso remoto amplio a un conjunto modulable y el\u00e1stico de recursos inform\u00e1ticos que se pueden compartir, tambi\u00e9n cuando dichos recursos est\u00e1n distribuidos entre varias ubicaciones;"
+                },
+                {
+                    "nombre": "Proveedores de servicio de centro de datos",
+                    "descripcion": "proveedores de servicio de centro de datos: \u00abservicio de centro de datos\u00bb: un servicio que engloba las estructuras, o agrupaciones de estructuras, dedicadas al alojamiento, la interconexi\u00f3n y la explotaci\u00f3n centralizados de las tecnolog\u00edas de la informaci\u00f3n y los equipos de red que proporcionan servicios de almacenamiento, tratamiento y transporte de datos, junto con todas las instalaciones e infraestructuras necesarias para la distribuci\u00f3n de la energ\u00eda y el control ambiental;"
+                },
+                {
+                    "nombre": "Los proveedores de redes de distribuci\u00f3n de contenidos",
+                    "descripcion": "Los proveedores de redes de distribuci\u00f3n de contenidos: \u00abred de distribuci\u00f3n de contenidos\u00bb: una red de servidores distribuidos geogr\u00e1ficamente a efectos de garantizar una elevada disponibilidad, accesibilidad o distribuci\u00f3n r\u00e1pida de contenidos y servicios digitales a los usuarios de internet en nombre de los proveedores de contenidos y servicios;"
+                },
+                {
+                    "nombre": "Prestador de servicios de confianza",
+                    "descripcion": "\u00abprestador de servicios de confianza\u00bb, una persona f\u00edsica o jur\u00eddica que presta uno o m\u00e1s servicios de confianza, bien como prestador cualificado o como prestador no cualificado de servicios de confianzas;"
+                },
+                {
+                    "nombre": "Los proveedores de redes p\u00fablicas de comunicaciones electr\u00f3nicas:",
+                    "descripcion": "Los proveedores de redes p\u00fablicas de comunicaciones electr\u00f3nicas: \u00abred p\u00fablica de comunicaciones electr\u00f3nicas\u00bb: una red de comunicaciones electr\u00f3nicas que se utiliza, en su totalidad o principalmente, para la prestaci\u00f3n de servicios de comunicaciones electr\u00f3nicas disponibles para el p\u00fablico y que soporta la transferencia de informaci\u00f3n entre puntos de terminaci\u00f3n de la red;"
+                },
+                {
+                    "nombre": "Los proveedores de servicios de comunicaciones electr\u00f3nicas",
+                    "descripcion": "Los proveedores de servicios de comunicaciones electr\u00f3nicas: \u00abservicio de comunicaciones electr\u00f3nicas\u00bb: el prestado por lo general a cambio de una remuneraci\u00f3n a trav\u00e9s de redes de comunicaciones electr\u00f3nicas, que incluye, con la excepci\u00f3n de los servicios que suministren contenidos transmitidos mediante redes y servicios de comunicaciones electr\u00f3nicas o ejerzan control editorial sobre ellos, los siguientes tipos de servicios:\n                            a) el \u00abservicio de acceso a internet\u00bb, entendido seg\u00fan la definici\u00f3n del punto 2) del p\u00e1rrafo segundo del art\u00edculo 2 del                            Reglamento (UE) 2015/2120;\n                            b) el \u00abservicio de comunicaciones interpersonales\u00bb, y\n                            c) servicios consistentes, en su totalidad o principalmente, en el transporte de se\u00f1ales, como son los servicios de                            transmisi\u00f3n utilizados para la prestaci\u00f3n de servicios m\u00e1quina a m\u00e1quina y para la radiodifusi\u00f3n;"
+                }
+            ]
+        },
+        {
+            "Sector 11": "Producci\u00f3n, transformaci\u00f3n y distribuci\u00f3n de alimentos",
+            "descripci\u00f3n": "La distribuci\u00f3n de alimentos es el proceso en el que se suministra alimentos a una poblaci\u00f3n en general",
+            "categorias_entidades": [
+                {
+                    "nombre": "Empresas alimentarias",
+                    "descripcion": "Las empresas alimentarias que se dedican exclusivamente a la log\u00edstica y a la distribuci\u00f3n al por mayor y a la producci\u00f3n y transformaci\u00f3n industrial a gran escala; Empresa alimentaria= toda empresa p\u00fablica o privada que, con o sin \u00e1nimo de lucro, lleve a cabo cualquier actividad relacionada con cualquiera de las etapas de la producci\u00f3n, la transformaci\u00f3n y la distribuci\u00f3n de alimentos."
+                }
+            ]
+        }
+    ]
+}

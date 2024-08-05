@@ -1,4 +1,6 @@
 from __future__ import annotations
+
+from datetime import datetime
 from typing import Callable
 
 from bs4 import BeautifulSoup as soup
@@ -24,9 +26,12 @@ class Event:
         self.start_time = start_time
         self.end_time = end_time
 
-    def get_related_news(self, query_generator: Callable[[Event], str]) -> list[Article]:
+    def get_related_news(self,
+                         query_generator: Callable[[Event], str],
+                         do_date_filter: bool = True) -> list[Article]:
         """
         Fetches news related to the event. The amount of news fetched is a class attribute
+        :param do_date_filter: filter news by date or ignore date
         :param query_generator: Its return type must be an ascii string with no whitespaces
             (use '+' instead, eg: 'this+is+an+example')
         """
@@ -51,13 +56,26 @@ class Event:
 
             # Iterar sobre las primeras noticias
             for item in items[:self.MAX_NEWS_PER_EVENT]:
-                articles.append(Article(item.title.text, item.link.text, item.pubDate.text))
+                articles.append(Article(
+                    title_arg=item.title.text,
+                    link_arg=item.link.text,
+                    date_arg=np.datetime64(datetime.strptime(item.pubDate.text, "%a, %d %b %Y %H:%M:%S %Z")))
+                )
+
+            if do_date_filter:
+                articles = self.filter_articles_by_date(articles)
 
             return articles
         except Exception as e:
             # TODO ADD MORE DEBUG INFO HERE
             print("Error al obtener noticias:")
             raise e
+
+    def filter_articles_by_date(self, articles: list[Article]) -> list[Article]:
+        def filter_key(article: Article) -> bool:
+            return self.start_time <= article.date <= self.end_time
+        filtered_news = list(filter(filter_key, articles))
+        return filtered_news
 
     @classmethod
     def from_csv(cls) -> list[Event]:
@@ -99,7 +117,6 @@ class Event:
     def __repr__(self):
         return f"<__main__.Event object: {self.theme}, {self.location}, {self.start_time}>"
 
-
     @classmethod
     def extract_info_to_csv(cls, events: Event | [Event]) -> None:
         """The input path is defined as a class attribute"""
@@ -121,11 +138,15 @@ class Event:
 
 if __name__ == '__main__':
     Event.INPUT_PATH = "og_proyect_files/Eventos.json"
-    Event.MAX_NEWS_PER_EVENT = 4
+    Event.MAX_NEWS_PER_EVENT = 6
     event_list = Event.from_json()
+
 
     def generate_query(self: Event) -> str:
         return self.theme.replace(' ', '+')
 
-    bernard_borrasca_articles = event_list[0].get_related_news(generate_query)
-    print(bernard_borrasca_articles)
+    test_event = event_list[0]
+    news_articles = test_event.get_related_news(generate_query, do_date_filter=True)
+    # articles = test_event.filter_articles_by_date(articles)
+    print(news_articles)
+    print(news_articles[0].contents)
