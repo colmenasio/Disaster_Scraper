@@ -16,7 +16,7 @@ class DisasterLinker:
     INPUT_PATH = "../input-output/merged_expedients_1.csv"
     OUTPUT_PATH = "../input-output/merged_expedients_2.csv"
     ADJACENCY_TABLE_PATH = "../data/provinces_adjacency/adjacency_table.csv"
-    CONFIG_PATH = "../config/disaster_merger_2/config.json"
+    CONFIG_PATH = "../config/disaster_merger_3/config.json"
 
     expedients = pd.read_csv(INPUT_PATH)
     expedients['date'] = pd.to_datetime(expedients['date'], errors='raise')
