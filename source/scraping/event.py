@@ -40,7 +40,7 @@ class Event:
             # Convertir el tema en un formato adecuado para la URL
             # formatted_theme = self.theme.replace(' ', '+')
             url_google_news = \
-                f'https://news.google.com/rss/search?q={query_generator(self)}&hl=es-419&gl=US&ceid=US:es-419'
+                f'https://news.google.com/rss/search?q={query_generator(self)}&hl=es&gl=US&ceid=US:es-419'
 
             # Conexión
             cliente = urlopen(url_google_news)
@@ -58,7 +58,8 @@ class Event:
             for item in items[:self.MAX_NEWS_PER_EVENT]:
                 articles.append(Article(
                     title_arg=item.title.text,
-                    link_arg=item.link.text,
+                    source_url_arg=item.source.get("url"),
+                    source_name_arg=item.source.text,
                     date_arg=np.datetime64(datetime.strptime(item.pubDate.text, "%a, %d %b %Y %H:%M:%S %Z")))
                 )
 
@@ -149,4 +150,4 @@ if __name__ == '__main__':
     news_articles = test_event.get_related_news(generate_query, do_date_filter=True)
     # articles = test_event.filter_articles_by_date(articles)
     print(news_articles)
-    print(news_articles[0].contents)
+    # print(news_articles[0].contents)
