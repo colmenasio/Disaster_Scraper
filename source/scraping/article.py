@@ -1,8 +1,17 @@
+import requests
 from numpy import datetime64
-from selenium import webdriver
+from googlesearch import search as g_search
 from bs4 import BeautifulSoup
 import openai
 import json
+
+
+class InformationFetchingError(IOError):
+    def __init__(self, inner_exception: Exception | None = None, message: str = ""):
+        # Call the base class constructor with the parameters it needs
+        self.message = message
+        super().__init__(message)
+        self.inner_exception = inner_exception
 
 
 class Article:
@@ -24,41 +33,48 @@ class Article:
     with open(QUESTIONS_PATH, "r", encoding="utf-8") as fstream:
         QUESTIONS = json.load(fstream)
 
-    def __init__(self, title_arg: str, link_arg: str, date_arg: datetime64):
-        self.state = 1
+    def __init__(self, title_arg: str, source_url_arg: str, source_name_arg: str, date_arg: datetime64):
         self.title = title_arg
-        self.link = link_arg
+        self.source_url = source_url_arg
+        self.source_name = source_name_arg
         self.date = date_arg
-        self.contents = self.obtain_contents_from_link()
-        self.sectores = self.obtain_sectors_affected()
-        self.answers = self.obtain_answers_to_questions()
+        self.sucessfully_built = True
+        try:
+            self.link = self.obtain_link_by_google()
+            self.contents = self.obtain_contents_from_link()
+            self.sectores = self.obtain_sectors_affected()
+            # self.answers = self.obtain_answers_to_questions()
+        except InformationFetchingError as e:
+            self.sucessfully_built = False
+            print(f"Error building {self.title}; Message: {e.message}; Exception ocurred: {e.inner_exception}")
 
-    def obtain_contents_from_link(self) -> str | None:
+    def obtain_link_by_google(self) -> str:
+        # TODO Refine this
+        query = f'"{self.title}, {self.source_name}"'
+        enlaces = list(g_search(query, num_results=1))
+        if len(enlaces) == 0:
+            raise InformationFetchingError(message="Article could not be found by a google search of its title")
+        return enlaces[0]
+
+    def obtain_contents_from_link(self) -> str:
         # TODO Implement performance upgrades
         try:
-            sel_options = webdriver.ChromeOptions()
-            sel_options.add_argument("--headless")
-            sel_driver = webdriver.Chrome(options=sel_options)
-            sel_driver.get(self.link)
-            sel_driver.implicitly_wait(4)
-            response_content = sel_driver.page_source
-            sel_driver.close()
-            page = BeautifulSoup(response_content, 'html.parser')
-            raise NotImplementedError("obtain_contents_from_link isnt fully implemented yet")
+            response = requests.get(self.link)
+            page = BeautifulSoup(response.content, 'html.parser')
+        except requests.exceptions.RequestException as e:
+            raise InformationFetchingError(inner_exception=e,
+                                           message=f"Could not get a response from the url: {self.link}")
 
-            # Extraer título y párrafos como ejemplo de contenido
-            parrafos = page.find_all('p')
-            if len(parrafos) == 0:
-                return None
-            # TODO extracting all the paragraphs MAY be just a little unprecise, fetching paragraphs that dont
-            #  necesarilly belong on the new and could affect the OpenAI performace
-            contenido = ' '.join([p.text for p in parrafos])
-            return contenido
-        except Exception as e:
-            # TODO add better debug info
-            return None
+        # Extraer título y párrafos como ejemplo de contenido
+        # TODO extracting all the paragraphs MAY be just a little unprecise, fetching paragraphs that dont
+        #  necesarilly belong on the new and could affect the OpenAI performace
+        parrafos = page.find_all('p')
+        if len(parrafos) == 0:
+            raise InformationFetchingError(message="No <p> tags were found in the article")
+        contenido = ' '.join([p.text for p in parrafos])
+        return contenido
 
-    def obtain_sectors_affected(self) -> str | None:
+    def obtain_sectors_affected(self) -> str:
         # TODO THIS IS ABSOLUTELY PAINFUL TO LOOK AT. IMPROVING THIS IS A PRIORITY
         prompt = f"""
             Lee el archivo noticias.
@@ -139,5 +155,8 @@ class Article:
         )
         return response.choices[0].message["content"]
 
+    def format_title_body(self) -> str:
+        return f"Title: {self.title}\n\nContent:{self.contents}"
+
     def __repr__(self):
-        return f"<__main__.Article object: {self.title}, {self.link}, {self.date}>"
+        return f"<__main__.Article object: {self.title}, {self.source_url}, {self.date}>"
