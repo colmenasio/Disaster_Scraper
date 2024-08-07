@@ -1,15 +1,14 @@
 {
     "sectores": [
         {
-            "Sector 1": "Energ\u00eda",
-            "descripci\u00f3n": "La energ\u00eda es la capacidad que tienen los objetos o sustancias para realizar trabajo o producir cambios en el entorno",
+            "Sector 1": "Energia",
             "subsectores": [
                 {
                     "Subsector 1": "Electricidad",
                     "categorias_entidades": [
                         {
-                            "nombre": "Empresa el\u00e9ctrica y suministro",
-                            "descripcion": "\u00abempresa el\u00e9ctrica\u00bb: cualquier persona f\u00edsica o jur\u00eddica que realice al menos una de las funciones siguientes: generaci\u00f3n, transporte, distribuci\u00f3n, agregaci\u00f3n, respuesta de demanda, almacenamiento de energ\u00eda, suministro o compra de electricidad, y que lleve a cabo las tareas comerciales, t\u00e9cnicas o de mantenimiento relacionadas con estas funciones, pero sin incluir a los clientes finales;                          \u00absuministro\u00bb: la venta y la reventa de electricidad a clientes;"
+                            "nombre": "Empresa electrica y suministro",
+                            "descripcion": "Empresa electrica: cualquier persona fisica o juridica que realice al menos una de las funciones siguientes: generacion, transporte, distribucion, agregacion, respuesta de demanda, almacenamiento de energia, suministro o compra de electricidad, y que lleve a cabo las tareas comerciales, tecnicas o de mantenimiento relacionadas con estas funciones, pero sin incluir a los clientes finales; suministro: la venta y la reventa de electricidad a clientes;"
                         },
                         {
                             "nombre": "Gestor de la red de distribuci\u00f3n",
