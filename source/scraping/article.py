@@ -117,12 +117,15 @@ class Article:
                       "- Se lo mas breve y conciso posible. Evita redundancias como repetir la pregunta\n"
                       "- En caso de que el articulo no contenga la informacion "
                       "necesaria para responder con cierto grado de confianza, responde solamente `null`, sin comillas")
-        prompt = (f"Noticia:\n"
-                  f"`{self.title}\n{self.contents}`\n"
-                  f"Pregunta: {question}")
+        content_prompt = (f"Noticia:\n"
+                          f"`{self.title}\n{self.contents}`\n"
+                          f"Pregunta: {question}")
 
         try:
-            response = self.get_completion(prompt)
+            response = self.get_completion(
+                system_prompt=sys_prompt,
+                content_prompt=content_prompt
+            )
         except openai.APIError as e:
             raise InformationFetchingError(inner_exception=e, message="Error ocurred when calling OpenAI completion")
 
