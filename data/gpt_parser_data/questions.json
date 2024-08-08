@@ -1,25 +1,46 @@
 {
-    "Energia": [
-        "\u00bfHa habido cortes?         \u00bfN\u00famero de personas sin servicio?         Gravedad:(Cortes intermitentes = leve, cortes de varias horas = grave, cortes de varios d\u00edas = muy grave)"
-    ],
-    "Transporte": [
-        "\u00bfQu\u00e9 tipo de transporte identificas?(A\u00e9reo, Ferrocarril, Carretera, Metro, Mar\u00edtimo",
-        "tests cosas",
-        "mas tests"
-    ],
-    "Sanidad": [
-        "\u00bfHay hospitales o centros de salud afectados?         \u00bfN\u00famero de pacientes afectados?         \u00bfFalta de personal o recursos m\u00e9dicos?         \u00bfse ha quedado sin luz alg\u00fan hospital?         \u00bfSe ha inundado alg\u00fan hospital?"
-    ],
-    "Agua potable": [
-        "\u00bfSe ha interrumpido el suministro de agua?         \u00bfCu\u00e1ntas personas est\u00e1n afectadas?         \u00bfQu\u00e9 \u00e1reas est\u00e1n afectadas?         \u00bfHay problemas de contaminaci\u00f3n del agua?         Gravedad: (Interrupciones breves=leve, interrupciones de varias horas=grave, interrupciones de varios d\u00edas=muy grave)"
-    ],
-    "Aguas residuales": [
-        "\u00bfSe ha interrumpido la recogida o tratamiento de aguas residuales?         \u00bfHay \u00e1reas afectadas por la falta de tratamiento de aguas residuales?         \u00bfSe ha reportado contaminaci\u00f3n en cuerpos de agua?         Gravedad: (Interrupciones breves=leve, interrupciones de varias horas=grave, interrupciones de varios d\u00edas=muy grave)"
-    ],
-    "Comunicaci\u00f3n": [
-        "\u00bfComo de severa ha sido la interrupcion en las comunicaciones?"
-    ],
-    "Producci\u00f3n, transformaci\u00f3n y distribuci\u00f3n de alimentos": [
-        "\u00bfHay interrupciones en la cadena de suministro de alimentos?         \u00bfQu\u00e9 empresas alimentarias est\u00e1n afectadas?         \u00bfHay escasez de alimentos en \u00e1reas afectadas?         \u00bfSe han visto afectadas las plantas de producci\u00f3n o transformaci\u00f3n?         Gravedad: (Interrupciones breves=leve, interrupciones de varias horas=grave, interrupciones de varios d\u00edas=muy grave)"
+  "Energia": {
+    "description": "¿Ha habido algun corte electrico a causa del desastre?",
+    "questions": [
+      "\u00bfHa habido cortes?         \u00bfN\u00famero de personas sin servicio?         Gravedad:(Cortes intermitentes = leve, cortes de varias horas = grave, cortes de varios d\u00edas = muy grave)"
     ]
+  },
+  "Transporte": {
+    "description": "¿Ha habido algun corte de transporte a causa del desastre?",
+    "questions": [
+      "\u00bfQu\u00e9 tipo de transporte identificas?(A\u00e9reo, Ferrocarril, Carretera, Metro, Mar\u00edtimo",
+      "tests cosas",
+      "mas tests"
+    ]
+  },
+  "Sanidad": {
+    "description": "¿Ha habido algun corte sanitario a causa del desastre?",
+    "questions": [
+      "\u00bfHay hospitales o centros de salud afectados?         \u00bfN\u00famero de pacientes afectados?         \u00bfFalta de personal o recursos m\u00e9dicos?         \u00bfse ha quedado sin luz alg\u00fan hospital?         \u00bfSe ha inundado alg\u00fan hospital?"
+    ]
+  },
+  "Agua potable": {
+    "description": "¿Ha habido algun corte en el suministro de agua potable a causa del desastre?",
+    "questions": [
+      "\u00bfSe ha interrumpido el suministro de agua?         \u00bfCu\u00e1ntas personas est\u00e1n afectadas?         \u00bfQu\u00e9 \u00e1reas est\u00e1n afectadas?         \u00bfHay problemas de contaminaci\u00f3n del agua?         Gravedad: (Interrupciones breves=leve, interrupciones de varias horas=grave, interrupciones de varios d\u00edas=muy grave)"
+    ]
+  },
+  "Aguas residuales": {
+    "description": "¿Ha habido algun corte en el tratamiento de aguas residuales a causa del desastre?",
+    "questions": [
+      "\u00bfSe ha interrumpido la recogida o tratamiento de aguas residuales?         \u00bfHay \u00e1reas afectadas por la falta de tratamiento de aguas residuales?         \u00bfSe ha reportado contaminaci\u00f3n en cuerpos de agua?         Gravedad: (Interrupciones breves=leve, interrupciones de varias horas=grave, interrupciones de varios d\u00edas=muy grave)"
+    ]
+  },
+  "Comunicaci\u00f3n": {
+    "description": "¿Ha habido algun corte en telecomunicaciones a causa del desastre?",
+    "questions": [
+      "\u00bfComo de severa ha sido la interrupcion en las comunicaciones?"
+    ]
+  },
+  "Producci\u00f3n, transformaci\u00f3n y distribuci\u00f3n de alimentos": {
+    "description": "¿Ha habido algun corte en la produccion o distribucion de alimentos a causa del desastre?",
+    "questions": [
+      "\u00bfHay interrupciones en la cadena de suministro de alimentos?         \u00bfQu\u00e9 empresas alimentarias est\u00e1n afectadas?         \u00bfHay escasez de alimentos en \u00e1reas afectadas?         \u00bfSe han visto afectadas las plantas de producci\u00f3n o transformaci\u00f3n?         Gravedad: (Interrupciones breves=leve, interrupciones de varias horas=grave, interrupciones de varios d\u00edas=muy grave)"
+    ]
+  }
 }
