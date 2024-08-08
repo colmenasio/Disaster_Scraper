@@ -21,7 +21,8 @@ class Article:
 
     try:
         with open(OPEN_AI_KEY_PATH, "r", encoding="utf-8") as fstream:
-            openai.api_key = json.load(fstream)["OPENAI_API_KEY"]
+            openai_api_key = json.load(fstream)["OPENAI_API_KEY"]
+            openai_client = openai.OpenAI(api_key=openai_api_key)
     except FileNotFoundError as e:
         raise FileNotFoundError(f"{OPEN_AI_KEY_PATH} not found")
     except KeyError as e:
@@ -103,12 +104,14 @@ class Article:
             raise InformationFetchingError(inner_exception=e, message="Error ocurred when calling OpenAI completion")
 
         # Limpiar el contenido del response si es necesario
-        if response.lower() == "si":
+        if response.lower().strip(".") == "si":
             return True
-        elif response.lower() == "no":
+        elif response.lower().strip(".") == "no":
             return False
         else:
-            raise InformationFetchingError(message="Error ocurred when parsing OpenAI response")
+            raise InformationFetchingError(
+                message="Error ocurred when parsing OpenAI response (in `article.ask_bool_question`)"
+            )
 
     def obtain_answers_to_questions(self) -> dict:
         questionnaire = Questionnaire(self.sectores)
@@ -152,6 +155,18 @@ class Article:
 
     @classmethod
     def get_completion(cls, content_prompt: str, system_prompt: str = "", model="gpt-4o"):
+        messages = []
+        if system_prompt != "":
+            messages.append({"role": "system", "content": system_prompt})
+        messages.append({"role": "user", "content": content_prompt})
+        response = cls.openai_client.chat.completions.create(
+            model="gpt-3.5-turbo",
+            messages=messages
+        )
+        return response.choices[0].message.content
+
+    @classmethod
+    def get_completion_obsolete(cls, content_prompt: str, system_prompt: str = "", model="gpt-4o"):
         messages = []
         if system_prompt != "":
             messages.append({"role": "system", "content": system_prompt})

@@ -142,7 +142,6 @@ if __name__ == '__main__':
     Event.MAX_NEWS_PER_EVENT = 6
     event_list = Event.from_json()
 
-
     def generate_query(self: Event) -> str:
         return self.theme.replace(' ', '+')
 
