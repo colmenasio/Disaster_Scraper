@@ -38,7 +38,7 @@ class Event:
         # TODO modify to integrate the filtering in the fetching process
         try:
             # Convertir el tema en un formato adecuado para la URL
-            # formatted_theme = cls.theme.replace(' ', '+')
+            # formatted_theme = self.theme.replace(' ', '+')
             url_google_news = \
                 f'https://news.google.com/rss/search?q={query_generator(self)}&hl=es&gl=US&ceid=US:es-419'
 
