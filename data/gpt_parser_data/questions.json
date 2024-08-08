@@ -1,33 +1,11 @@
 {
-    "Energ\u00eda": [
+    "Energia": [
         "\u00bfHa habido cortes?         \u00bfN\u00famero de personas sin servicio?         Gravedad:(Cortes intermitentes = leve, cortes de varias horas = grave, cortes de varios d\u00edas = muy grave)"
     ],
     "Transporte": [
         "\u00bfQu\u00e9 tipo de transporte identificas?(A\u00e9reo, Ferrocarril, Carretera, Metro, Mar\u00edtimo",
-        {
-            "Tipo de transporte": [
-                {
-                    "nombre": "Transporte a\u00e9reo",
-                    "Preguntas": "\u00bfN\u00famero de vuelos cancelados?             \u00bfN\u00famero de vuelos atrasados?             \u00bfN\u00famero de vuelos desviados?"
-                },
-                {
-                    "nombre": "Transporte Ferrocarril",
-                    "Preguntas": "\u00bfHa habido cortes de v\u00edas?              Gravedad indica cuantos cortes ha habido de cada nivel:(Cortes breves = leve, cortes de varias horas = grave, cortes de varios d\u00edas = muy grave)              \u00bfCuantas l\u00edneas han sido afectadas?              \u00bfCuantos pasajeros han sido afectados?"
-                },
-                {
-                    "nombre": "Transporte Carretera",
-                    "Preguntas": "\u00bfHa habido cortes de v\u00edas?              Gravedad, indica cuantos cortes ha habido de cada nivel:(Cortes breves = leve, cortes de varias horas = grave, cortes de varios d\u00edas = muy grave)              \u00bfCuantas l\u00edneas han sido afectadas?              \u00bfCuantos pasajeros han sido afectados?"
-                },
-                {
-                    "nombre": "Transporte Metro",
-                    "Preguntas": "\u00bfHa habido cortes de v\u00edas?              Gravedad indica cuantos cortes ha habido de cada nivel:(Cortes breves = leve, cortes de varias horas = grave, cortes de varios d\u00edas = muy grave)              \u00bfCuantas l\u00edneas han sido afectadas?              \u00bfCuantos pasajeros han sido afectados?"
-                },
-                {
-                    "nombre": "Transporte Mar\u00edtimo",
-                    "Preguntas": "\u00bfHan sido afectados los puertos? Si es as\u00ed indicalo."
-                }
-            ]
-        }
+        "tests cosas",
+        "mas tests"
     ],
     "Sanidad": [
         "\u00bfHay hospitales o centros de salud afectados?         \u00bfN\u00famero de pacientes afectados?         \u00bfFalta de personal o recursos m\u00e9dicos?         \u00bfse ha quedado sin luz alg\u00fan hospital?         \u00bfSe ha inundado alg\u00fan hospital?"

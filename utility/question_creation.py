@@ -3,9 +3,9 @@ import json
 # Crear el diccionario con los sectores y preguntas
 preguntas_por_sector = {
     "Energia": [
-        "?Ha habido cortes?\
-         ?Numero de personas sin servicio?\
-         Gravedad:(Cortes intermitentes = leve, cortes de varias horas = grave, cortes de varios dias = muy grave)"
+        "?Ha habido cortes?",
+        "?Numero de personas sin servicio?",
+        "Gravedad:(Cortes intermitentes = leve, cortes de varias horas = grave, cortes de varios dias = muy grave)"
     ],
     "Transporte": [
         "?Que tipo de transporte identificas?(Aereo, Ferrocarril, Carretera, Metro, Maritimo",
@@ -75,3 +75,5 @@ preguntas_por_sector = {
 # Guardar el diccionario como JSON en un archivo
 with open("../data/gpt_parser_data/preguntas_por_sector.json", "w") as archivo_json:
     json.dump(preguntas_por_sector, archivo_json, indent=4)
+
+# TODO redo the questions so that the format is a dictionary of lists

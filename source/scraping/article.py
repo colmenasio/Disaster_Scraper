@@ -4,6 +4,7 @@ from googlesearch import search as g_search
 from bs4 import BeautifulSoup
 import openai
 import json
+from questionnaire import Questionnaire
 
 
 class InformationFetchingError(IOError):
@@ -17,7 +18,6 @@ class InformationFetchingError(IOError):
 class Article:
     OPEN_AI_KEY_PATH = "../../config/credentials/OPENAI_API_KEY.json"
     DEFINITIONS_PATH = "../../data/gpt_parser_data/definiciones.json"
-    QUESTIONS_PATH = "../../data/gpt_parser_data/questions.json"
 
     try:
         with open(OPEN_AI_KEY_PATH, "r", encoding="utf-8") as fstream:
@@ -30,9 +30,6 @@ class Article:
     with open(DEFINITIONS_PATH, "r", encoding="utf-8") as fstream:
         DEFINITIONS = json.load(fstream)
 
-    with open(QUESTIONS_PATH, "r", encoding="utf-8") as fstream:
-        QUESTIONS = json.load(fstream)
-
     def __init__(self, title_arg: str, source_url_arg: str, source_name_arg: str, date_arg: datetime64):
         self.title = title_arg
         self.source_url = source_url_arg
@@ -43,7 +40,7 @@ class Article:
             self.link = self.obtain_link_by_google()
             self.contents = self.obtain_contents_from_link()
             self.sectores = self.obtain_sectors_affected()
-            # self.answers = self.obtain_answers_to_questions()
+            self.answers = self.obtain_answers_to_questions()
         except InformationFetchingError as e:
             self.sucessfully_built = False
             print(f"Error building {self.title}; Message: {e.message}; Exception ocurred: {e.inner_exception}")
@@ -74,10 +71,10 @@ class Article:
         contenido = ' '.join([p.text for p in parrafos])
         return contenido
 
-    def obtain_sectors_affected(self) -> str:
+    def obtain_sectors_affected(self) -> list[str]:
         # TODO THIS IS ABSOLUTELY PAINFUL TO LOOK AT. IMPROVING THIS IS A PRIORITY
         prompt = f"""
-            Lee el archivo noticias.
+            Lee la noticia provista.
             Lee el archivo "definiciones" para identificar los sectores y sus descripciones.
             En las noticias, detecta menciones relacionadas con los sectores sin buscar definiciones específicas.
 
@@ -85,7 +82,7 @@ class Article:
             Marca un 0 o 1 para cada sector según si se menciona o no algo relacionado en la noticia.
             Nombra los sectores
             Formatea la respuesta con un objeto JSON
-            noticias: ```{self.title}; {self.contents}´´´
+            noticia: ```{self.title}; {self.contents}´´´
             definiciones: ```{self.DEFINITIONS}´´´
         """
         sectores_afectados = self.get_completion(prompt)
@@ -93,47 +90,48 @@ class Article:
         prompt = f"""
             Devuelve una lista con los sectores que tienen un uno después del nombre del sector, en el archivo sectores afectados.
             Solo indica los nombres.
-            Formatea la respuesta con un objeto JSON
+            Formatea tu respuesta con coma espacidada (`, `) entre cada nombre
             sectores afectados: ```{sectores_afectados}´´´ 
             """
-        response = self.get_completion(prompt)
+        response = self.get_completion(prompt).split(", ")
         return response
 
-    def obtain_answers_to_questions(self) -> dict | None:
-        # TODO THIS IS ABSOLUTELY PAINFUL TO LOOK AT. IMPROVING THIS IS A PRIORITY
-        prompt = f"""
-        Identifica los sectores afectados desde el archivo Sectores afectados. 
-        Responde a las preguntas correspondientes de cada sector, formuladas en el archivo preguntas.
-        Las respuestas deben ser específicas y claras, sin proporcionar un contexto general. Responde directamente a cada pregunta sin divagar.
-        Asegúrate de que cada sector responda solo a las preguntas designadas para él.
-        En el caso de transporte, identifica el tipo de transporte, y responde a las preguntas de dicho tipo.
-        Las respuestas deben de ser breves. Como por ejemplo: si, no, grave... 
-        La información necesaria para responder a las preguntas se encuentran en el archivo noticia.
-        En el archivo noticia encontramos 10 diferentes noticias.
-        Realiza lo anterior con todas las noticias.
+    def obtain_answers_to_questions(self) -> dict:
+        questionnaire = Questionnaire(self.sectores)
+        answers = {}
+        for q in questionnaire:
+            a = self.answer_single_question(q.question)
+            if a is None:
+                continue
+            else:
+                answers[q.id] = a
+        return answers
 
+    def answer_single_question(self, question: str) -> str | None:
+        # TODO ADD SAFER TYPE CASTING AND ADD NUMBER OF RETRIES
+        sys_prompt = ("Eres una herramienta de extraccion de datos.\n"
+                      "A continuacion, se te provera un fragmento de un articulo de un noticiario. "
+                      "Immediatamente despues, se te proporcionara una pregunta que deberás "
+                      "responder en base a la informacion presente en la noticia.\n"
+                      "A la hora de responder, sigue las siguientes pautas:\n"
+                      "- Se lo mas breve y conciso posible. Evita redundancias como repetir la pregunta\n"
+                      "- En caso de que el articulo no contenga la informacion "
+                      "necesaria para responder con cierto grado de confianza, responde solamente `null`, sin comillas")
+        prompt = (f"Noticia:\n"
+                  f"`{self.title}\n{self.contents}`\n"
+                  f"Pregunta: {question}")
 
-        Formatea la respuesta con un objeto JSON en texto plano y sin cabecera json.
-        El JSON debe contener Sector, Subsector, Preguntas y Respuestas.
-        En Respuestas, NO vuelvas a escribir la pregunta, solo indica la respuesta.
-        En el caso de que NO haya Subsector, no pongas null/none, simplemente indica:'' .
-        Los subsectores se detectan en el archivo preguntas. Si hay varias descripciones dentro de uno de los sectores principales. 
-
-        sectores afectados: ```{self.sectores}´´´
-        preguntas: ```{self.QUESTIONS}´´´
-        noticia: ```{self.title}; {self.contents}´´´
-        """
-        response = self.get_completion(prompt)
+        try:
+            response = self.get_completion(prompt)
+        except openai.APIError as e:
+            raise InformationFetchingError(inner_exception=e, message="Error ocurred when calling OpenAI completion")
 
         # Limpiar el contenido del response si es necesario
-        contenido_limpio = self.clean_json(response)
-
-        # Verificar si el contenido limpio es un JSON válido
-        try:
-            return json.loads(contenido_limpio)
-        except json.JSONDecodeError:
-            print("El contenido no es un JSON válido después de la limpieza.")
+        # TODO Add type casting
+        if response.lower() == "null":
             return None
+        else:
+            return response
 
     @staticmethod
     def clean_json(contenido):
