@@ -19,12 +19,14 @@ class Question:
 
 class Questionnaire:
     QUESTIONS_PATH = "../../data/gpt_parser_data/questions.json"
-    DEFINITIONS_PATH = "../../data/gpt_parser_data/definiciones.json"
 
     with open(QUESTIONS_PATH) as fstream:
-        questions = json.load(fstream)
-    for key in questions.keys():
-        questions[key] = [Question(x) for x in questions[key]]
+        raw_questions = json.load(fstream)
+        questions, sectors_descriptions = {}, {}
+    for key in raw_questions.keys():
+        questions[key] = [Question(x) for x in raw_questions[key]["questions"]]
+        sectors_descriptions[key] = raw_questions[key]["description"]
+    del raw_questions
 
     def __init__(self, sectors_arg: list[str]):
         self.sectors = sectors_arg
@@ -37,8 +39,13 @@ class Questionnaire:
             for sector_question in sector_questions:
                 yield sector_question
 
-    def get_sector_list(self) -> list[str]:
-        return list(self.questions.keys())
+    @classmethod
+    def get_sector_list(cls) -> list[str]:
+        return list(cls.questions.keys())
+
+    @classmethod
+    def get_sector_descriptions(cls):
+        return cls.sectors_descriptions
 
 
 if __name__ == '__main__':
