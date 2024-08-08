@@ -1,6 +1,7 @@
 import json
 from typing import Iterator
 
+
 class Question:
     id_counter = 0
 
@@ -35,6 +36,9 @@ class Questionnaire:
                 continue
             for sector_question in sector_questions:
                 yield sector_question
+
+    def get_sector_list(self) -> list[str]:
+        return list(self.questions.keys())
 
 
 if __name__ == '__main__':
