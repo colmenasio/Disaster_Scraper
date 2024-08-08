@@ -39,7 +39,7 @@ class Article:
         try:
             self.link = self.obtain_link_by_google()
             self.contents = self.obtain_contents_from_link()
-            self.sectores = self.obtain_sectors_affected()
+            self.sectores = self.classify_into_sectors()
             self.answers = self.obtain_answers_to_questions()
         except InformationFetchingError as e:
             self.sucessfully_built = False
@@ -71,30 +71,44 @@ class Article:
         contenido = ' '.join([p.text for p in parrafos])
         return contenido
 
-    def obtain_sectors_affected(self) -> list[str]:
-        # TODO THIS IS ABSOLUTELY PAINFUL TO LOOK AT. IMPROVING THIS IS A PRIORITY
-        prompt = f"""
-            Lee la noticia provista.
-            Lee el archivo "definiciones" para identificar los sectores y sus descripciones.
-            En las noticias, detecta menciones relacionadas con los sectores sin buscar definiciones específicas.
+    def classify_into_sectors(self) -> list[str]:
+        affected_sectors = []
+        for sector in Questionnaire.get_sector_list():
+            sector_description = Questionnaire.get_sector_descriptions()[sector]
+            question = (f"En la noticia, ¿se menciona cualquier dato relacionado con el sector {sector}?\n"
+                        f"En otras palabras, {sector_description}")
+            if self.ask_bool_question(question) is True:
+                affected_sectors.append(sector)
+        return affected_sectors
 
-            tu respuesta debe de ser la siguiente:
-            Marca un 0 o 1 para cada sector según si se menciona o no algo relacionado en la noticia.
-            Nombra los sectores
-            Formatea la respuesta con un objeto JSON
-            noticia: ```{self.title}; {self.contents}´´´
-            definiciones: ```{self.DEFINITIONS}´´´
-        """
-        sectores_afectados = self.get_completion(prompt)
+    def ask_bool_question(self, bool_question: str) -> bool:
+        sys_prompt = ("Eres una herramienta de extraccion de datos.\n"
+                      "A continuacion, se te provera un fragmento de un articulo de un noticiario. "
+                      "Immediatamente despues, se te proporcionara una pregunta de si/no que deberás "
+                      "responder en base a la informacion presente en la noticia.\n"
+                      "A la hora de responder, sigue las siguientes pautas:\n"
+                      "- Se lo mas breve y conciso posible. Evita redundancias como repetir la pregunta\n"
+                      "- Responde unicamente o bien `si` o bien `no`. "
+                      "- En caso de no haber suficiente informacion para decidir entre `si` y `no`, responde `no`")
+        content_prompt = (f"Noticia:\n"
+                          f"`{self.title}\n{self.contents}`\n"
+                          f"Pregunta: {bool_question}")
 
-        prompt = f"""
-            Devuelve una lista con los sectores que tienen un uno después del nombre del sector, en el archivo sectores afectados.
-            Solo indica los nombres.
-            Formatea tu respuesta con coma espacidada (`, `) entre cada nombre
-            sectores afectados: ```{sectores_afectados}´´´ 
-            """
-        response = self.get_completion(prompt).split(", ")
-        return response
+        try:
+            response = self.get_completion(
+                system_prompt=sys_prompt,
+                content_prompt=content_prompt
+            )
+        except openai.APIError as e:
+            raise InformationFetchingError(inner_exception=e, message="Error ocurred when calling OpenAI completion")
+
+        # Limpiar el contenido del response si es necesario
+        if response.lower() == "si":
+            return True
+        elif response.lower() == "no":
+            return False
+        else:
+            raise InformationFetchingError(message="Error ocurred when parsing OpenAI response")
 
     def obtain_answers_to_questions(self) -> dict:
         questionnaire = Questionnaire(self.sectores)
@@ -135,13 +149,6 @@ class Article:
             return None
         else:
             return response
-
-    @staticmethod
-    def clean_json(contenido):
-        # Verificar y eliminar etiquetas ```json ... ```
-        if contenido.startswith('```json') and contenido.endswith('```'):
-            contenido = contenido[7:-3].strip()
-        return contenido
 
     @classmethod
     def get_completion(cls, content_prompt: str, system_prompt: str = "", model="gpt-4o"):
