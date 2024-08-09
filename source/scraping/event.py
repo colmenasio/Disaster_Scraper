@@ -11,6 +11,8 @@ import json
 
 from source.scraping.article import Article
 
+from unidecode import unidecode
+
 
 class Event:
     """Each instance represents a single event"""
@@ -18,7 +20,9 @@ class Event:
     INPUT_PATH = ""
     OUTPUT_PATH = ""
 
-    MAX_NEWS_PER_EVENT = 30
+    CONFIG_PATH = "../config/event/event.json"
+    with open(CONFIG_PATH) as fstream:
+        CONFIG = json.load(fstream)
 
     def __init__(self,
                  theme_arg: str,
@@ -32,7 +36,7 @@ class Event:
         self.location = location_arg
         self.start_time = start_time
         self.end_time = end_time
-        self.related_articles = []
+        self.related_articles = None
 
     def get_related_news(self,
                          query_generator: Callable[[Event], str],
@@ -51,9 +55,9 @@ class Event:
                 f'https://news.google.com/rss/search?q={query_generator(self)}&hl=es&gl=US&ceid=US:es-419'
 
             # Conexión
-            cliente = urlopen(url_google_news)
-            contenido_xml = cliente.read()
-            cliente.close()
+            client = urlopen(url_google_news)
+            contenido_xml = client.read()
+            client.close()
 
             # Lectura en el formato XML
             pagina = soup(contenido_xml, 'xml')
@@ -62,33 +66,40 @@ class Event:
             # Lista para almacenar las noticias
             articles = []
 
-            # Iterar sobre las primeras noticias
-            for item in items[:self.MAX_NEWS_PER_EVENT]:
+            # Instanciate the Articles, toggling the automatic processing off
+            for item in items[:self.CONFIG["max_articles_per_event"]]:
                 articles.append(Article(
                     title_arg=item.title.text,
                     source_url_arg=item.source.get("url"),
                     source_name_arg=item.source.text,
-                    date_arg=np.datetime64(datetime.strptime(item.pubDate.text, "%a, %d %b %Y %H:%M:%S %Z")))
-                )
+                    date_arg=np.datetime64(datetime.strptime(item.pubDate.text, "%a, %d %b %Y %H:%M:%S %Z")),
+                    do_processing_on_instanciation=False
+                ))
 
+            # Filter out irrelevent articles
             if do_date_filter:
                 articles = self.filter_articles_by_date(articles)
 
-            return articles
+            # Scrape the article and answer the questions
+            for article in articles:
+                article.process_article()
+            self.related_articles = articles
+
         except Exception as e:
             # TODO ADD MORE DEBUG INFO HERE
             print("Error al obtener noticias:")
             raise e
 
     def filter_articles_by_date(self, articles: list[Article]) -> list[Article]:
+        effective_end_time = self.end_time + pd.Timedelta(days=self.CONFIG["article_days_leniency"]).to_timedelta64()
         def filter_key(article: Article) -> bool:
-            return self.start_time <= article.date <= self.end_time
+            return self.start_time <= article.date <= effective_end_time
 
         filtered_news = list(filter(filter_key, articles))
         return filtered_news
 
     @staticmethod
-    def filter_out_not_found_events(events_arg: list[Event]) -> list[Event]:
+    def filter_out_irrelevant_events(events_arg: list[Event]) -> list[Event]:
         """Filters out events for which related news have been searched and still have no related news"""
         return [event for event in events_arg if event.related_articles is not None and len(event.related_articles) > 0]
 
@@ -110,7 +121,7 @@ class Event:
             for theme in possible_themes_dictionary.get(row["disaster"]):
                 events.append(Event(
                     theme,
-                    row["location"],
+                    row["province"],
                     row["date"],
                     row["date"] + pd.Timedelta(days=row["duration"]),
                     df_index_arg=int(index))
@@ -158,12 +169,20 @@ class Event:
 
 
 if __name__ == '__main__':
-    Event.INPUT_PATH = "og_proyect_files/Eventos.json"
+    Event.INPUT_PATH = "../utility/testfiles/sample_merged_1.csv"
     Event.MAX_NEWS_PER_EVENT = 6
-    event_list = Event.from_json()
+    event_list = Event.from_csv()
+
 
     def generate_query(self: Event) -> str:
-        return self.theme.replace(' ', '+')
+        numero_mes = self.start_time.month
+        mes = ["enero", "febrero", "marzo", "abril", "mayo", "junio",
+               "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"][numero_mes]
+        human_readable_query = unidecode(
+            f"{self.theme} {self.location} {mes}"
+        )
+        return human_readable_query.replace(' ', '+')
+
 
     for e in event_list:
         e.get_related_news(generate_query)
