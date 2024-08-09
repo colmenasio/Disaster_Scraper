@@ -18,7 +18,7 @@ class Question:
 
 
 class Questionnaire:
-    QUESTIONS_PATH = "../../data/gpt_parser_data/questions.json"
+    QUESTIONS_PATH = "../data/gpt_parser_data/questions.json"
 
     with open(QUESTIONS_PATH) as fstream:
         raw_questions = json.load(fstream)
@@ -46,6 +46,14 @@ class Questionnaire:
     @classmethod
     def get_sector_descriptions(cls):
         return cls.sectors_descriptions
+
+    @classmethod
+    def get_question_id_dict(cls) -> dict[int, str]:
+        question_dict = {}
+        for sector_questions in cls.questions.values():
+            for q in sector_questions:
+                question_dict[q.id] = q.question
+        return question_dict
 
 
 if __name__ == '__main__':
