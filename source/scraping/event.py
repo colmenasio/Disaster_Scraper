@@ -20,15 +20,23 @@ class Event:
 
     MAX_NEWS_PER_EVENT = 30
 
-    def __init__(self, theme_arg: str, location_arg: str, start_time: np.datetime64, end_time: np.datetime64):
+    def __init__(self,
+                 theme_arg: str,
+                 location_arg: str,
+                 start_time: np.datetime64,
+                 end_time: np.datetime64,
+                 df_index_arg: int = 0
+                 ):
+        self.df_index = df_index_arg
         self.theme = theme_arg
         self.location = location_arg
         self.start_time = start_time
         self.end_time = end_time
+        self.related_articles = []
 
     def get_related_news(self,
                          query_generator: Callable[[Event], str],
-                         do_date_filter: bool = True) -> list[Article]:
+                         do_date_filter: bool = True) -> None:
         """
         Fetches news related to the event. The amount of news fetched is a class attribute
         :param do_date_filter: filter news by date or ignore date
@@ -75,26 +83,38 @@ class Event:
     def filter_articles_by_date(self, articles: list[Article]) -> list[Article]:
         def filter_key(article: Article) -> bool:
             return self.start_time <= article.date <= self.end_time
+
         filtered_news = list(filter(filter_key, articles))
         return filtered_news
+
+    @staticmethod
+    def filter_out_not_found_events(events_arg: list[Event]) -> list[Event]:
+        """Filters out events for which related news have been searched and still have no related news"""
+        return [event for event in events_arg if event.related_articles is not None and len(event.related_articles) > 0]
 
     @classmethod
     def from_csv(cls) -> list[Event]:
         """The input path is defined as a class attribute"""
         df = pd.read_csv(cls.INPUT_PATH, parse_dates=["date"])
-        theme_dictionary = {  # TODO REFINE THIS DICTIONARY
-            "CAUSAS NATURALES/INUNDACIÓN EXTRAORDINARIA": "",
-            "etc": ""
+        possible_themes_dictionary = {  # TODO REFINE THIS DICTIONARY
+            "CAUSAS NATURALES/INUNDACIÓN EXTRAORDINARIA":
+                ["Inundacion", "Luvias Torrenciales", "Desbordamiento de rìos"],
+            "CAUSAS NATURALES/TEMPESTAD CICLÓNICA ATÍPICA":
+                ["Tornado", "Huracan", "Tormenta"],
+            "CAUSAS NATURALES/EMBATE DE MAR":
+                ["Embate de mar", "Tsunami"],
+
         }
-        raise NotImplementedError("theme dictionary infinished")
         events = []
         for index, row in df.iterrows():
-            events.append(Event(
-                theme_dictionary.get(row["disaster"]),
-                row["location"],
-                row["date"],
-                row["date"] + pd.Timedelta(days=row["duration"]))
-            )
+            for theme in possible_themes_dictionary.get(row["disaster"]):
+                events.append(Event(
+                    theme,
+                    row["location"],
+                    row["date"],
+                    row["date"] + pd.Timedelta(days=row["duration"]),
+                    df_index_arg=int(index))
+                )
         return events
 
     @classmethod
@@ -145,8 +165,9 @@ if __name__ == '__main__':
     def generate_query(self: Event) -> str:
         return self.theme.replace(' ', '+')
 
-    test_event = event_list[0]
-    news_articles = test_event.get_related_news(generate_query, do_date_filter=True)
+    for e in event_list:
+        e.get_related_news(generate_query)
+    # event_list = Event.filter_out_not_found_events(event_list)
     # articles = test_event.filter_articles_by_date(articles)
-    print(news_articles)
+    print(event_list[1].related_articles)
     # print(news_articles[0].contents)
