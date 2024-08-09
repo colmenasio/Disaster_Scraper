@@ -4,7 +4,7 @@ from googlesearch import search as g_search
 from bs4 import BeautifulSoup
 import openai
 import json
-from questionnaire import Questionnaire
+from source.scraping.questionnaire import Questionnaire
 
 
 class InformationFetchingError(IOError):
@@ -16,8 +16,7 @@ class InformationFetchingError(IOError):
 
 
 class Article:
-    OPEN_AI_KEY_PATH = "../../config/credentials/OPENAI_API_KEY.json"
-    DEFINITIONS_PATH = "../../data/gpt_parser_data/definiciones.json"
+    OPEN_AI_KEY_PATH = "../config/credentials/OPENAI_API_KEY.json"
 
     try:
         with open(OPEN_AI_KEY_PATH, "r", encoding="utf-8") as fstream:
@@ -28,15 +27,39 @@ class Article:
     except KeyError as e:
         raise KeyError(f"'OPENAI_API_KEY' attribute not found in {OPEN_AI_KEY_PATH}")
 
-    with open(DEFINITIONS_PATH, "r", encoding="utf-8") as fstream:
-        DEFINITIONS = json.load(fstream)
+    def __init__(self,
+                 title_arg: str,
+                 source_url_arg: str,
+                 source_name_arg: str,
+                 date_arg: datetime64,
+                 do_processing_on_instanciation: bool = True):
+        """
+        Each `Article` instance represent a single news article with
+        its respective information and its answers to the questions provided
 
-    def __init__(self, title_arg: str, source_url_arg: str, source_name_arg: str, date_arg: datetime64):
+        :param do_processing_on_instanciation:
+            By default, all the scraping, classifying and answering is done on instanciation.
+            This can be a hinderance if pre-processing is to be done
+            (like filtering by date and such), causing an unecessary workload.
+            This automatic processing can be manually toggled off by setting `do_processing` to False when instanciating,
+            and then processed by calling `self.do_procesing`"""
         self.title = title_arg
         self.source_url = source_url_arg
         self.source_name = source_name_arg
         self.date = date_arg
-        self.sucessfully_built = True
+        self.sucessfully_built = False
+        self.link = None
+        self.contents = None
+        self.sectores = None
+        self.answers = None
+
+        if do_processing_on_instanciation:
+            self.process_article()
+
+    def process_article(self):
+        """Idempotent function for scraping, classifying and answering the questions about the news article"""
+        if self.sucessfully_built:
+            return
         try:
             self.link = self.obtain_link_by_google()
             self.contents = self.obtain_contents_from_link()
@@ -45,6 +68,7 @@ class Article:
         except InformationFetchingError as e:
             self.sucessfully_built = False
             print(f"Error building {self.title}; Message: {e.message}; Exception ocurred: {e.inner_exception}")
+        self.sucessfully_built = True
 
     def obtain_link_by_google(self) -> str:
         # TODO Refine this
