@@ -92,6 +92,7 @@ class Event:
 
     def filter_articles_by_date(self, articles: list[Article]) -> list[Article]:
         effective_end_time = self.end_time + pd.Timedelta(days=self.CONFIG["article_days_leniency"]).to_timedelta64()
+
         def filter_key(article: Article) -> bool:
             return self.start_time <= article.date <= effective_end_time
 
@@ -101,7 +102,11 @@ class Event:
     @staticmethod
     def filter_out_irrelevant_events(events_arg: list[Event]) -> list[Event]:
         """Filters out events for which related news have been searched and still have no related news"""
-        return [event for event in events_arg if event.related_articles is not None and len(event.related_articles) > 0]
+        new_events = []
+        for e in events_arg:
+            if e.related_articles is not None and len(e.related_articles)>0:
+                new_events.append(e)
+        return new_events
 
     @classmethod
     def from_csv(cls) -> list[Event]:
@@ -183,10 +188,7 @@ if __name__ == '__main__':
         )
         return human_readable_query.replace(' ', '+')
 
-
-    for e in event_list:
-        e.get_related_news(generate_query)
-    # event_list = Event.filter_out_not_found_events(event_list)
-    # articles = test_event.filter_articles_by_date(articles)
-    print(event_list[1].related_articles)
-    # print(news_articles[0].contents)
+    for evento in event_list:
+        evento.get_related_news(generate_query)
+    event_list = Event.filter_out_irrelevant_events(event_list)
+    print(len(event_list))
