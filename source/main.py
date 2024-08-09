@@ -3,6 +3,7 @@ from data_merger.disaster_merger_2 import QuartileCuller
 from data_merger.disaster_merger_3 import DisasterLinker
 
 from scraping.event import Event
+from scraping.questionnaire import Questionnaire
 
 from auxiliary_main import culler, disaster_to_dict
 
@@ -31,4 +32,5 @@ if __name__ == '__main__':
     DisasterLinker.collapse_disaster_list(disaster_list)
 
     final_df = DisasterLinker.to_dataframe(disaster_list, disaster_to_dict)
+    questions_id = Questionnaire.get_question_id_dict()
 
