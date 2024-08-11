@@ -4,7 +4,9 @@ from googlesearch import search as g_search
 from bs4 import BeautifulSoup
 import openai
 import json
-from source.scraping.questionnaire import Questionnaire
+
+from scraping.questionnaire import Questionnaire
+from common.retriable_decorator import retriable
 
 
 class InformationFetchingError(IOError):
@@ -17,6 +19,7 @@ class InformationFetchingError(IOError):
 
 class Article:
     OPEN_AI_KEY_PATH = "../config/credentials/OPENAI_API_KEY.json"
+    CONFIG_PATH = "../config/article/article.json"
 
     try:
         with open(OPEN_AI_KEY_PATH, "r", encoding="utf-8") as fstream:
@@ -26,6 +29,12 @@ class Article:
         raise FileNotFoundError(f"{OPEN_AI_KEY_PATH} not found")
     except KeyError as e:
         raise KeyError(f"'OPENAI_API_KEY' attribute not found in {OPEN_AI_KEY_PATH}")
+
+    try:
+        with open(CONFIG_PATH, "r") as fstream:
+            CONFIG = json.load(fstream)
+    except FileNotFoundError as e:
+        raise FileNotFoundError(f"{CONFIG_PATH} not found")
 
     def __init__(self,
                  title_arg: str,
@@ -106,6 +115,7 @@ class Article:
                 affected_sectors.append(sector)
         return affected_sectors
 
+    @retriable(CONFIG["max_openai_call_tries"])
     def ask_bool_question(self, bool_question: str) -> bool:
         sys_prompt = ("Eres una herramienta de extraccion de datos.\n"
                       "A continuacion, se te provera un fragmento de un articulo de un noticiario. "
@@ -148,6 +158,7 @@ class Article:
                 answers[q.id] = a
         return answers
 
+    @retriable(CONFIG["max_openai_call_tries"])
     def answer_single_question(self, question: str) -> str | None:
         # TODO ADD SAFER TYPE CASTING AND ADD NUMBER OF RETRIES
         sys_prompt = ("Eres una herramienta de extraccion de datos.\n"
