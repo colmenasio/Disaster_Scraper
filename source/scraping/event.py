@@ -103,11 +103,15 @@ class Event:
     def filter_out_irrelevant_events(events_arg: list[Event]) -> list[Event]:
         # TODO filter out events with no related article in any of their related events
         """Filters out events for which related news have been searched and still have no related news"""
-        new_events = []
-        for e in events_arg:
-            if e.related_articles is not None and len(e.related_articles)>0:
-                new_events.append(e)
-        return new_events
+        def filter_is_event_relevant(e: Event) -> bool:
+            if e.related_articles is None or len(e.related_articles) == 0:
+                return False
+            if all([a.answers is None or len(a.answers) == 0 for a in e.related_articles]):
+                return False
+            return True
+
+        filtered_events = list(filter(filter_is_event_relevant, events_arg))
+        return filtered_events
 
     @classmethod
     def from_csv(cls) -> list[Event]:
@@ -183,11 +187,12 @@ if __name__ == '__main__':
     def generate_query(self: Event) -> str:
         numero_mes = self.start_time.month
         mes = ["enero", "febrero", "marzo", "abril", "mayo", "junio",
-               "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"][numero_mes-1]
+               "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"][numero_mes - 1]
         human_readable_query = unidecode(
             f"{self.theme} {self.location} {mes}"
         )
         return human_readable_query.replace(' ', '+')
+
 
     for evento in event_list:
         evento.get_related_news(generate_query)
