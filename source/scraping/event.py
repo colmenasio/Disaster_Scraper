@@ -101,6 +101,7 @@ class Event:
 
     @staticmethod
     def filter_out_irrelevant_events(events_arg: list[Event]) -> list[Event]:
+        # TODO filter out events with no related article in any of their related events
         """Filters out events for which related news have been searched and still have no related news"""
         new_events = []
         for e in events_arg:
@@ -182,7 +183,7 @@ if __name__ == '__main__':
     def generate_query(self: Event) -> str:
         numero_mes = self.start_time.month
         mes = ["enero", "febrero", "marzo", "abril", "mayo", "junio",
-               "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"][numero_mes]
+               "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"][numero_mes-1]
         human_readable_query = unidecode(
             f"{self.theme} {self.location} {mes}"
         )
