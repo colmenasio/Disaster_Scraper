@@ -179,6 +179,7 @@ class Event:
 
 
 if __name__ == '__main__':
+    print("Imports/Initialization: Done\nStarting unit test")
     Event.INPUT_PATH = "../utility/testfiles/sample_merged_1.csv"
     Event.MAX_NEWS_PER_EVENT = 6
     event_list = Event.from_csv()

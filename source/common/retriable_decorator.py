@@ -3,7 +3,7 @@ def retriable(max_n_of_tries: int):
     Decorator. Will call the function it decorates up to n times, retrying if the function raises any exception
     After n tries, if the function excepts the exception will be raised anyway.
 
-    :param max_n_of_tries: The maximum njumber of retries allowed
+    :param max_n_of_tries: The maximum number of retries allowed
     """
     def inner(func):
         def wrapper(*args, **kwargs):
