@@ -80,7 +80,7 @@ class Article:
         self.sucessfully_built = True
 
     def obtain_link_by_google(self) -> str:
-        # TODO Refine this
+        # TODO Refine this search query
         query = f'"{self.title}, {self.source_name}"'
         enlaces = list(g_search(query, num_results=1))
         if len(enlaces) == 0:
@@ -160,7 +160,6 @@ class Article:
 
     @retriable(CONFIG["max_openai_call_tries"])
     def answer_single_question(self, question: str) -> str | None:
-        # TODO ADD SAFER TYPE CASTING AND ADD NUMBER OF RETRIES
         sys_prompt = ("Eres una herramienta de extraccion de datos.\n"
                       "A continuacion, se te provera un fragmento de un articulo de un noticiario. "
                       "Immediatamente despues, se te proporcionara una pregunta que deberás "
