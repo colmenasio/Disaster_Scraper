@@ -14,8 +14,8 @@ The format is the following:
   "Energia": {
     "description": "¿Ha afectado el desastre a la produccion o al suministro de energia eléctrica?",
     "questions": [
-      "Question1",
-      "Question2"
+      {"q": "Question1", "w": 10},
+      {"q": "Question2", "w": 5}
     ]
   },
   "Transporte": { ... 
@@ -23,8 +23,8 @@ The format is the following:
 }
 ```
 
-Each entry in `questions.json` correspond to a sector.
+Each key in `questions.json` correspond to a sector.
 
 It`s value must be a dictionary containing 2 keys:
 - `"description"`: A yes/no question that broadly encapsulates the meaning of the sector
-- `"questions"`: A list of specific questions that will be asked about articles that are related that sector in question 
+- `"questions"`: A list of dictionaries, in which the `"q"` key contains a question that will be asked about articles that are related that sector in question and `"w"` specifies the weight of the article in the calculations of the severity of the disaster
