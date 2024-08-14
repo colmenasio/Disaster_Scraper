@@ -5,8 +5,9 @@ from typing import Iterator
 class Question:
     id_counter = 0
 
-    def __init__(self, question_arg: str):
+    def __init__(self, question_arg: str, weight_arg: int):
         self.question = question_arg
+        self.weight = weight_arg
         self.id = Question.id_counter
         Question.id_counter += 1
 
@@ -14,7 +15,7 @@ class Question:
         return self.question
 
     def __repr__(self):
-        return f"Question {self.id}: {self.question}"
+        return f"Question {self.id} (weight: {self.weight}): {self.question}"
 
 
 class Questionnaire:
@@ -24,7 +25,7 @@ class Questionnaire:
         raw_questions = json.load(fstream)
         questions, sectors_descriptions = {}, {}
     for key in raw_questions.keys():
-        questions[key] = [Question(x) for x in raw_questions[key]["questions"]]
+        questions[key] = [Question(x["q"], x["w"]) for x in raw_questions[key]["questions"]]
         sectors_descriptions[key] = raw_questions[key]["description"]
     del raw_questions
 
