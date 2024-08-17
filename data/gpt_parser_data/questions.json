@@ -1,0 +1,137 @@
+{
+  "Energia": {
+    "description": "\u00bfSe ha visto afectada la produccion, distribucion o almacenamiento de energia electrica, o bien recursos relacionados con esta como el gas, petroleo o hidrogeno?",
+    "questions": [
+      {
+        "q": "\u00bfSe ha visto afectada la produccion de energia electrica?",
+        "w": 10
+      },
+      {
+        "q": "\u00bfSe ha visto afectada la distribucion de energia electrica?",
+        "w": 10
+      },
+      {
+        "q": "\u00bfSe ha visto afectada la distribucion de gas natural?",
+        "w": 5
+      },
+      {
+        "q": "\u00bfSe ha visto afectada la distribucion de pretroleo?",
+        "w": 5
+      },
+      {
+        "q": "\u00bfSe ha visto afectada la distribucion de hidrogeno?",
+        "w": 2
+      }
+    ]
+  },
+  "Transporte": {
+    "description": "\u00bfSe ha visto afectado el transporte bien de mercancias o de individuos?",
+    "questions": [
+      {
+        "q": "\u00bfSe ha visto afectado el transporte aereo?",
+        "w": 10
+      },
+      {
+        "q": "\u00bfSe ha visto afectado el transporte maritimo?",
+        "w": 10
+      },
+      {
+        "q": "\u00bfSe ha visto afectado el transporte ferroviario?",
+        "w": 10
+      },
+      {
+        "q": "\u00bfSe han visto afectadas carreteras y o autopistas?",
+        "w": 10
+      }
+    ]
+  },
+  "Finanzas": {
+    "description": "\u00bfSe han visto afectadas entidades financieras tales como bancos, centros de negociacion o similares?",
+    "questions": [
+      {
+        "q": "\u00bfSe han visto afectadas entidades bancarias?",
+        "w": 10
+      }
+    ]
+  },
+  "Sanidad": {
+    "description": "\u00bfHa afectado el evento al sector sanitario y/o ha dejado una cantidad considerable de victimas necesitadas de cuidados medicos?",
+    "questions": [
+      {
+        "q": "\u00bfSe han visto afectadas instituciones sanitarias como hospitales, ambulatorios o similares?",
+        "w": 10
+      },
+      {
+        "q": "\u00bfHa causado el numero de heridos saturacion o otros problemas en instituciones sanitarias?",
+        "w": 10
+      },
+      {
+        "q": "\u00bfSe han visto afectadas instituciones dedicadas a la produccion o distribucion de productos farmaceuticos?",
+        "w": 5
+      },
+      {
+        "q": "\u00bfSe ha visto afectada la distribucion de productos farmaceuticos esenciales?",
+        "w": 5
+      }
+    ]
+  },
+  "Agua y Alimentos": {
+    "description": "\u00bfSe ha visto afectada la distribucion o produccion de recursos basicos como Agua o Alimentos?",
+    "questions": [
+      {
+        "q": "\u00bfSe ha visto afectada la produccion de alimentos, ya sea en fabricas o en cultivos?",
+        "w": 10
+      },
+      {
+        "q": "\u00bfSe ha visto afectado el suministro de agua potable y/o la disponibilidad de esta?",
+        "w": 10
+      },
+      {
+        "q": "\u00bfSe ha visto afectada la disponibilidad de productos alimenticios a causa del evento?",
+        "w": 10
+      }
+    ]
+  },
+  "Aguas Residuales": {
+    "description": "\u00bfSe ha visto afectado el procesamiento de aguas residuales y/o se han producido desbordamientos de alcantarillado o similares?",
+    "questions": [
+      {
+        "q": "\u00bfSe ha producido algun desbordamiento de aguas residuales por alcantarillado o similares?",
+        "w": 5
+      },
+      {
+        "q": "\u00bfSe ha visto afectado el tratamiendo de aguas residuales a causa el evento?",
+        "w": 2
+      },
+      {
+        "q": "\u00bfSe ha visto afectada la infraestructura relacionada con el tratamiento o transporte de aguas residuales?",
+        "w": 10
+      }
+    ]
+  },
+  "Infraestructura digital": {
+    "description": "\u00bfSe han visto afectadas infraestructuras relacionadas con telecomunicaciones, transmision de datos, servidores, o similares?",
+    "questions": [
+      {
+        "q": "\u00bfSe han visto afectadas torres de comunicacion / difusion?",
+        "w": 10
+      },
+      {
+        "q": "\u00bfSe ha visto afectado cableado relacionado con comunicaciones o similares (fibra, pares de cobre, etc)?",
+        "w": 10
+      },
+      {
+        "q": "\u00bfSe han visto afectados servidores, centros de datos, o similares?",
+        "w": 15
+      },
+      {
+        "q": "\u00bfSe han producido cortes notables en servicios digitales como transmision de datos o proovedores de television?",
+        "w": 15
+      },
+      {
+        "q": "\u00bfSe ha visto afectada la comunicacion por radiofrecuencia a causa del evento?",
+        "w": 5
+      }
+    ]
+  }
+}
