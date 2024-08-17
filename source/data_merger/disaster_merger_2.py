@@ -13,7 +13,7 @@ class QuartileCuller:
                       total_q: int,
                       lower_n_cuts: int, ) -> pd.Series:
         """Returns a Series of bool values determining wether each row of a dataframe is in the nth qcut or lower according
-        to some provided key
+        to some provided sector
 
         :return: A series. In each entry of the series, True means the correspondent row belongs in the lower n qcuts, False means it is in the upper q-n qcuts"""
         if lower_n_cuts > total_q:
