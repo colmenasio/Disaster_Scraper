@@ -59,8 +59,9 @@ class Article:
         self.sucessfully_built = False
         self.link = None
         self.contents = None
-        self.sectores = None
+        self.sectors = None
         self.answers = None
+        self.severity = None
 
         if do_processing_on_instanciation:
             self.process_article()
@@ -72,8 +73,9 @@ class Article:
         try:
             self.link = self.obtain_link_by_google()
             self.contents = self.obtain_contents_from_link()
-            self.sectores = self.classify_into_sectors()
-            self.answers = self.obtain_answers_to_questions()
+            self.sectors = self.classify_into_sectors()
+            self.answers = self.obtain_answers_to_bool_questions()
+            self.severity = Questionnaire(self.sectors).get_severity_score_by_sector(self.answers)
         except InformationFetchingError as e:
             self.sucessfully_built = False
             print(f"Error building {self.title}; Message: {e.message}; Exception ocurred: {e.inner_exception}")
@@ -115,6 +117,17 @@ class Article:
                 affected_sectors.append(sector)
         return affected_sectors
 
+    def obtain_answers_to_bool_questions(self) -> dict:
+        questionnaire = Questionnaire(self.sectors)
+        answers = {}
+        for q in questionnaire:
+            a = self.ask_bool_question(q.question)
+            if a is None:
+                continue
+            else:
+                answers[q.id] = a
+        return answers
+
     @retriable(CONFIG["max_openai_call_tries"])
     def ask_bool_question(self, bool_question: str) -> bool:
         sys_prompt = ("Eres una herramienta de extraccion de datos.\n"
@@ -146,17 +159,6 @@ class Article:
             raise InformationFetchingError(
                 message="Error ocurred when parsing OpenAI response (in `article.ask_bool_question`)"
             )
-
-    def obtain_answers_to_questions(self) -> dict:
-        questionnaire = Questionnaire(self.sectores)
-        answers = {}
-        for q in questionnaire:
-            a = self.answer_single_question(q.question)
-            if a is None:
-                continue
-            else:
-                answers[q.id] = a
-        return answers
 
     @retriable(CONFIG["max_openai_call_tries"])
     def answer_single_question(self, question: str) -> str | None:
@@ -214,6 +216,7 @@ class Article:
 
     def format_title_body(self) -> str:
         return f"Title: {self.title}\n\nContent:{self.contents}"
+
 
     def __repr__(self):
         return f"<__main__.Article object: {self.title}, {self.source_url}, {self.date}>"

@@ -5,7 +5,7 @@ from data_merger.disaster_merger_3 import DisasterLinker
 from scraping.event import Event
 from scraping.questionnaire import Questionnaire
 
-from auxiliary_main import culler, disaster_to_dict
+from auxiliary_main import culler, disaster_to_dict_factory, generate_search_query
 
 if __name__ == '__main__':
     # First, we merge the raw expedients into events
@@ -19,11 +19,12 @@ if __name__ == '__main__':
 
     QuartileCuller.apply_cull_csv_file(culler)
 
+    #exit(0) # AVOID INNECESARY API CALLS WHEN TESTING
+
     # We extract information about each event in the remaining events
     Event.INPUT_PATH = "../input-output/culled_events.csv"
-    Event.OUTPUT_PATH = "../input-output/event_information.csv"
     events = Event.from_csv()
-    Event.extract_info_to_csv(events)
+    events = Event.extract_info_events(events, generate_search_query)
 
     # Link the information extrated from events into disasters
     DisasterLinker.INPUT_PATH = "../input-output/culled_events.csv"
@@ -31,6 +32,6 @@ if __name__ == '__main__':
     disaster_list = DisasterLinker.build_initial_disaster_pool()
     DisasterLinker.collapse_disaster_list(disaster_list)
 
-    final_df = DisasterLinker.to_dataframe(disaster_list, disaster_to_dict)
+    final_df = DisasterLinker.to_dataframe(disaster_list, disaster_to_dict_factory(events))
     questions_id = Questionnaire.get_question_id_dict()
 

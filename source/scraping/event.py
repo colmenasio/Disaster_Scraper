@@ -159,23 +159,16 @@ class Event:
     def __repr__(self):
         return f"<__main__.Event object: {self.theme}, {self.location}, {self.start_time}>"
 
-    @classmethod
-    def extract_info_to_csv(cls, events: Event | [Event]) -> None:
-        """The input path is defined as a class attribute"""
-        # Sanitize input
-        if isinstance(events, Event):
-            events = [events]
-
-        # Extract information about each event
-        results_df = pd.DataFrame(columns=["1", "2"])
-        # raise NotImplementedError("Not finished implementing information extraction")
-        for curr_index, event in enumerate(events):
-            results_df.loc[curr_index] = event.extract_info_event()
-        results_df.to_csv(cls.OUTPUT_PATH)
-
-    def extract_info_event(self) -> dict:
-        """Extracts info from a single disaster"""
-        raise NotImplementedError
+    @staticmethod
+    def extract_info_events(events: list[Event],
+                            query_generator: Callable[[Event], str],
+                            do_relevancy_filter: bool = True) -> list[Event]:
+        """In-place extraction of info from a list of disaster"""
+        for event in events:
+            event.get_related_news(query_generator)
+        if do_relevancy_filter:
+            events = Event.filter_out_irrelevant_events(events)
+        return events
 
 
 if __name__ == '__main__':
