@@ -1,3 +1,6 @@
+from __future__ import annotations
+from typing import Callable
+
 import requests
 from numpy import datetime64
 from googlesearch import search as g_search
@@ -76,10 +79,10 @@ class Article:
             self.sectors = self.classify_into_sectors()
             self.answers = self.obtain_answers_to_bool_questions()
             self.severity = Questionnaire(self.sectors).get_severity_score_by_sector(self.answers)
+            self.sucessfully_built = True
         except InformationFetchingError as e:
             self.sucessfully_built = False
             print(f"Error building {self.title}; Message: {e.message}; Exception ocurred: {e.inner_exception}")
-        self.sucessfully_built = True
 
     def obtain_link_by_google(self) -> str:
         # TODO Refine this search query
@@ -217,6 +220,35 @@ class Article:
     def format_title_body(self) -> str:
         return f"Title: {self.title}\n\nContent:{self.contents}"
 
+    @staticmethod
+    def get_combined_severity(articles: list[Article],
+                              combination_operation: Callable[[list[float]], float] = lambda x: sum(x)/len(x)) -> dict:
+        severities_lists = {}
+        for article in articles:
+            for sector in article.sectors:
+                if sector not in severities_lists.keys():
+                    severities_lists[sector] = []
+                severities_lists[sector] = severities_lists[sector] + [article.severity[sector]]
+        final_severities = {}
+        for sector in severities_lists.keys():
+            final_severities[sector] = combination_operation(severities_lists[sector])
+        return final_severities
+
+    @staticmethod
+    def get_answers_true_ratio(articles: list[Article]) -> dict:
+        answers_true_count, total_answer_count = {}, {}
+        for article in articles:
+            for answer_id in article.answers.keys():
+                if answer_id not in answers_true_count:
+                    answers_true_count[answer_id] = 0
+                    total_answer_count[answer_id] = 0
+                if article.answers[answer_id] is True:
+                    answers_true_count[answer_id] += 1
+                total_answer_count[answer_id] += 1
+        true_ratio = {}
+        for answer_id in total_answer_count.keys():
+            true_ratio[answer_id] = answers_true_count[answer_id] / total_answer_count[answer_id]
+        return true_ratio
 
     def __repr__(self):
         return f"<__main__.Article object: {self.title}, {self.source_url}, {self.date}>"

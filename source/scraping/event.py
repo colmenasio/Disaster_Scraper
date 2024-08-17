@@ -83,7 +83,7 @@ class Event:
             # Scrape the article and answer the questions
             for article in articles:
                 article.process_article()
-            self.related_articles = articles
+            self.related_articles = [article for article in articles if article.sucessfully_built]
 
         except Exception as e:
             # TODO ADD MORE DEBUG INFO HERE
@@ -192,3 +192,8 @@ if __name__ == '__main__':
         evento.get_related_news(generate_query)
     event_list = Event.filter_out_irrelevant_events(event_list)
     print(len(event_list))
+    if len(event_list) == 0:
+        print("No articles were relevant")
+        exit(0)
+    print(Article.get_combined_severity(event_list[0].related_articles))
+    print(Article.get_answers_true_ratio(event_list[0].related_articles))
