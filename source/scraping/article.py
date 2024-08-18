@@ -10,6 +10,7 @@ import json
 
 from scraping.questionnaire import Questionnaire
 from common.retriable_decorator import retriable
+from common.merge_dictionaries import merge_dicts
 
 
 class InformationFetchingError(IOError):
@@ -222,33 +223,19 @@ class Article:
 
     @staticmethod
     def get_combined_severity(articles: list[Article],
-                              combination_operation: Callable[[list[float]], float] = lambda x: sum(x)/len(x)) -> dict:
-        severities_lists = {}
-        for article in articles:
-            for sector in article.sectors:
-                if sector not in severities_lists.keys():
-                    severities_lists[sector] = []
-                severities_lists[sector] = severities_lists[sector] + [article.severity[sector]]
-        final_severities = {}
-        for sector in severities_lists.keys():
-            final_severities[sector] = combination_operation(severities_lists[sector])
-        return final_severities
+                              combination_operation: Callable[[list[float]], float] = lambda x: sum(x) / len(
+                                  x)) -> dict:
+        """The resulting severity is the mean of the severities by default.
+        This can be changed by providing a custom combination operation"""
+        dict_generator = (a.severity for a in articles)
+        return merge_dicts(dict_generator, combination_operation)
 
     @staticmethod
     def get_answers_true_ratio(articles: list[Article]) -> dict:
-        answers_true_count, total_answer_count = {}, {}
-        for article in articles:
-            for answer_id in article.answers.keys():
-                if answer_id not in answers_true_count:
-                    answers_true_count[answer_id] = 0
-                    total_answer_count[answer_id] = 0
-                if article.answers[answer_id] is True:
-                    answers_true_count[answer_id] += 1
-                total_answer_count[answer_id] += 1
-        true_ratio = {}
-        for answer_id in total_answer_count.keys():
-            true_ratio[answer_id] = answers_true_count[answer_id] / total_answer_count[answer_id]
-        return true_ratio
+        def combination_operation(list_arg: list[bool]) -> float:
+            return sum(list_arg) / len(list_arg)
+        dict_generator = (a.severity for a in articles)
+        return merge_dicts(dict_generator, combination_operation)
 
     def __repr__(self):
         return f"<__main__.Article object: {self.title}, {self.source_url}, {self.date}>"
