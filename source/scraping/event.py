@@ -1,17 +1,18 @@
 from __future__ import annotations
 
+import warnings
 from datetime import datetime
-from typing import Callable
+from typing import Callable, Generator
 
 from bs4 import BeautifulSoup as soup
 from urllib.request import urlopen
 import pandas as pd
 import numpy as np
 import json
+from unidecode import unidecode
 
 from source.scraping.article import Article
-
-from unidecode import unidecode
+from source.common.merge_dictionaries import merge_dicts
 
 
 class Event:
@@ -169,6 +170,38 @@ class Event:
         if do_relevancy_filter:
             events = Event.filter_out_irrelevant_events(events)
         return events
+
+    @staticmethod
+    def get_articles_iterable(events: list[Event]) -> Generator[Article, None, None]:
+        """Generator that yields all the related articles in a list of events"""
+        for event in events:
+            for article in event.related_articles:
+                yield article
+
+    @staticmethod
+    def combine_events(events: list[Event]) -> dict:
+        """Combines a list of events merging their data into single dictionary of info
+        The disasters to be merged must be consistent in theme
+        :except ValueError: If the disasters cannot be merged because of an inconsistency
+            or if no disasters are provided"""
+        warnings.warn("event.combine_events() HAS NOT BEEN PROPPERLY TESTED")
+        if len(events) == 0:
+            raise ValueError("No events were provided")
+        info = {}
+        theme = events[0].theme
+        if any((e.theme != theme for e in events)):
+            raise ValueError("Inconsistent themes")
+        info["theme"] = theme
+        info["locations"] = list({e.location for e in events})
+        info["start_time"] = min([e.start_time for e in events])
+        info["end_time"] = max([e.end_time for e in events])
+        info["affected_sectors"] = list({a.sectors for a in Event.get_articles_iterable(events)})
+        info["event_ids"] = list({e.df_index for e in events})
+        severities_generator = (a.severity for a in Event.get_articles_iterable(events))
+        info["severity_ratio"] = merge_dicts(severities_generator, lambda x: sum(x)/len(x))
+        answers_generator = (a.answers for a in Event.get_articles_iterable(events))
+        info["answer_ratio"] = merge_dicts(answers_generator, lambda x: sum(x) / len(x))
+        return info
 
 
 if __name__ == '__main__':
