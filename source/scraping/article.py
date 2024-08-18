@@ -225,13 +225,18 @@ class Article:
     def get_combined_severity(articles: list[Article],
                               combination_operation: Callable[[list[float]], float] = lambda x: sum(x) / len(
                                   x)) -> dict:
-        """The resulting severity is the mean of the severities by default.
+
+        """
+        DEPRECATED
+
+        The resulting severity is the mean of the severities by default.
         This can be changed by providing a custom combination operation"""
         dict_generator = (a.severity for a in articles)
         return merge_dicts(dict_generator, combination_operation)
 
     @staticmethod
     def get_answers_true_ratio(articles: list[Article]) -> dict:
+        """DEPRECATED"""
         def combination_operation(list_arg: list[bool]) -> float:
             return sum(list_arg) / len(list_arg)
         dict_generator = (a.severity for a in articles)
