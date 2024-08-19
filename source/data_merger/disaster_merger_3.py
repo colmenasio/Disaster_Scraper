@@ -186,14 +186,23 @@ class DisasterLinker:
 
     @staticmethod
     def to_dataframe(instances: list[DisasterLinker],
-                     to_dict: Callable[[DisasterLinker], dict] = generate_data_dict) -> pd.DataFrame | None:
+                     to_dict: Callable[[DisasterLinker], dict | list[dict]] = generate_data_dict
+                     ) -> pd.DataFrame | None:
         if len(instances) == 0:
             return None
         column_tags = list(to_dict(instances[0]).keys())
         disasters_df = pd.DataFrame(columns=column_tags)
-        for df_index, disaster in enumerate(instances):
-            data_dict = to_dict(disaster)
-            disasters_df.loc[df_index] = data_dict
+        df_index = 0
+        for disaster in instances:
+            # Returns either a row or a list of rows
+            data_dicts = to_dict(disaster)
+            # Type cast into list for consistency
+            if not isinstance(data_dicts, list):
+                data_dicts = [data_dicts]
+            # Add each row to the dataframe
+            for data_dict in data_dicts:
+                disasters_df.loc[df_index] = data_dict
+                df_index += 1
         return disasters_df
 
     def __repr__(self):
