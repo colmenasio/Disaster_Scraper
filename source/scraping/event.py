@@ -41,7 +41,8 @@ class Event:
 
     def get_related_news(self,
                          query_generator: Callable[[Event], str],
-                         do_date_filter: bool = True) -> None:
+                         do_date_filter: bool = True,
+                         do_article_processing: bool = True) -> None:
         """
         Fetches news related to the event. The amount of news fetched is a class attribute
         :param do_date_filter: filter news by date or ignore date
@@ -80,16 +81,24 @@ class Event:
             # Filter out irrelevent articles
             if do_date_filter:
                 articles = self.filter_articles_by_date(articles)
+            self.related_articles = articles
 
             # Scrape the article and answer the questions
-            for article in articles:
-                article.process_article()
-            self.related_articles = [article for article in articles if article.sucessfully_built]
+            if do_article_processing:
+                self.build_related_articles()
 
         except Exception as e:
             # TODO ADD MORE DEBUG INFO HERE
             print("Error al obtener noticias:")
             raise e
+
+    def build_related_articles(self) -> None:
+        """Builds related articles. Discards those news who couldn't be built"""
+        if self.related_articles is None:
+            return None
+        for article in self.related_articles:
+            article.process_article()
+        self.related_articles = [article for article in self.related_articles if article.sucessfully_built]
 
     def filter_articles_by_date(self, articles: list[Article]) -> list[Article]:
         effective_end_time = self.end_time + pd.Timedelta(days=self.CONFIG["article_days_leniency"]).to_timedelta64()
