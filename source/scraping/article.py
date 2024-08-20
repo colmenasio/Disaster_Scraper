@@ -239,7 +239,7 @@ class Article:
         """DEPRECATED"""
         def combination_operation(list_arg: list[bool]) -> float:
             return sum(list_arg) / len(list_arg)
-        dict_generator = (a.severity for a in articles)
+        dict_generator = (a.answers for a in articles)
         return merge_dicts(dict_generator, combination_operation)
 
     def __repr__(self):
