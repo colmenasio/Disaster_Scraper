@@ -23,8 +23,7 @@ def generate_query(self: Event) -> str:
     return human_readable_query.replace(' ', '+')
 
 
-for evento in event_list:
-    evento.get_related_news(generate_query)
+Event.get_related_news_concurrent(event_list, generate_query)
 event_list = Event.filter_out_irrelevant_events(event_list)
 print(len(event_list))
 if len(event_list) == 0:

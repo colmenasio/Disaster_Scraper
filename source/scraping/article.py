@@ -1,7 +1,10 @@
 from __future__ import annotations
+
 from typing import Callable
 
 import requests
+from concurrent.futures import ThreadPoolExecutor
+import asyncio
 from numpy import datetime64
 from googlesearch import search as g_search
 from bs4 import BeautifulSoup
@@ -11,6 +14,7 @@ import json
 from scraping.questionnaire import Questionnaire
 from common.retriable_decorator import retriable
 from common.merge_dictionaries import merge_dicts
+from common.idempotent_attribute_setter import idempotent_attribute_setter
 
 
 class InformationFetchingError(IOError):
@@ -70,30 +74,56 @@ class Article:
         if do_processing_on_instanciation:
             self.process_article()
 
+    @idempotent_attribute_setter("sucessfully_built")
     def process_article(self):
         """Idempotent function for scraping, classifying and answering the questions about the news article"""
-        if self.sucessfully_built:
-            return
         try:
-            self.link = self.obtain_link_by_google()
-            self.contents = self.obtain_contents_from_link()
-            self.sectors = self.classify_into_sectors()
-            self.answers = self.obtain_answers_to_bool_questions()
+            self.obtain_link_by_google()
+            self.obtain_contents_from_link()
+            self.classify_into_sectors()
+            self.obtain_answers_to_bool_questions()
             self.severity = Questionnaire(self.sectors).get_severity_score_by_sector(self.answers)
             self.sucessfully_built = True
         except InformationFetchingError as e:
             self.sucessfully_built = False
             print(f"Error building {self.title}; Message: {e.message}; Exception ocurred: {e.inner_exception}")
 
-    def obtain_link_by_google(self) -> str:
-        # TODO Refine this search query
-        query = f'"{self.title}, {self.source_name}"'
-        enlaces = list(g_search(query, num_results=1))
-        if len(enlaces) == 0:
-            raise InformationFetchingError(message="Article could not be found by a google search of its title")
-        return enlaces[0]
+    @staticmethod
+    async def _async_google_search(query, num_results=1):
+        loop = asyncio.get_event_loop()
+        with ThreadPoolExecutor() as executor:
+            result = await loop.run_in_executor(executor, g_search, query, num_results)
+            return list(result)
 
-    def obtain_contents_from_link(self) -> str:
+    async def _async_obtain_link_by_google_task(self):
+        # TODO ADD ERROR HANDLING
+        query = f'"{self.title}, {self.source_name}"'
+        enlaces = await Article._async_google_search(query, num_results=1)
+        if len(enlaces) == 0:
+            return InformationFetchingError(message="Article could not be found by a google search of its title")
+        self.link = enlaces[0]
+
+    @staticmethod
+    async def _async_obtain_link_by_google(articles: list[Article]):
+        tasks = [asyncio.create_task(self._async_obtain_link_by_google_task()) for self in articles]
+        await asyncio.gather(*tasks)
+
+    @idempotent_attribute_setter("link")
+    def obtain_link_by_google(self) -> None:
+        # TODO Refine this search query
+        result = asyncio.run(self._async_obtain_link_by_google_task())
+        # If the search has failed
+        if isinstance(result, Exception):
+            raise result
+
+    @staticmethod
+    def obtain_links_by_google_concurrent(articles: list[Article]) -> None:
+        """Concurrently obtains the links for several Articles. If no link was found for a particular article,
+        it gets skipped"""
+        asyncio.run(Article._async_obtain_link_by_google(articles))
+
+    @idempotent_attribute_setter("contents")
+    def obtain_contents_from_link(self) -> None:
         # TODO Implement performance upgrades
         try:
             response = requests.get(self.link)
@@ -109,9 +139,11 @@ class Article:
         if len(parrafos) == 0:
             raise InformationFetchingError(message="No <p> tags were found in the article")
         contenido = ' '.join([p.text for p in parrafos])
-        return contenido
+        self.contents = contenido
+        return None
 
-    def classify_into_sectors(self) -> list[str]:
+    @idempotent_attribute_setter("sectors")
+    def classify_into_sectors(self) -> None:
         affected_sectors = []
         for sector in Questionnaire.get_sector_list():
             sector_description = Questionnaire.get_sector_descriptions()[sector]
@@ -119,9 +151,10 @@ class Article:
                         f"En otras palabras, {sector_description}")
             if self.ask_bool_question(question) is True:
                 affected_sectors.append(sector)
-        return affected_sectors
+        self.sectors = affected_sectors
 
-    def obtain_answers_to_bool_questions(self) -> dict:
+    @idempotent_attribute_setter("answers")
+    def obtain_answers_to_bool_questions(self) -> None:
         questionnaire = Questionnaire(self.sectors)
         answers = {}
         for q in questionnaire:
@@ -130,7 +163,7 @@ class Article:
                 continue
             else:
                 answers[q.id] = a
-        return answers
+        self.answers = answers
 
     @retriable(CONFIG["max_openai_call_tries"])
     def ask_bool_question(self, bool_question: str) -> bool:
@@ -237,8 +270,10 @@ class Article:
     @staticmethod
     def get_answers_true_ratio(articles: list[Article]) -> dict:
         """DEPRECATED"""
+
         def combination_operation(list_arg: list[bool]) -> float:
             return sum(list_arg) / len(list_arg)
+
         dict_generator = (a.answers for a in articles)
         return merge_dicts(dict_generator, combination_operation)
 

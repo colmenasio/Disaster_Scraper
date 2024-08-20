@@ -8,12 +8,12 @@ from scraping.questionnaire import Questionnaire
 from auxiliary_main import culler, disaster_to_dict_factory, generate_search_query
 
 if __name__ == '__main__':
-    # First, we merge the raw expedients into events
+    # First, we merge the raw expedients into articles
     ExpedientMerger.INPUT_PATH = "../input-output/raw_expedients.csv"
     ExpedientMerger.OUTPUT_PATH = "../input-output/all_events.csv"
     ExpedientMerger.merge_csv()
 
-    # Then, we filter the events by quartile exclusion
+    # Then, we filter the articles by quartile exclusion
     QuartileCuller.INPUT_PATH = "../input-output/all_events.csv"
     QuartileCuller.OUTPUT_PATH = "../input-output/culled_events.csv"
 
@@ -21,12 +21,12 @@ if __name__ == '__main__':
 
     #exit(0) # AVOID INNECESARY API CALLS WHEN TESTING
 
-    # We extract information about each event in the remaining events
+    # We extract information about each event in the remaining articles
     Event.INPUT_PATH = "../input-output/culled_events.csv"
     events = Event.from_csv()
     events = Event.extract_info_events(events, generate_search_query)
 
-    # Link the information extrated from events into disasters
+    # Link the information extrated from articles into disasters
     DisasterLinker.INPUT_PATH = "../input-output/culled_events.csv"
     DisasterLinker.OUTPUT_PATH = "../input-output/results.csv"
     disaster_list = DisasterLinker.build_initial_disaster_pool()

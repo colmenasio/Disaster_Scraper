@@ -23,7 +23,7 @@ def generate_search_query(self: Event) -> str:
 
 def disaster_to_dict_factory(event_list: list[Event]) -> Callable[[DisasterLinker], dict | list[dict]]:
     def disaster_to_dict(disaster: DisasterLinker) -> list[dict]:
-        # Define how to generate a row for the result dataframe from a disaster instace (a cluster of events)
+        # Define how to generate a row for the result dataframe from a disaster instace (a cluster of articles)
         event_groups = {}
         for event in event_list:
             if event.df_index not in disaster.indexes:
