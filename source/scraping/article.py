@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from typing import Callable
 
+import random
 import requests
 from concurrent.futures import ThreadPoolExecutor
 import asyncio
@@ -88,39 +89,19 @@ class Article:
             self.sucessfully_built = False
             print(f"Error building {self.title}; Message: {e.message}; Exception ocurred: {e.inner_exception}")
 
-    @staticmethod
-    async def _async_google_search(query, num_results=1):
-        loop = asyncio.get_event_loop()
-        with ThreadPoolExecutor() as executor:
-            result = await loop.run_in_executor(executor, g_search, query, num_results)
-            return list(result)
-
-    async def _async_obtain_link_by_google_task(self):
-        # TODO ADD ERROR HANDLING
-        query = f'"{self.title}, {self.source_name}"'
-        enlaces = await Article._async_google_search(query, num_results=1)
-        if len(enlaces) == 0:
-            return InformationFetchingError(message="Article could not be found by a google search of its title")
-        self.link = enlaces[0]
-
-    @staticmethod
-    async def _async_obtain_link_by_google(articles: list[Article]):
-        tasks = [asyncio.create_task(self._async_obtain_link_by_google_task()) for self in articles]
-        await asyncio.gather(*tasks)
-
     @idempotent_attribute_setter("link")
     def obtain_link_by_google(self) -> None:
         # TODO Refine this search query
-        result = asyncio.run(self._async_obtain_link_by_google_task())
-        # If the search has failed
-        if isinstance(result, Exception):
-            raise result
-
-    @staticmethod
-    def obtain_links_by_google_concurrent(articles: list[Article]) -> None:
-        """Concurrently obtains the links for several Articles. If no link was found for a particular article,
-        it gets skipped"""
-        asyncio.run(Article._async_obtain_link_by_google(articles))
+        query = f'"{self.title}, {self.source_name}"'
+        try:
+            enlaces = list(g_search(query, num_results=1))
+        except requests.exceptions.RequestException as e:
+            raise InformationFetchingError(
+                inner_exception=e,
+                message="Error when calling the google api")
+        if len(enlaces) == 0:
+            raise InformationFetchingError(message="Article could not be found by a google search of its title")
+        self.link = enlaces[0]
 
     @idempotent_attribute_setter("contents")
     def obtain_contents_from_link(self) -> None:

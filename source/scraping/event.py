@@ -140,7 +140,6 @@ class Event:
         """Builds related articles. Discards those news who couldn't be built"""
         if self.related_articles is None:
             return None
-        Article.obtain_links_by_google_concurrent(self.related_articles)
         for article in self.related_articles:
             article.process_article()
         self.related_articles = [article for article in self.related_articles if article.sucessfully_built]
