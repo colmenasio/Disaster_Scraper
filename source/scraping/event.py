@@ -48,6 +48,7 @@ class Event:
         :param do_date_filter: filter news by date or ignore date
         :param query_generator: Its return type must be an ascii string with no whitespaces
             (use '+' instead, eg: 'this+is+an+example')
+        :param do_article_processing: Do info extraction automatically or not
         """
         # TODO modify to integrate the filtering in the fetching process
         try:
@@ -91,6 +92,18 @@ class Event:
             # TODO ADD MORE DEBUG INFO HERE
             print("Error al obtener noticias:")
             raise e
+
+    @staticmethod
+    async def async_get_related_news(events: list[Event],
+                         query_generator: Callable[[Event], str],
+                         do_date_filter: bool = True,
+                         do_article_processing: bool = False):
+        """Asyncronous search of related articles
+        :exception NotImplementedError: Asyncronous article processing is not yet supported.
+            Setting do_article_processing to True will cause an exception to be raised"""
+        if do_article_processing:
+            raise NotImplementedError("Asyncronous article processing is not yet supported")
+        raise NotImplementedError("LMAO i have no idea how async works time to read documentation")
 
     def build_related_articles(self) -> None:
         """Builds related articles. Discards those news who couldn't be built"""
