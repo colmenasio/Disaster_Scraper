@@ -124,8 +124,7 @@ class Event:
             "CAUSAS NATURALES/TEMPESTAD CICLÓNICA ATÍPICA":
                 ["Tornado", "Huracan", "Tormenta"],
             "CAUSAS NATURALES/EMBATE DE MAR":
-                ["Embate de mar", "Tsunami"],
-
+                ["Embate de mar", "Tsunami"]
         }
         events = []
         for index, row in df.iterrows():
