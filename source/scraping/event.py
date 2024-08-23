@@ -237,7 +237,6 @@ class Event:
         The disasters to be merged must be consistent in theme
         :except ValueError: If the disasters cannot be merged because of an inconsistency
             or if no disasters are provided"""
-        warnings.warn("event.combine_events() HAS NOT BEEN PROPPERLY TESTED")
         if len(events) == 0:
             raise ValueError("No articles were provided")
         info = {}
