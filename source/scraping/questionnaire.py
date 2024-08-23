@@ -1,4 +1,5 @@
 import json
+import numbers
 from typing import Iterator
 
 
@@ -78,9 +79,10 @@ class Questionnaire:
         # Iterate over questions
         for question in self:
             answer = answers.get(question.id)
-            if not isinstance(answer, bool) or answer is False:
+            # Either an int, a float or a bool
+            if not isinstance(answer, (numbers.Integral, numbers.Real)):
                 continue
-            actual_scores[question.sector] += question.weight
+            actual_scores[question.sector] += question.weight * answer
 
         # Calculate the final score
         ratios_dict = {}
