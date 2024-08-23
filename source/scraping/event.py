@@ -256,4 +256,7 @@ class Event:
         return info
 
     def summary_event(self) -> dict:
-        return Event.combine_events([self])
+        info = Event.combine_events([self])
+        info["location"] = info.pop("locations")[0]
+        info["df_index"] = info.pop("event_ids")[0]
+        return info
