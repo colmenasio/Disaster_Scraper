@@ -255,3 +255,6 @@ class Event:
         answers_generator = (a.answers for a in Event.get_articles_iterable(events))
         info["answer_ratio"] = merge_dicts(answers_generator, lambda x: sum(x) / len(x))
         return info
+
+    def summary_event(self) -> dict:
+        return Event.combine_events([self])
