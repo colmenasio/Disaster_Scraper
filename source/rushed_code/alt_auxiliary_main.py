@@ -1,6 +1,6 @@
 from typing import Callable
 from source.data_merger.disaster_merger_3 import DisasterLinker
-from source.rushed_code import SummarizedEvent
+from source.rushed_code.summarized_event import SummarizedEvent
 
 
 # Modified overrides of some of the auxiliary functions to account for the rushed changes
@@ -10,7 +10,7 @@ def disaster_to_dict_factory(event_list: list[SummarizedEvent]) -> Callable[[Dis
         # Define how to generate a row for the result dataframe from a disaster instace (a cluster of articles)
         event_groups = {}
         for event in event_list:
-            if event.df_index not in disaster.indexes:
+            if event.event_id not in disaster.indexes:
                 continue
             if event.theme not in event_groups.keys():
                 event_groups[event.theme] = []
