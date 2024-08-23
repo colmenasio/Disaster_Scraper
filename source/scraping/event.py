@@ -248,7 +248,7 @@ class Event:
         info["locations"] = list({e.location for e in events})
         info["start_time"] = min([e.start_time for e in events])
         info["end_time"] = max([e.end_time for e in events])
-        info["affected_sectors"] = list({a.sectors for a in Event.get_articles_iterable(events)})
+        info["affected_sectors"] = list({s for a in Event.get_articles_iterable(events) for s in a.sectors})
         info["event_ids"] = list({e.df_index for e in events})
         severities_generator = (a.severity for a in Event.get_articles_iterable(events))
         info["severity_ratio"] = merge_dicts(severities_generator, lambda x: sum(x) / len(x))

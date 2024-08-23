@@ -82,7 +82,7 @@ class Article:
             self.obtain_link_by_google()
             self.obtain_contents_from_link()
             self.classify_into_sectors()
-            self.obtain_answers_to_bool_questions()
+            self.obtain_severities_questions()
             self.severity = Questionnaire(self.sectors).get_severity_score_by_sector(self.answers)
             self.sucessfully_built = True
         except InformationFetchingError as e:
@@ -92,6 +92,7 @@ class Article:
     @idempotent_attribute_setter("link")
     def obtain_link_by_google(self) -> None:
         # TODO Refine this search query
+        # TODO MAKE PATCHES TO SAFELY STOP THE SCRIP ON GOOGLE IP BAN
         query = f'"{self.title}, {self.source_name}"'
         try:
             enlaces = list(g_search(query, num_results=1))
@@ -135,11 +136,11 @@ class Article:
         self.sectors = affected_sectors
 
     @idempotent_attribute_setter("answers")
-    def obtain_answers_to_bool_questions(self) -> None:
+    def obtain_severities_questions(self) -> None:
         questionnaire = Questionnaire(self.sectors)
         answers = {}
         for q in questionnaire:
-            a = self.ask_bool_question(q.question)
+            a = self.answer_severity_scale_question(q.question)
             if a is None:
                 continue
             else:
@@ -208,8 +209,12 @@ class Article:
             return response
 
     @retriable(CONFIG["max_openai_call_tries"])
-    def answer_severity_scale_question(self, question: str) -> int | None:
-        """I'm in too much of a hurry to parametrize it so for now it's hard coded to work on a scale of 1-5"""
+    def answer_severity_scale_question(self, question: str) -> float | None:
+        """
+        Returns a float from 0 to 1 indicating the severity of the impact of self in a sector specified by the question
+        parameter. In case no answer can be provided, None is returned
+
+        I'm in too much of a hurry to parametrize it so for now it's hard coded to work on a scale of 1-5"""
 
         sys_prompt = ("Eres una herramienta de extraccion de datos.\n"
                       "A continuacion, se te provera un fragmento de un articulo de un noticiario "
@@ -242,7 +247,11 @@ class Article:
         # Type cast the response
         try:
             result = int(response)
-            return None if result is 0 else result
+            if result == 0:
+                return None
+            else:
+                return (result-1)/4
+            # return None if result == 0 else (result-1)/4
         except ValueError as e:
             raise InformationFetchingError(inner_exception=e,
                                            message="OpenAI response could not be parsed")
@@ -289,7 +298,7 @@ class Article:
         return merge_dicts(dict_generator, combination_operation)
 
     @staticmethod
-    def get_answers_true_ratio(articles: list[Article]) -> dict:
+    def get_answers_score_ratio(articles: list[Article]) -> dict:
         """DEPRECATED"""
 
         def combination_operation(list_arg: list[bool]) -> float:

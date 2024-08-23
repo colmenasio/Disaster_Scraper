@@ -30,7 +30,8 @@ if len(event_list) == 0:
     print("No articles were relevant")
 else:
     print(Article.get_combined_severity(event_list[0].related_articles))
-    print(Article.get_answers_true_ratio(event_list[0].related_articles))
+    print(Article.get_answers_score_ratio(event_list[0].related_articles))
 END_TIME = time.time()
 ELAPSED_TIME = END_TIME-START_TIME
+
 print(f"DEBUG INFO\nTOOK {ELAPSED_TIME} TO PROCESS {NUMBER_OF_EVENTS} EVENTS")
