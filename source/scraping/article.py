@@ -16,14 +16,7 @@ from scraping.questionnaire import Questionnaire
 from common.retriable_decorator import retriable
 from common.merge_dictionaries import merge_dicts
 from common.idempotent_attribute_setter import idempotent_attribute_setter
-
-
-class InformationFetchingError(IOError):
-    def __init__(self, inner_exception: Exception | None = None, message: str = ""):
-        # Call the base class constructor with the parameters it needs
-        self.message = message
-        super().__init__(message)
-        self.inner_exception = inner_exception
+from common.exceptions import InformationFetchingError, IPBanError
 
 
 class Article:
