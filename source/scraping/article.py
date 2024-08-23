@@ -90,9 +90,13 @@ class Article:
         try:
             enlaces = list(g_search(query, num_results=1))
         except requests.exceptions.RequestException as e:
-            raise InformationFetchingError(
-                inner_exception=e,
-                message="Error when calling the google api")
+            if e.response.status_code == 429:
+                raise IPBanError
+            else:
+                raise InformationFetchingError(
+                    inner_exception=e,
+                    message="Error when calling the google api")
+
         if len(enlaces) == 0:
             raise InformationFetchingError(message="Article could not be found by a google search of its title")
         self.link = enlaces[0]
