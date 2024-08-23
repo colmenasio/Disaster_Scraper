@@ -207,6 +207,46 @@ class Article:
         else:
             return response
 
+    @retriable(CONFIG["max_openai_call_tries"])
+    def answer_severity_scale_question(self, question: str) -> int | None:
+        """I'm in too much of a hurry to parametrize it so for now it's hard coded to work on a scale of 1-5"""
+
+        sys_prompt = ("Eres una herramienta de extraccion de datos.\n"
+                      "A continuacion, se te provera un fragmento de un articulo de un noticiario "
+                      "hablando acerca de un desastre natural o similar.\n"
+                      "Immediatamente despues, se te proporcionara una pregunta acerca la gravedad con la que ha "
+                      "afectado dicho desastre a un determinado sector."
+                      "Debes responder la pregunta en una escala del 1 al 5 en base como de severamente se ha visto "
+                      "afectado el sector descrito en la pregunta.\n"
+                      "En cuanto a la escala en la que has de responder:\n"
+                      "- Un '1' equivale a: "
+                      "'El sector apenas se ha visto afectado\\Las afecciones han sido leves'\n"
+                      "- Un '5' equivale a: "
+                      "'El sector se ha visto extremadamente afectado\\Las afecciones han sido muy graves'\n"
+                      "En el caso de que no se mencionen afecciones al sector en question, responde '0'\n"
+                      "A la hora de responder, sigue las siguientes pautas:\n"
+                      "- Tu respuesta ha de ser únicamente un entero entre el 0 y el 5, ambos incluidos\n"
+                      "- Recuerda que en caso de no haber mención a afecciones al sector en cuestion, responde '0'")
+        content_prompt = (f"Noticia:\n"
+                          f"`{self.title}\n{self.contents}`\n"
+                          f"Pregunta: {question}")
+
+        try:
+            response = self.get_completion(
+                system_prompt=sys_prompt,
+                content_prompt=content_prompt
+            )
+        except openai.APIError as e:
+            raise InformationFetchingError(inner_exception=e, message="Error ocurred when calling OpenAI completion")
+
+        # Type cast the response
+        try:
+            result = int(response)
+            return None if result is 0 else result
+        except ValueError as e:
+            raise InformationFetchingError(inner_exception=e,
+                                           message="OpenAI response could not be parsed")
+
     @classmethod
     def get_completion(cls, content_prompt: str, system_prompt: str = "", model="gpt-4o"):
         messages = []
