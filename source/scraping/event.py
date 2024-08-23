@@ -174,11 +174,11 @@ class Event:
         df = pd.read_csv(cls.INPUT_PATH, parse_dates=["date"])
         possible_themes_dictionary = {  # TODO REFINE THIS DICTIONARY
             "CAUSAS NATURALES/INUNDACIÓN EXTRAORDINARIA":
-                ["Inundacion", "Luvias Torrenciales", "Desbordamiento de rìos"],
+                ["Inundacion", "Luvias Intensas", "Desbordamientos", "Crecida", "Dana"],
             "CAUSAS NATURALES/TEMPESTAD CICLÓNICA ATÍPICA":
-                ["Tornado", "Huracan", "Tormenta"],
+                ["Tempestad", "Borrasca", "Temporal", "Vientos fuertes"],
             "CAUSAS NATURALES/EMBATE DE MAR":
-                ["Embate de mar", "Tsunami"]
+                ["Fuerte Oleaje", "Embate de mar"]
         }
         events = []
         for index, row in df.iterrows():
