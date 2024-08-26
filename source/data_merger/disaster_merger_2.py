@@ -33,7 +33,7 @@ class QuartileCuller:
                          key: Callable[[pd.DataFrame], pd.Series],
                          total_q: int,
                          lower_n_cuts: int,
-                         inplace: bool = False) -> pd.DataFrame | None:
+                         inplace: bool = False) -> pd.DataFrame:
         """Cuts a dataframe into qcuts and removes the lower N qcuts from the dataframe
         :param df: Target DataFrame
         :param key: Callable returning a Series from the dataframe used as keys in the qcuts creation
@@ -70,10 +70,10 @@ def losses_per_claim_key(df: pd.DataFrame) -> pd.Series:
 
 
 if __name__ == '__main__':
-    og_df = pd.read_csv("../../input-output/merged_expedients_1.csv")
+    og_df = pd.read_csv("../input-output/merged_expedients_1.csv")
     og_df.drop(columns=["Unnamed: 0"], inplace=True)
     number_of_qcuts = 10
-    drop_lower_n = 2
+    drop_lower_n = 4
     df_filtering_by_total_cost = QuartileCuller.drop_lower_qcuts(df=og_df,
                                                   key=lambda df: index_key("total_cost", df),
                                                   total_q=number_of_qcuts,
@@ -98,3 +98,4 @@ if __name__ == '__main__':
     print(og_df.shape)
     print(df_filtering_by_total_cost.sort_values(by="total_cost"))
     print(df_filtering_by_total_cost.shape)
+    df_filtering_by_total_cost.to_csv("../input-output/merged_expedients_2.csv", index=False)
