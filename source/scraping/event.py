@@ -169,9 +169,21 @@ class Event:
         return filtered_events
 
     @classmethod
-    def from_csv(cls) -> list[Event]:
-        """The input path is defined as a class attribute"""
+    def from_csv(cls, from_row: int = -1, to_row: int = -1) -> list[Event]:
+        """
+        The input path is defined as a class attribute
+        The range of rows can be defined as parameters. -1 means no bounds
+        """
         df = pd.read_csv(cls.INPUT_PATH, parse_dates=["date"])
+        if from_row < 0:
+            from_row = 0
+        if to_row < 0 or from_row>to_row:
+            to_row = df.shape[0]
+        df = df.iloc[from_row:to_row]
+        return Event.from_dataframe(df)
+
+    @classmethod
+    def from_dataframe(cls, df: pd.DataFrame) -> list[Event]:
         possible_themes_dictionary = {  # TODO REFINE THIS DICTIONARY
             "CAUSAS NATURALES/INUNDACIÓN EXTRAORDINARIA":
                 ["Inundacion", "Luvias Intensas", "Desbordamientos", "Crecida", "Dana"],
@@ -253,6 +265,8 @@ class Event:
         info["severity_ratio"] = merge_dicts(severities_generator, lambda x: sum(x) / len(x))
         answers_generator = (a.answers for a in Event.get_articles_iterable(events))
         info["answer_ratio"] = merge_dicts(answers_generator, lambda x: sum(x) / len(x))
+        sources_generator = (a.link for a in Event.get_articles_iterable(events))
+        info["sources"] = [link for link in sources_generator]
         return info
 
     def summary_event(self) -> dict:
