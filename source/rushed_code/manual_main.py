@@ -38,7 +38,7 @@ def process_events_batches():
             summaries.extend([e.summary_event() for e in event_list])
             CONTROL_DATA["last_row_processed"] += BATCH_SIZE
     except IPBanError:
-        print("IP banned stopping procedure")
+        print("IP banned; Stopping procedure")
     except KeyboardInterrupt:
         return
     finally:
