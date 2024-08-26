@@ -18,12 +18,7 @@ class SummarizedEvent:
         severity_ratio: dict[str, float]
         answer_ratio: dict[int, float]
         """
-        self.data = data_arg
-
-    def __getattr__(self, item):
-        if item not in self.data.keys():
-            raise AttributeError(f"type object 'SummarizedEvent' has no attribute '´{item}'")
-        return self.data[item]
+        self.__dict__ = data_arg
 
     @staticmethod
     def combine_events(events: list[SummarizedEvent]) -> dict:

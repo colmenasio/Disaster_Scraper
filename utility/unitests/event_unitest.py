@@ -2,13 +2,12 @@ from source.scraping.event import Event
 from source.scraping.article import Article
 
 from unidecode import unidecode
-
 import time
+import pandas as pd
 
 START_TIME = time.time()
 print("Imports/Initialization: Done\nStarting unit test")
 Event.INPUT_PATH = "../utility/testfiles/sample_merged_1.csv"
-Event.MAX_NEWS_PER_EVENT = 6
 event_list = Event.from_csv()
 NUMBER_OF_EVENTS = len(event_list)
 
@@ -33,5 +32,6 @@ else:
     print(Article.get_answers_score_ratio(event_list[0].related_articles))
 END_TIME = time.time()
 ELAPSED_TIME = END_TIME-START_TIME
-
+df = pd.DataFrame(data=[e.summary_event() for e in event_list])
+df.to_csv(path_or_buf="../utility/testfiles/example_summarized_events.csv")
 print(f"DEBUG INFO\nTOOK {ELAPSED_TIME} TO PROCESS {NUMBER_OF_EVENTS} EVENTS")
