@@ -2,10 +2,7 @@ from __future__ import annotations
 
 from typing import Callable
 
-import random
 import requests
-from concurrent.futures import ThreadPoolExecutor
-import asyncio
 from numpy import datetime64
 from googlesearch import search as g_search
 from bs4 import BeautifulSoup
@@ -227,8 +224,9 @@ class Article:
                       "'El sector se ha visto extremadamente afectado\\Las afecciones han sido muy graves'\n"
                       "En el caso de que no se mencionen afecciones al sector en question, responde '0'\n"
                       "A la hora de responder, sigue las siguientes pautas:\n"
-                      "- Tu respuesta ha de ser únicamente un entero entre el 0 y el 5, ambos incluidos\n"
-                      "- Recuerda que en caso de no haber mención a afecciones al sector en cuestion, responde '0'")
+                      "- Responde únicamente con un numero entero entre el 0 y el 5, ambos incluidos\n"
+                      "- Recuerda que en caso de no haber mención a afecciones al sector en cuestion, "
+                      "debes responder '0'")
         content_prompt = (f"Noticia:\n"
                           f"`{self.title}\n{self.contents}`\n"
                           f"Pregunta: {question}")
