@@ -39,7 +39,13 @@ def process_events_batches():
             CONTROL_DATA["last_row_processed"] += BATCH_SIZE
     except IPBanError:
         print("IP banned stopping procedure")
+    except KeyboardInterrupt:
+        return
     finally:
+        print("Running cleanup")
+        if len(summaries) == 0:
+            print("No cleanup was needed")
+            return
         file_id = CONTROL_DATA['last_output_file_id']
         CONTROL_DATA['last_output_file_id'] += 1
         result_df = pd.DataFrame(data=summaries)

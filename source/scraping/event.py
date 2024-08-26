@@ -71,6 +71,7 @@ class Event:
             for event in events:
                 print(f"Building Event: {event}")
                 event.build_related_articles()
+                print("Done")
 
     @staticmethod
     async def _fetch(url, session):
