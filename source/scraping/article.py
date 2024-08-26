@@ -69,6 +69,7 @@ class Article:
     def process_article(self):
         """Idempotent function for scraping, classifying and answering the questions about the news article"""
         try:
+            print(f"    Processing article: {self}")
             self.obtain_link_by_google()
             self.obtain_contents_from_link()
             self.classify_into_sectors()
