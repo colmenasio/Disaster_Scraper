@@ -35,6 +35,25 @@ class Article:
     except FileNotFoundError as e:
         raise FileNotFoundError(f"{CONFIG_PATH} not found")
 
+    CACHE = dict()
+
+    def __new__(cls,
+                title_arg: str,
+                source_url_arg: str,
+                source_name_arg: str,
+                date_arg: datetime64,
+                do_processing_on_instanciation: bool = True):
+        # Check if an instance with the same id already exists in the cache
+        if title_arg in cls.CACHE:
+            print("Article already in cache")
+            return cls.CACHE[title_arg]  # Return the cached instance without calling __init__
+        else:
+            # Create a new instance
+            self = super().__new__(cls)
+            # Store the new instance in the cache
+            cls.CACHE[title_arg] = self
+            return self
+
     def __init__(self,
                  title_arg: str,
                  source_url_arg: str,
@@ -246,7 +265,7 @@ class Article:
             if result == 0:
                 return None
             else:
-                return (result-1)/4
+                return (result - 1) / 4
             # return None if result == 0 else (result-1)/4
         except ValueError as e:
             raise InformationFetchingError(inner_exception=e,
