@@ -15,7 +15,7 @@ import pandas as pd
 
 
 def process_events_batches():
-    BATCH_SIZE = 3
+    BATCH_SIZE = 1
     INPUT_PATH = "../input-output/merged_expedients_2.csv"
     CONTROL_PATH = "rushed_code/control_data/control.json"
     with open(CONTROL_PATH) as fstream:
@@ -43,6 +43,7 @@ def process_events_batches():
         return
     finally:
         print("Running cleanup")
+        print(f"Current progress: {100*CONTROL_DATA["last_row_processed"]/df.shape[0]:.2f}%")
         if len(summaries) == 0:
             print("No cleanup was needed")
             return
