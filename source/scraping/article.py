@@ -69,6 +69,9 @@ class Article:
             (like filtering by date and such), causing an unecessary workload.
             This automatic processing can be manually toggled off by setting `do_processing` to False when instanciating,
             and then processed by calling `self.do_procesing`"""
+        if "title" in self.__dict__:
+            # Already has been initialized so no need to initialize again
+            return
         self.title = title_arg
         self.source_url = source_url_arg
         self.source_name = source_name_arg
