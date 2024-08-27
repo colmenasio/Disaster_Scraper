@@ -73,7 +73,7 @@ if __name__ == '__main__':
     og_df = pd.read_csv("../input-output/merged_expedients_1.csv")
     og_df.drop(columns=["Unnamed: 0"], inplace=True)
     number_of_qcuts = 10
-    drop_lower_n = 4
+    drop_lower_n = 8
     df_filtering_by_total_cost = QuartileCuller.drop_lower_qcuts(df=og_df,
                                                   key=lambda df: index_key("total_cost", df),
                                                   total_q=number_of_qcuts,
