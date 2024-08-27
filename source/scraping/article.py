@@ -45,12 +45,11 @@ class Article:
                 do_processing_on_instanciation: bool = True):
         # Check if an instance with the same id already exists in the cache
         if title_arg in cls.CACHE:
-            print("Article already in cache")
-            return cls.CACHE[title_arg]  # Return the cached instance without calling __init__
+            self = cls.CACHE[title_arg]
+            return self
         else:
             # Create a new instance
             self = super().__new__(cls)
-            # Store the new instance in the cache
             cls.CACHE[title_arg] = self
             return self
 
