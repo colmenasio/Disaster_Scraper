@@ -69,7 +69,7 @@ class Event:
         asyncio.run(Event._async_get_related_news(events, query_generator, do_date_filter))
         if do_article_processing:
             for event in events:
-                print(f"Building Event: {event}")
+                print(f"Building Event: {event} ({len(event.related_articles)} articles before processing)")
                 event.build_related_articles()
                 print("Done")
 
