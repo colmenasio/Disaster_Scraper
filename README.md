@@ -27,8 +27,7 @@ Collumns (name and type):
   - The sectors that were not affected will not have a key in the dictionary
 - `Question_average (dict[int, float])`:
   - Each key corresponds to the id of a question asked
-  - Each value is the average response over all articles in all events
-  - For example; Lets consider question `1`. If 3 articles answer `True` and 2 answer `False` to question `1`, then the value associated to the key `1` in this dictionary will be `0.6`
+  - Each value is the average of the response over all articles in all events in the disaster
 
 
 ### Id to Question Mapping
