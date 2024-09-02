@@ -29,6 +29,7 @@ if __name__ == '__main__':
     # Link the information extrated from articles into disasters
     DisasterLinker.INPUT_PATH = "../input-output/culled_events.csv"
     DisasterLinker.OUTPUT_PATH = "../input-output/results.csv"
+    DisasterLinker.do_startup()
     disaster_list = DisasterLinker.build_initial_disaster_pool()
     DisasterLinker.collapse_disaster_list(disaster_list)
 
