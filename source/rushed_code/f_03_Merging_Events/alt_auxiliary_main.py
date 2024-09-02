@@ -1,6 +1,6 @@
 from typing import Callable
 from source.data_merger.disaster_merger_3 import DisasterLinker
-from source.rushed_code.summarized_event import SummarizedEvent
+from source.rushed_code.f_03_Merging_Events.summarized_event import SummarizedEvent
 
 
 # Modified overrides of some of the auxiliary functions to account for the rushed changes
