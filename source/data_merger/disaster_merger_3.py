@@ -18,13 +18,15 @@ class DisasterLinker:
     ADJACENCY_TABLE_PATH = "../data/provinces_adjacency/adjacency_table.csv"
     CONFIG_PATH = "../config/disaster_merger_3/config.json"
 
-    expedients = pd.read_csv(INPUT_PATH)
-    expedients['date'] = pd.to_datetime(expedients['date'], errors='raise')
-    expedients.drop("Unnamed: 0", axis=1, inplace=True)
-    adjacencies = pd.read_csv(ADJACENCY_TABLE_PATH, index_col=0)
+    @classmethod
+    def do_startup(cls):
+        cls.expedients = pd.read_csv(cls.INPUT_PATH)
+        cls.expedients['date'] = pd.to_datetime(cls.expedients['date'], errors='raise')
+        cls.expedients.drop("Unnamed: 0", axis=1, inplace=True)
+        cls.adjacencies = pd.read_csv(cls.ADJACENCY_TABLE_PATH, index_col=0)
 
-    with open(CONFIG_PATH) as fstream:
-        CONFIG = jsonload(fstream)
+        with open(cls.CONFIG_PATH) as fstream:
+            cls.CONFIG = jsonload(fstream)
 
     def __init__(self, indexes: list[int]):
         self.indexes = indexes
