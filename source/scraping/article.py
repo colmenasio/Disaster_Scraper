@@ -58,7 +58,8 @@ class Article:
                  source_url_arg: str,
                  source_name_arg: str,
                  date_arg: datetime64,
-                 do_processing_on_instanciation: bool = True):
+                 do_processing_on_instanciation: bool = True,
+                 link_arg=None):
         """
         Each `Article` instance represent a single news article with
         its respective information and its answers to the questions provided
@@ -77,7 +78,7 @@ class Article:
         self.source_name = source_name_arg
         self.date = date_arg
         self.sucessfully_built = False
-        self.link = None
+        self.link = link_arg
         self.contents = None
         self.sectors = None
         self.answers = None
