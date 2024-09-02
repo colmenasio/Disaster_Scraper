@@ -22,7 +22,8 @@ class DisasterLinker:
     def do_startup(cls):
         cls.expedients = pd.read_csv(cls.INPUT_PATH)
         cls.expedients['date'] = pd.to_datetime(cls.expedients['date'], errors='raise')
-        cls.expedients.drop("Unnamed: 0", axis=1, inplace=True)
+        if "Unnamed: 0" in cls.expedients.columns:
+            cls.expedients.drop(columns=["Unnamed: 0"], inplace=True)
         cls.adjacencies = pd.read_csv(cls.ADJACENCY_TABLE_PATH, index_col=0)
 
         with open(cls.CONFIG_PATH) as fstream:
@@ -192,8 +193,9 @@ class DisasterLinker:
                      ) -> pd.DataFrame | None:
         if len(instances) == 0:
             return None
-        column_tags = list(to_dict(instances[0]).keys())
-        disasters_df = pd.DataFrame(columns=column_tags)
+
+
+        disasters_df = None
         df_index = 0
         for disaster in instances:
             # Returns either a row or a list of rows
@@ -203,6 +205,8 @@ class DisasterLinker:
                 data_dicts = [data_dicts]
             # Add each row to the dataframe
             for data_dict in data_dicts:
+                if disasters_df is None:
+                    disasters_df = pd.DataFrame(columns = list(data_dict.keys()))
                 disasters_df.loc[df_index] = data_dict
                 df_index += 1
         return disasters_df
