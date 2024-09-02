@@ -10,6 +10,7 @@ def read_csv(filepath) -> pd.DataFrame:
         "affected_sectors": lambda x: eval(x),
         "severity_ratio": lambda x: eval(x),
         "answer_ratio": lambda x: eval(x),
+        "sources": lambda x: eval(x)
     })
     if "Unnamed: 0" in df.columns:
         df.drop(columns=["Unnamed: 0"], inplace=True)
@@ -29,4 +30,5 @@ if __name__ == '__main__':
     disaster_list = DisasterLinker.build_initial_disaster_pool()
     DisasterLinker.collapse_disaster_list(disaster_list)
     final_df = DisasterLinker.to_dataframe(disaster_list, disaster_to_dict)
-    print(final_df)
+    OUTPUT_PATH = "../input-output/final.csv"
+    final_df.to_csv(OUTPUT_PATH)
