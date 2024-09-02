@@ -19,7 +19,13 @@ class SummarizedEvent:
         severity_ratio: dict[str, float]
         answer_ratio: dict[int, float]
         """
-        self.__dict__ = data_arg | self.__dict__
+        self.data = data_arg
+
+    def __getattr__(self, item):
+        if item in self.data:
+            return self.data[item]
+        else:
+            raise AttributeError("'SummarizedEvent' object has no attribute 'event_id'")
 
     @staticmethod
     def combine_events(events: list[SummarizedEvent]) -> dict:
