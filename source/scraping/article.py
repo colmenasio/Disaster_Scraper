@@ -109,7 +109,7 @@ class Article:
         try:
             enlaces = list(g_search(query, num_results=1))
         except requests.exceptions.RequestException as e:
-            if e.response.status_code == 429:
+            if e.response is not None and e.response.status_code == 429:
                 raise IPBanError
             else:
                 raise InformationFetchingError(
@@ -280,7 +280,7 @@ class Article:
             messages.append({"role": "system", "content": system_prompt})
         messages.append({"role": "user", "content": content_prompt})
         response = cls.openai_client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model=cls.CONFIG["GPT_VERSION"],
             messages=messages
         )
         return response.choices[0].message.content
