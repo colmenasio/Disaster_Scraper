@@ -8,9 +8,10 @@ from source.rushed_code.f_03_Merging_Events.summarized_event import SummarizedEv
 def disaster_to_dict_factory(event_list: list[SummarizedEvent]) -> Callable[[DisasterLinker], dict | list[dict]]:
     def disaster_to_dict(disaster: DisasterLinker) -> list[dict]:
         # Define how to generate a row for the result dataframe from a disaster instace (a cluster of articles)
+        print(f"Merging" )
         event_groups = {}
         for event in event_list:
-            if event.event_id not in disaster.indexes:
+            if event.df_index not in disaster.indexes:
                 continue
             if event.theme not in event_groups.keys():
                 event_groups[event.theme] = []
