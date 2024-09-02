@@ -3,7 +3,7 @@ import pandas as pd
 from typing import Literal
 
 BATCHES_DIR = "rushed_code/01_Basic_Scraping/unmerged_data"
-RESULT_DIR = "rushed_code/01_Basic_Scraping/<<<results"
+RESULT_DIR = "rushed_code/01_Basic_Scraping/results"
 RESULT_NAME = "result_semi_final"
 FileExtension = Literal["csv", "xlsx"]
 
