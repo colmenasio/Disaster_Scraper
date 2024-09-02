@@ -75,8 +75,6 @@ class Questionnaire:
         :return: A dictionary in which each sector is a sector their value represents their score over 1"""
         # Initialize sector scores
         actual_scores = {}
-        for sector in self.sectors:
-            actual_scores[sector] = 0
 
         # Iterate over questions
         for question in self:
@@ -84,6 +82,8 @@ class Questionnaire:
             # Either an int, a float or a bool
             if not isinstance(answer, (numbers.Integral, numbers.Real)):
                 continue
+            if question.sector not in actual_scores:
+                actual_scores[question.sector] = 0
             actual_scores[question.sector] += question.weight * answer
 
         # Calculate the final score
