@@ -42,7 +42,9 @@ class Article:
                 source_url_arg: str,
                 source_name_arg: str,
                 date_arg: datetime64,
-                do_processing_on_instanciation: bool = True):
+                do_processing_on_instanciation: bool = True,
+                link_arg: str = None
+                ):
         # Check if an instance with the same id already exists in the cache
         if title_arg in cls.CACHE:
             self = cls.CACHE[title_arg]
@@ -59,7 +61,7 @@ class Article:
                  source_name_arg: str,
                  date_arg: datetime64,
                  do_processing_on_instanciation: bool = True,
-                 link_arg=None):
+                 link_arg: str = None):
         """
         Each `Article` instance represent a single news article with
         its respective information and its answers to the questions provided
@@ -106,8 +108,9 @@ class Article:
     def obtain_link_by_google(self) -> None:
         # TODO Refine this search query
         # TODO MAKE PATCHES TO SAFELY STOP THE SCRIP ON GOOGLE IP BAN
-        query = f'"{self.title}, {self.source_name}"'
+        print("THIS SHOULDNT BE RUNNING LMAOOO")
         try:
+            query = f'"{self.title}, {self.source_name}"'
             enlaces = list(g_search(query, num_results=1))
         except requests.exceptions.RequestException as e:
             if e.response is not None and e.response.status_code == 429:
