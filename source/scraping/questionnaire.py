@@ -55,11 +55,13 @@ class Questionnaire:
         return cls.sectors_descriptions
 
     @classmethod
-    def get_question_id_dict(cls) -> dict[int, str]:
+    def get_question_id_dict(cls) -> dict[int, (str, int, str)]:
+        """Each value in the dict corresponds, respectively,
+        to the question itself, the weight of said question and the sector the question belongs to"""
         question_dict = {}
         for sector_questions in cls.questions.values():
             for q in sector_questions:
-                question_dict[q.id] = q.question
+                question_dict[q.id] = (q.question, q.weight, q.sector)
         return question_dict
 
     def get_severity_score_by_sector(self, answers: dict[int, bool]) -> dict[str, float]:
