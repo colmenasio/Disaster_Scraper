@@ -6,6 +6,7 @@ from common.merge_dictionaries import merge_dicts
 class SummarizedEvent:
     """mostly a dict wrapper so that it `kinda` behaves like a Event instance
     and can reuse most of the merging code lmao"""
+
     def __init__(self, data_arg: dict):
         """
         keys:
@@ -18,7 +19,7 @@ class SummarizedEvent:
         severity_ratio: dict[str, float]
         answer_ratio: dict[int, float]
         """
-        self.__dict__ = data_arg
+        self.__dict__ = data_arg | self.__dict__
 
     @staticmethod
     def combine_events(events: list[SummarizedEvent]) -> dict:
