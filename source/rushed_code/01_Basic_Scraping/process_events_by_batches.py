@@ -1,24 +1,18 @@
 import json
 import time
 
-from data_merger.disaster_merger_1 import ExpedientMerger
-from data_merger.disaster_merger_2 import QuartileCuller
-from data_merger.disaster_merger_3 import DisasterLinker
-
 from scraping.event import Event
-from scraping.questionnaire import Questionnaire
 
 from common.exceptions import IPBanError
 
-from auxiliary_main import culler, disaster_to_dict_factory, generate_search_query
-
+from auxiliary_main import generate_search_query
 import pandas as pd
 
 
 def process_events_batches() -> bool:
     BATCH_SIZE = 1
     INPUT_PATH = "../input-output/merged_expedients_2.csv"
-    CONTROL_PATH = "rushed_code/control_data/control.json"
+    CONTROL_PATH = "rushed_code/01_Basic_Scraping/control_data/control.json"
     with open(CONTROL_PATH) as fstream:
         CONTROL_DATA = json.load(fstream)
     df = pd.read_csv(INPUT_PATH, parse_dates=["date"])
