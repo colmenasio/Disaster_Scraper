@@ -1,4 +1,5 @@
 import json
+import time
 
 from data_merger.disaster_merger_1 import ExpedientMerger
 from data_merger.disaster_merger_2 import QuartileCuller
@@ -14,7 +15,7 @@ from auxiliary_main import culler, disaster_to_dict_factory, generate_search_que
 import pandas as pd
 
 
-def process_events_batches():
+def process_events_batches() -> bool:
     BATCH_SIZE = 1
     INPUT_PATH = "../input-output/merged_expedients_2.csv"
     CONTROL_PATH = "rushed_code/control_data/control.json"
@@ -37,23 +38,39 @@ def process_events_batches():
             print(f"Useful total events: {len(event_list)}")
             summaries.extend([e.summary_event() for e in event_list])
             CONTROL_DATA["last_row_processed"] += BATCH_SIZE
+        else:
+            return True
     except IPBanError:
         print("IP banned; Stopping procedure")
     except KeyboardInterrupt:
-        return
+        return False
     finally:
         print("Running cleanup")
         print(f"Current progress: {100*CONTROL_DATA["last_row_processed"]/df.shape[0]:.2f}%")
         if len(summaries) == 0:
             print("No cleanup was needed")
-            return
+            return False
         file_id = CONTROL_DATA['last_output_file_id']
         CONTROL_DATA['last_output_file_id'] += 1
         result_df = pd.DataFrame(data=summaries)
         result_df.to_csv(f"rushed_code/unmerged_data/result_{file_id}.csv")
         with open(CONTROL_PATH, "w+") as fstream:
             json.dump(CONTROL_DATA, fstream)
+    return False
+
+
+def auto_retry_processing(min_between_retries: int = 30) -> None:
+    has_reached_eof = False
+    while True:
+        print("---- INITIATING NEW PROCESSING ----")
+        has_reached_eof = process_events_batches()
+        if has_reached_eof:
+            print("FINISHED")
+            return
+        else:
+            print("---- NOT FINSIHED; SLEEPING ----")
+            time.sleep(min_between_retries*60)
 
 
 if __name__ == '__main__':
-    process_events_batches()
+    auto_retry_processing()
