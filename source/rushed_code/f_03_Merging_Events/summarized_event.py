@@ -40,9 +40,14 @@ class SummarizedEvent:
         info["start_time"] = min([e.start_time for e in events])
         info["end_time"] = max([e.end_time for e in events])
         info["affected_sectors"] = list({s for e in events for s in e.affected_sectors})
-        info["event_ids"] = list({e.df_index for e in events})
+        info["event_ids"] = list({int(e.df_index) for e in events})
         severities_generator = (e.severity_ratio for e in events)
         info["severity_ratio"] = merge_dicts(severities_generator, lambda x: sum(x) / len(x))
         answers_generator = (e.answer_ratio for e in events)
         info["answer_ratio"] = merge_dicts(answers_generator, lambda x: sum(x) / len(x))
+        info["df_indexes"] = list({int(se.df_index) for se in events})
+        info["sources"] = list({url for se in events for url in se.sources})
         return info
+
+    def __repr__(self):
+        return f"<__main__.Event object: {self.theme}, {self.location}, {self.start_time}>"
