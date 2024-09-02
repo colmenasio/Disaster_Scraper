@@ -108,7 +108,6 @@ class Article:
     def obtain_link_by_google(self) -> None:
         # TODO Refine this search query
         # TODO MAKE PATCHES TO SAFELY STOP THE SCRIP ON GOOGLE IP BAN
-        print("THIS SHOULDNT BE RUNNING LMAOOO")
         try:
             query = f'"{self.title}, {self.source_name}"'
             enlaces = list(g_search(query, num_results=1))
