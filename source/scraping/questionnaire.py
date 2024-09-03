@@ -88,7 +88,7 @@ class Questionnaire:
 
         # Calculate the final score
         ratios_dict = {}
-        for sector in self.sectors:
+        for sector in actual_scores.keys():
             if self.sector_weight_sum[sector] == 0:
                 continue
             ratios_dict[sector] = actual_scores[sector] / self.sector_weight_sum[sector]
