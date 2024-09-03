@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from typing import Callable
 
+import pandas as pd
 import requests
 from numpy import datetime64
 from googlesearch import search as g_search
@@ -234,7 +235,7 @@ class Article:
         parameter. In case no answer can be provided, None is returned
 
         I'm in too much of a hurry to parametrize it so for now it's hard coded to work on a scale of 1-5"""
-
+        # TODO add a more specific description
         sys_prompt = ("Eres una herramienta de extraccion de datos.\n"
                       "A continuacion, se te provera un fragmento de un articulo de un noticiario "
                       "hablando acerca de un desastre natural o similar.\n"
@@ -326,6 +327,20 @@ class Article:
 
         dict_generator = (a.answers for a in articles)
         return merge_dicts(dict_generator, combination_operation)
+
+    @classmethod
+    def dump_cache(cls) -> pd.DataFrame:
+        """Dumps all articles in the cache to a Dataframe"""
+        formated_cache = [{cls.CACHE[key].link,
+                           cls.CACHE[key].sectors,
+                           cls.CACHE[key].severity,
+                           cls.CACHE[key].answers} for key in cls.CACHE]
+        return pd.DataFrame(data=formated_cache)
+
+    @classmethod
+    def clear_cache(cls) -> None:
+        """idk how this would be usefult, but it's just a single line sooo"""
+        cls.CACHE = {}
 
     def __repr__(self):
         return f"<__main__.Article object: {self.title}, {self.source_url}, {self.date}>"
