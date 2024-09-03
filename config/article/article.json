@@ -1,4 +1,4 @@
 {
   "max_openai_call_tries": 2,
-  "GPT_VERSION": "gpt-4o-mini"
+  "GPT_VERSION": "gpt-4o"
 }
