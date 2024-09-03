@@ -1,22 +1,22 @@
 {
   "Energia": {
-    "description": "\u00bfSe ha visto afectada la produccion, distribucion o almacenamiento de energia electrica, o bien recursos relacionados con esta como el gas, petroleo o hidrogeno?",
+    "description": "\u00bfSe han producido cortes electricos, se ha visto afectada la produccion, distribucion o almacenamiento de energia electrica, o bien recursos relacionados con esta como el gas, petroleo o hidrogeno?",
     "questions": [
       {
-        "q": "\u00bfSe ha visto afectada la produccion de energia electrica?",
+        "q": "\u00bfComo de graves han sido los cortes electricos causados?",
         "w": 10
       },
       {
-        "q": "\u00bfSe ha visto afectada la distribucion de energia electrica?",
-        "w": 10
+        "q": "\u00bfSe ha visto afectada la produccion de energia electrica?",
+        "w": 5
       },
       {
         "q": "\u00bfSe ha visto afectada la distribucion de gas natural?",
-        "w": 5
+        "w": 2
       },
       {
-        "q": "\u00bfSe ha visto afectada la distribucion de pretroleo?",
-        "w": 5
+        "q": "\u00bfSe ha visto afectada la distribucion de petroleo?",
+        "w": 2
       },
       {
         "q": "\u00bfSe ha visto afectada la distribucion de hidrogeno?",
