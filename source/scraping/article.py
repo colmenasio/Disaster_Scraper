@@ -37,6 +37,7 @@ class Article:
         raise FileNotFoundError(f"{CONFIG_PATH} not found")
 
     CACHE = dict()
+    CURR_ID = 0
 
     def __new__(cls,
                 title_arg: str,
@@ -76,6 +77,7 @@ class Article:
         if "title" in self.__dict__:
             # Already has been initialized so no need to initialize again
             return
+        self.id = Article.generate_new_id()
         self.title = title_arg
         self.source_url = source_url_arg
         self.source_name = source_name_arg
@@ -89,6 +91,12 @@ class Article:
 
         if do_processing_on_instanciation:
             self.process_article()
+
+    @classmethod
+    def generate_new_id(cls) -> int:
+        new_id = cls.CURR_ID
+        cls.CURR_ID += 1
+        return new_id
 
     @idempotent_attribute_setter("sucessfully_built")
     def process_article(self):
@@ -333,11 +341,15 @@ class Article:
     @classmethod
     def dump_cache(cls) -> pd.DataFrame:
         """Dumps all articles in the cache to a Dataframe"""
-        formated_cache = [{cls.CACHE[key].link,
-                           cls.CACHE[key].sectors,
-                           cls.CACHE[key].severity,
-                           cls.CACHE[key].answers} for key in cls.CACHE]
-        return pd.DataFrame(data=formated_cache)
+        formated_cache = [{
+            "id": cls.CACHE[key].id,
+            "link": cls.CACHE[key].link,
+            "sectors": cls.CACHE[key].sectors,
+            "severity": cls.CACHE[key].severity,
+            "answers": cls.CACHE[key].answers
+            } for key in cls.CACHE
+        ]
+        return pd.DataFrame(data=formated_cache).set_index("id")
 
     @classmethod
     def clear_cache(cls) -> None:
