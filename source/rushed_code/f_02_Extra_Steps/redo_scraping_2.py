@@ -66,10 +66,10 @@ def read_csv(filepath) -> pd.DataFrame:
 
 
 if __name__ == '__main__':
-    # BASE_CSV_FILE_PATH = "rushed_code/f_01_Basic_Scraping/results/events_semi_final.csv"
-    BASE_CSV_FILE_PATH = "rushed_code/f_01_Basic_Scraping/unmerged_batches/result_0.csv"
-    EVENT_OUTPUT_PATH = "rushed_code/f_02_Extra_Steps/results/events_final_test_0.csv"
-    ARTICLE_OUTPUT_PATH = "rushed_code/f_02_Extra_Steps/results/articles_final_test_0.csv"
+    BASE_CSV_FILE_PATH = "rushed_code/f_01_Basic_Scraping/results/events_semi_final.csv"
+    # BASE_CSV_FILE_PATH = "rushed_code/f_01_Basic_Scraping/unmerged_batches/result_0.csv"
+    EVENT_OUTPUT_PATH = "rushed_code/f_02_Extra_Steps/results/events_final.csv"
+    ARTICLE_OUTPUT_PATH = "rushed_code/f_02_Extra_Steps/results/articles_final.csv"
 
     og_df = read_csv(BASE_CSV_FILE_PATH)
     new_df = redo_df(og_df)
