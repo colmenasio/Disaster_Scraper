@@ -66,11 +66,18 @@ def read_csv(filepath) -> pd.DataFrame:
 
 
 if __name__ == '__main__':
-    BASE_CSV_FILE_PATH = "rushed_code/f_01_Basic_Scraping/results/events_semi_final.csv"
+    BASE_CSV_FILE_PATH = "rushed_code/f_01_Basic_Scraping/results/result_semi_final_2.csv"
     # BASE_CSV_FILE_PATH = "rushed_code/f_01_Basic_Scraping/unmerged_batches/result_0.csv"
-    EVENT_OUTPUT_PATH = "rushed_code/f_02_Extra_Steps/results/events_final.csv"
-    ARTICLE_OUTPUT_PATH = "rushed_code/f_02_Extra_Steps/results/articles_final.csv"
+    EVENT_OUTPUT_PATH = "rushed_code/f_02_Extra_Steps/results/events_final_batch_2.csv"
+    ARTICLE_INPUT_PATH = "rushed_code/f_02_Extra_Steps/results/articles_final_batch_1.csv"
+    ARTICLE_OUTPUT_PATH = "rushed_code/f_02_Extra_Steps/results/articles_final_batch_2.csv"
 
+    # If there is an article cache to load, load it
+    if ARTICLE_INPUT_PATH is not None:
+        old_cache = pd.read_csv(ARTICLE_INPUT_PATH,
+                                converters={key: lambda x: eval(x) for key in ['sectors', 'severity', 'answers']}
+                                ).set_index("id")
+        Article.load_cache(old_cache)
     og_df = read_csv(BASE_CSV_FILE_PATH)
     new_df = redo_df(og_df)
     new_df.to_csv(path_or_buf=EVENT_OUTPUT_PATH, index=False)
