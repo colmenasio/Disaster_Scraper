@@ -7,6 +7,7 @@ import requests
 from numpy import datetime64
 from googlesearch import search as g_search
 from bs4 import BeautifulSoup
+from unidecode import unidecode
 import openai
 import json
 
@@ -198,9 +199,9 @@ class Article:
             raise InformationFetchingError(inner_exception=e, message="Error ocurred when calling OpenAI completion")
 
         # Limpiar el contenido del response si es necesario
-        if response.lower().strip(".") == "si":
+        if unidecode(response).lower().strip(".") == "si":
             return True
-        elif response.lower().strip(".") == "no":
+        elif unidecode(response).lower().strip(".") == "no":
             return False
         else:
             raise InformationFetchingError(
@@ -257,7 +258,7 @@ class Article:
                       "'El sector apenas se ha visto afectado\\Las afecciones han sido leves'\n"
                       "- Un '5' equivale a: "
                       "'El sector se ha visto extremadamente afectado\\Las afecciones han sido muy graves'\n"
-                      
+
                       "En el caso de que no se mencionen afecciones al sector en question, responde '0'\n"
                       "A la hora de responder, sigue las siguientes pautas:\n"
                       "- Responde únicamente con un numero entero entre el 0 y el 5, ambos incluidos\n"
@@ -347,7 +348,7 @@ class Article:
             "sectors": cls.CACHE[key].sectors,
             "severity": cls.CACHE[key].severity,
             "answers": cls.CACHE[key].answers
-            } for key in cls.CACHE
+        } for key in cls.CACHE
         ]
         return pd.DataFrame(data=formated_cache).set_index("id")
 
@@ -355,6 +356,24 @@ class Article:
     def clear_cache(cls) -> None:
         """idk how this would be usefult, but it's just a single line sooo"""
         cls.CACHE = {}
+
+    @classmethod
+    def load_cache(cls, data: pd.DataFrame) -> None:
+        """manually fill the cache from a dataframe"""
+        for row_id in data.index:
+            row = data.loc[row_id]
+            new_article = Article(title_arg=row["link"],
+                                  source_url_arg=None,
+                                  source_name_arg=None,
+                                  date_arg=None,
+                                  do_processing_on_instanciation=False)
+            new_article.sectors = row["sectors"]
+            new_article.severity = row["severity"]
+            new_article.answers = row["answers"]
+            new_article.sucessfully_built = True
+            new_article.id = row_id
+            cls.CACHE[row["link"]] = new_article
+        cls.CURR_ID = max(data.index) + 1
 
     def __repr__(self):
         return f"<__main__.Article object: {self.title}, {self.source_url}, {self.date}>"
