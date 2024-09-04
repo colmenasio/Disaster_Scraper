@@ -5,7 +5,7 @@ from source.rushed_code.f_03_Merging_Events.summarized_event import SummarizedEv
 
 # Modified overrides of some of the auxiliary functions to account for the rushed changes
 
-def disaster_to_dict_factory(event_list: list[SummarizedEvent]) -> Callable[[DisasterLinker], dict | list[dict]]:
+def disaster_to_dict_factory(event_list: list[SummarizedEvent], ) -> Callable[[DisasterLinker], dict | list[dict]]:
     def disaster_to_dict(disaster: DisasterLinker) -> list[dict]:
         # Define how to generate a row for the result dataframe from a disaster instace (a cluster of articles)
         print(f"Merging according to {disaster}")

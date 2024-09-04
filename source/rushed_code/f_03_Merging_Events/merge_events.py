@@ -20,15 +20,17 @@ def read_csv(filepath) -> pd.DataFrame:
 
 
 if __name__ == '__main__':
-    EVENT_PATH = "rushed_code/f_01_Basic_Scraping/results/result_semi_final.csv"
-    df = read_csv(EVENT_PATH)
+    EVENTS_PATH = "rushed_code/f_03_Merging_Events/results/events_final_clean.csv"
+    ARTICLES_PATH = "rushed_code/f_03_Merging_Events/results/articles_final_clean.csv"
+    df = read_csv(EVENTS_PATH)
     summarized_events = [SummarizedEvent(dict(df.iloc[i])) for i in df.index]
     del df
+    SummarizedEvent.initialize_referenced_articles(ARTICLES_PATH)
     disaster_to_dict = disaster_to_dict_factory(summarized_events)
     DisasterLinker.INPUT_PATH = "../input-output/merged_expedients_2.csv"
     DisasterLinker.do_startup()
     disaster_list = DisasterLinker.build_initial_disaster_pool()
     DisasterLinker.collapse_disaster_list(disaster_list)
     final_df = DisasterLinker.to_dataframe(disaster_list, disaster_to_dict)
-    OUTPUT_PATH = "../input-output/final.csv"
+    OUTPUT_PATH = "../input-output/final_events.csv"
     final_df.to_csv(OUTPUT_PATH)
