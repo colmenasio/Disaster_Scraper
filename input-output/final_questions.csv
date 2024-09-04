@@ -1,0 +1,26 @@
+,Question,Weight,Sector
+0,¿Como de graves han sido los cortes electricos causados?,10,Energia
+1,¿Se ha visto afectada la produccion de energia electrica?,5,Energia
+2,¿Se ha visto afectada la distribucion de gas natural?,2,Energia
+3,¿Se ha visto afectada la distribucion de petroleo?,2,Energia
+4,¿Se ha visto afectada la distribucion de hidrogeno?,2,Energia
+5,¿Se ha visto afectado el transporte aereo?,10,Transporte
+6,¿Se ha visto afectado el transporte maritimo?,10,Transporte
+7,¿Se ha visto afectado el transporte ferroviario?,10,Transporte
+8,¿Se han visto afectadas carreteras y o autopistas?,10,Transporte
+9,¿Se han visto afectadas entidades bancarias?,10,Finanzas
+10,"¿Se han visto afectadas instituciones sanitarias como hospitales, ambulatorios o similares?",10,Sanidad
+11,¿Ha causado el numero de heridos saturacion o otros problemas en instituciones sanitarias?,10,Sanidad
+12,¿Se han visto afectadas instituciones dedicadas a la produccion o distribucion de productos farmaceuticos?,5,Sanidad
+13,¿Se ha visto afectada la distribucion de productos farmaceuticos esenciales?,5,Sanidad
+14,"¿Se ha visto afectada la produccion de alimentos, ya sea en fabricas o en cultivos?",10,Agua y Alimentos
+15,¿Se ha visto afectado el suministro de agua potable y/o la disponibilidad de esta?,10,Agua y Alimentos
+16,¿Se ha visto afectada la disponibilidad de productos alimenticios a causa del evento?,10,Agua y Alimentos
+17,¿Se ha producido algun desbordamiento de aguas residuales por alcantarillado o similares?,5,Aguas Residuales
+18,¿Se ha visto afectado el tratamiendo de aguas residuales a causa el evento?,2,Aguas Residuales
+19,¿Se ha visto afectada la infraestructura relacionada con el tratamiento o transporte de aguas residuales?,10,Aguas Residuales
+20,¿Se han visto afectadas torres de comunicacion / difusion?,10,Infraestructura digital
+21,"¿Se ha visto afectado cableado relacionado con comunicaciones o similares (fibra, pares de cobre, etc)?",10,Infraestructura digital
+22,"¿Se han visto afectados servidores, centros de datos, o similares?",15,Infraestructura digital
+23,¿Se han producido cortes notables en servicios digitales como transmision de datos o proovedores de television?,15,Infraestructura digital
+24,¿Se ha visto afectada la comunicacion por radiofrecuencia a causa del evento?,5,Infraestructura digital
