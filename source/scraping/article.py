@@ -367,6 +367,7 @@ class Article:
                                   source_name_arg=None,
                                   date_arg=None,
                                   do_processing_on_instanciation=False)
+            new_article.link = row["link"]
             new_article.sectors = row["sectors"]
             new_article.severity = row["severity"]
             new_article.answers = row["answers"]
