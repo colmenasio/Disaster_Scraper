@@ -1,0 +1,715 @@
+id,link,sectors,severity,answers
+0,https://www.dream-alcala.com/gran-inundacion-en-alcala-de-henares-tras-la-rotura-de-una-tuberia/,"['Transporte', 'Agua y Alimentos']","{'Transporte': 0.0, 'Agua y Alimentos': 0.3333333333333333}","{8: 0.0, 15: 1.0}"
+1,https://www.larazon.es/el-tiempo/borrasca-fria-espana-directo-ultima-hora-temporal-tormentas-lluvias-torrenciales-granizo_202309156503f12998383a00011cd4c1.html,['Transporte'],{'Transporte': 0.375},"{7: 0.5, 8: 1.0}"
+2,https://www.elperiodico.com/es/tiempo/20230915/alerta-inuncat-lluvias-viernes-catalunya-dv-92096860,[],{},{}
+3,https://www.levante-emv.com/comunitat-valenciana/2023/09/19/dana-deja-lluvia-torrencial-granizo-92291214.html,['Transporte'],{'Transporte': 0.375},"{7: 0.5, 8: 1.0}"
+4,https://www.elnacional.cat/es/tag/el-tiempo,[],{},{}
+5,https://www.elprogreso.es/articulo/a-marina/vuelve-fin-semana-tormentoso-mucha-lluvia-manana/202309142133481691677.html,[],{},{}
+6,https://www.elmundo.es/espana/2023/10/28/653d565cfc6c838f768b45b0.html,['Transporte'],{'Transporte': 0.9375},"{5: 1.0, 6: 1.0, 7: 0.75, 8: 1.0}"
+7,https://www.publico.es/sociedad/aline-aleja-dejar-paso-nueva-borrasca-partir-domingo.html,[],{},{}
+8,https://www.lavozdegalicia.es/noticia/galicia/2023/10/28/nuevo-frente-deja-galicia-lluvia-fuertes-vientos-durante-sabado/00031698504215983982884.htm,['Transporte'],{'Transporte': 0.8125},"{5: 1.0, 6: 0.75, 7: 0.5, 8: 1.0}"
+9,https://www.abc.es/espana/madrid/alerta-roja-lluvias-madrid-directo-estado-carreteras-incidencias-metro-cercanias-20231019162135-di.html,['Transporte'],{'Transporte': 0.4375},"{7: 0.75, 8: 1.0}"
+10,https://www.farodevigo.es/sociedad/2023/10/20/tren-borrascas-aline-deja-galicia-93553121.html,['Transporte'],{'Transporte': 0.75},"{6: 1.0, 7: 1.0, 8: 1.0}"
+11,https://metropolitano.gal/enfoque/la-borrasca-celine-deja-numerosas-incidencias-en-vigo-y-area-donde-se-espera-otra-semana-de-lluvia/,['Transporte'],{'Transporte': 0.4375},"{5: 0.75, 8: 1.0}"
+12,https://www.elidealgallego.com/articulo/area-metropolitana/colapso-autopista-accidente-altura-barcala-4490748,['Transporte'],{'Transporte': 0.1875},{8: 0.75}
+13,https://www.galiciapress.es/articulo/sociedad/2023-10-23/4485326-aviso-naranja-viento-mar-martes-toda-galicia-salvo-marina-estara-amarillo,[],{},{}
+14,https://www.20minutos.es/noticia/5185878/0/varios-rescatados-huelva-tras-anegarse-sus-viviendas-por-lluvia/,"['Transporte', 'Sanidad']","{'Transporte': 0.25, 'Sanidad': 0.08333333333333333}","{8: 1.0, 11: 0.25}"
+15,https://www.diariodepontevedra.es/articulo/pontevedra/temporal-vuelve-golpear-dureza-marin/202310290852181276755.html,"['Transporte', 'Aguas Residuales']","{'Transporte': 0.5625, 'Aguas Residuales': 0.7352941176470589}","{5: 0.25, 6: 1.0, 8: 1.0, 17: 1.0, 19: 0.75}"
+16,https://www.lavozdegalicia.es/noticia/galicia/2023/10/26/galicia-registra-frente-lluvias-deja-balsas-agua-riadas-localizadas-inundaciones-crecidas-rios/00031698334986085205729.htm,['Transporte'],{'Transporte': 0.375},"{5: 0.5, 8: 1.0}"
+17,https://elpais.com/espana/2023-10-20/otra-borrasca-azota-el-norte-de-espana-tras-el-paso-de-la-historica-aline.html,[],{},{}
+18,https://aemetblog.es/2023/10/30/informe-operativo-semanal-del-16-al-22-de-octubre-de-2023/,[],{},{}
+19,https://www.elespanol.com/quincemil/actualidad/galicia/20231030/celine-ciaran-llegaran-domingos-elisa-todas-tormentas-galicia-otono/805919944_0.html,[],{},{}
+20,https://www.larazon.es/el-tiempo/temporal-espana-directo-alertas-ultima-hora-zonas-afectadas-borrasca-aline_20231020653216c4a1cbe00001722a03.html,['Transporte'],{'Transporte': 0.9375},"{5: 0.75, 6: 1.0, 7: 1.0, 8: 1.0}"
+21,https://www.miteco.gob.es/es/prensa/ultimas-noticias/2023/11/octubre-de-2023--el-segundo-mas-calido-de-la-serie-historica-y-e.html,[],{},{}
+22,https://www.elmundo.es/espana/2023/10/30/653f4cabe4d4d8a9328b4593.html,[],{},{}
+23,https://www.galiciapress.es/articulo/sociedad/2023-10-31/4514252-alerta-roja-jueves-parte-costa-hilo-ciclogenesis-ciaran-estan-punto-golpear-galicia,[],{},{}
+24,https://www.larazon.es/el-tiempo/borrasca-ciaran-directo-ultima-hora-zonas-espana-afectadas-temporal-lluvia-viento-nieve_202311036544ade8f6ca72000147fd57.html,"['Energia', 'Transporte']","{'Energia': 0.7142857142857143, 'Transporte': 1.0}","{0: 1.0, 1: 1.0, 5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0}"
+25,https://www.cope.es/emisoras/galicia/noticias/asi-afectar-borrasca-domingos-galicia-olas-hasta-metros-este-sabado-20231103_2981711,['Transporte'],{'Transporte': 0.5},"{6: 1.0, 8: 1.0}"
+26,https://www.laopinioncoruna.es/galicia/2023/11/07/pasado-octubre-segundo-mes-lluvioso-94293700.html,[],{},{}
+27,https://www.aemet.es/en/noticias/2023/11/Avance-climatico-Nacional-octubre-2023,[],{},{}
+28,https://www.lavozdegalicia.es/noticia/galicia/2023/11/14/fuertes-lluvias-dejan-doscientas-incidencias-galicia/00031699957402603811358.htm,[],{},{}
+29,https://www.galiciapress.es/articulo/sociedad/2023-11-14/4533615-temporal-descarrila-tren-ferrol-ribadeo-e-inunda-neda-pero-remite-no-habra-alertas,['Transporte'],{'Transporte': 0.5},"{7: 1.0, 8: 1.0}"
+30,https://www.publico.es/sociedad/servicios-emergencia-gestionan-220-incidencias-inundaciones-galicia.html,[],{},{}
+31,https://www.elidealgallego.com/articulo/galicia/inundaciones-desbordamientos-toda-galicia-causa-temporal-4533073,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+32,https://www.elconfidencial.com/espana/galicia/2023-11-17/a-coruna-fin-de-semana-conciertos-actividades_3774494/,[],{},{}
+33,https://www.galiciapress.es/articulo/ferrol/2023-11-14/4533006-preocupacion-varias-localidades-gallegas-crecida-rios-inundaciones-casas-proximas,[],{},{}
+34,https://www.elcorreogallego.es/concellos/2023/11/13/lluvia-supera-100-litros-metro-cuadrado-lousame-santa-comba-94582157.html,[],{},{}
+35,https://www.lavozdegalicia.es/noticia/sociedad/2023/11/14/riadas-tsunamis-rios-desbordados-racha-lluvia-galicia-record/00031699983771211124412.htm,[],{},{}
+36,https://es-us.noticias.yahoo.com/deportes/lluvia-granizo-provocan-inundaciones-guadalajara-204721431.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+37,https://udgtv.com/noticias/mienten-autoridades-sobre-causas-de-inundacion-en-la-zmg/195652,[],{},{}
+38,https://www.aztecajalisco.com/azteca-noticias/mueren-dos-personas-atrapados-carro-inundacion,[],{},{}
+39,https://www.elfinanciero.com.mx/estados/2023/09/08/tormenta-en-zapopan-deja-dos-personas-sin-vida/,"['Energia', 'Transporte']","{'Energia': 0.11904761904761904, 'Transporte': 0.25}","{0: 0.25, 8: 1.0}"
+40,https://www.debate.com.mx/guadalajara/Ahogados-mueren-dos-adultos-mayores-dentro-de-su-auto-durante-inundacion-en-Zapopan-Jalisco-20230907-0254.html,[],{},{}
+41,https://www.eloccidental.com.mx/policiaca/tormenta-cobro-dos-vidas-en-zapopan-10662054.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+42,https://www.milenio.com/politica/comunidad/clima-jalisco-esperan-fuertes-lluvias-6-septiembre,[],{},{}
+43,https://www.informador.mx/Tormenta-en-Guadalajara-deja-2-muertos-en-tunel-suman-7-en-temporal-l202309080001.html,"['Energia', 'Transporte']",{'Transporte': 0.25},{8: 1.0}
+44,https://www.nmas.com.mx/nacional/adulto-mayor-y-enfermera-mueren-atrapados-en-auto-por-inundacion-en-jalisco/,[],{},{}
+45,https://www.zonadocs.mx/2024/07/11/temporal-de-lluvia-arrasa-con-decenas-de-arboles-en-zapopan/,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+46,https://www.adn40.mx/mexico/lluvias-en-zapopan-2-personas-murieron-ahogados-paso-a-desnivel,[],{},{}
+47,https://www.excelsior.com.mx/nacional/clima-mexico-hoy-6-septiembre-2023-lluvias-jova/1607204,[],{},{}
+48,https://www.tvazteca.com/aztecanoticias/clima-en-mexico-7-septiembre-huracan-jova-traera-lluvias-y-granizo,[],{},{}
+49,https://www.informador.mx/Lluvias-en-Guadalajara-Fracasan-las-medidas-para-prevenir-muertes-por-inundaciones-l202309090001.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+50,https://aristeguinoticias.com/0809/mexico/zapopan-mueren-2-personas-luego-de-que-su-vehiculo-se-inundo-en-paso-a-desnivel/,[],{},{}
+51,https://www.rtve.es/noticias/20230904/efectos-dana-ultima-hora-directo-madrid-toledo/2455085.shtml,"['Transporte', 'Agua y Alimentos']","{'Transporte': 0.5, 'Agua y Alimentos': 0.6666666666666666}","{7: 1.0, 8: 1.0, 14: 1.0, 15: 1.0}"
+52,https://www.huffingtonpost.es/news/dana?page=3,[],{},{}
+53,https://www.abc.es/sociedad/dana-espana-muertos-carreteras-cortadas-temporal-metro-madrid-toledo-castilla-lamancha-hoy-20230904122329-di.html,['Transporte'],{'Transporte': 0.25},"{7: 0.0, 8: 1.0}"
+54,https://www.lacronica.net/41-incidencias-ha-dejado-la-dana-en-guadalajara-sobre-todo-en-el-corredor-del-henares/,[],{},{}
+55,https://www.antena3.com/noticias/el-tiempo/la-prevision/otra-dana-fin-semana-roberto-brasero-avisa-llegada-nuevas-lluvias-tormentas_2023091164ff37bd83dfa50001943ff2.html,[],{},{}
+56,https://nuevaalcarria.com/articulos/el-corredor-del-henares-es-la-zona-mas-afectada-por-la-dana-en-la-provincia-con-inundaciones-y-caida-de-arboles,[],{},{}
+57,https://www.nmas.com.mx/guadalajara/arroyo-el-cangrejo-autlan-jalisco-desbordamiento-deja-7-muertos-25-septiembre-2023/,[],{},{}
+58,https://www.infobae.com/mexico/2023/09/26/suman-ocho-muertos-tras-desbordamiento-de-arroyo-en-autlan-de-navarro/,"['Transporte', 'Sanidad']",{'Transporte': 0.1875},{8: 0.75}
+59,https://udgtv.com/noticias/no-es-comparable-la-inundacion-registrada-en-autlan-con-la/197624,[],{},{}
+60,https://jalisco.quadratin.com.mx/sucesos/lluvias-causan-el-desbordamiento-del-arroyo-el-jalocote-en-autlan/,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+61,https://www.eloccidental.com.mx/policiaca/confirma-proteccion-civil-jalisco-siete-muertos-por-el-desbordamiento-del-arroyo-el-cangrejo-10746127.html,[],{},{}
+62,https://cnnespanol.cnn.com/2023/09/25/desbordamiento-jalisco-muertos-mexico-orix,[],{},{}
+63,https://www.milenio.com/policia/autlan-navarro-desborda-arroyo-muerto-12-desaparecidos,[],{},{}
+64,https://traficozmg.com/2023/09/desbordamiento-de-un-arroyo-deja-siete-muertos-en-autlan/,[],{},{}
+65,https://www.yucatan.com.mx/mexico/2023/09/25/desbordamiento-del-arroyo-el-jalocote-en-autlan-jalisco-deja-al-menos-muertos-434624.html,[],{},{}
+66,https://jalisco.quadratin.com.mx/principal/lluvias-en-autlan-de-navarro-deja-al-menos-7-muertos-y-9-desaparecidos/,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+67,https://www.telesurtv.net/news/-menos-siete-fallecidos-crecida-arroyo-jalisco-mexico-20230925-0038.html,['Sanidad'],{},{}
+68,https://tribunadelabahia.com.mx/suman-7-muertos-arroyo-autlan-navarro/,[],{},{}
+69,https://www.jornada.com.mx/noticia/2023/09/26/estados/continua-busqueda-de-tres-personas-tras-tormenta-en-autlan-jalisco-2953,[],{},{}
+70,https://www.latribunadeguadalajara.es/noticia/z2aba1b88-01c6-1e66-1dada6249488a8d6/202309/caritas-facilita-numeros-de-cuenta-en-apoyo-a-libia,[],{},{}
+71,https://aemetblog.es/2023/09/24/informe-sobre-el-episodio-meteorologico-de-precipitaciones-intensas-ocasionado-por-una-dana-durante-los-dias-2-3-y-4-de-septiembre-de-2023/,[],{},{}
+72,https://www.latribunadeguadalajara.es/noticia/z33057c1f-a354-05a8-890e973c16568024/202309/la-aemet-no-descarta-que-clm-pueda-sufrir-otra-dana-este-otono,[],{},{}
+73,https://www.elfinanciero.com.mx/estados/2023/10/22/tormenta-norma-en-sinaloa-abren-albergues-y-cierran-aeropuertos-en-el-estado/,"['Energia', 'Transporte']","{'Energia': 0.5952380952380952, 'Transporte': 0.75}","{0: 0.75, 1: 1.0, 5: 1.0, 6: 1.0, 8: 1.0}"
+74,https://www.marca.com/mx/actualidad/2023/10/25/6539346046163f23778b45bd.html,[],{},{}
+75,https://www.informador.mx/mexico/Huracan-Otis-traera-lluvias-torrenciales-para-estos-estados-hoy-24-de-octubre-20231024-0034.html,[],{},{}
+76,https://www.marca.com/mx/actualidad/2023/10/21/653420fbca4741014e8b4589.html,[],{},{}
+77,https://www.eleconomista.com.mx/estados/Sequia-ocasionara-caida-de-produccion-y-alza-generalizada-en-precio-de-alimentos-CNA-20231024-0146.html,['Agua y Alimentos'],{'Agua y Alimentos': 0.6666666666666666},"{14: 1.0, 16: 1.0}"
+78,https://www.infobae.com/mexico/2023/12/04/prediccion-del-estado-del-tiempo-en-guadalajara-para-este-4-de-diciembre/,['Agua y Alimentos'],{'Agua y Alimentos': 0.6666666666666666},"{14: 1.0, 16: 1.0}"
+79,https://www.debate.com.mx/guadalajara/VIDEO-FUERTES-LLUVIAS-dejan-inundaciones-y-autos-varados-en-Jalisco-20231207-0056.html,[],{},{}
+80,https://www.telediario.mx/comunidad/lluvia-guadalajara-inunda-paso-desnivel-avenida-washington,[],{},{}
+81,https://tribunadelabahia.com.mx/esta-lloviendo-diciembre-guadalajara/,[],{},{}
+82,https://www.informador.mx/jalisco/Clima-HOY-Guadalajara-por-que-esta-lloviendo-en-diciembre-20231209-0080.html,[],{},{}
+83,https://www.telediario.mx/comunidad/clima-en-guadalajara-diciembre-2023-cuando-dejara-de-llover,[],{},{}
+84,https://www.informador.mx/jalisco/Clima-hoy-Guadalajara-Lluvias-dejan-afectaciones-en-la-ciudad-estos-fueron-los-puntos-inundados-20231207-0053.html,['Transporte'],{'Transporte': 0.1875},{8: 0.75}
+85,https://www.informador.mx/jalisco/Clima-HOY-Guadalajara-Viene-el-frio-y-la-lluvia-esta-semana-a-la-ciudad-este-es-el-pronostico-20231211-0034.html,[],{},{}
+86,https://www.nmas.com.mx/nacional/clima/pronostico-del-clima-en-mexico-hoy-10-de-diciembre-de-2023-frio-y-lluvias/,[],{},{}
+87,https://www.informador.mx/jalisco/Clima-HOY-Cuando-volvera-a-llover-en-Guadalajara-20240827-0052.html,[],{},{}
+88,https://www.debate.com.mx/guadalajara/Sigue-el-frio-y-las-lluvias-Asi-sera-el-clima-en-el-AMG-y-todo-Jalisco-HOY-6-de-diciembre-20231206-0041.html,[],{},{}
+89,https://www.elfinanciero.com.mx/nacional/2023/12/06/pronostico-del-clima-hoy-en-mexico-frente-frio-13-efectos-6-de-diciembre-lluvias-torrenciales/,[],{},{}
+90,https://www.nmas.com.mx/nacional/clima/pronostico-del-clima-en-mexico-hoy-6-de-diciembre-de-2023-probabilidad-de-lluvias-y/,[],{},{}
+91,https://www.debate.com.mx/guadalajara/Se-vuelve-a-esconder-el-sol-Jalisco-y-el-AMG-espera-climas-MUY-FRIOS-este-11-de-diciembre-20231210-0115.html,[],{},{}
+92,https://www.informador.mx/jalisco/Clima-HOY-Guadalajara-Seguira-lloviendo-Este-es-el-pronostico-del-lunes-4-de-diciembre-20231204-0030.html,[],{},{}
+93,https://as.com/actualidad/ciencia/geminidas-2023-fechas-hora-como-ver-y-cuando-es-la-lluvia-de-estrellas-de-diciembre-n-2/,[],{},{}
+94,https://www.debate.com.mx/estados/FRENTE-FRIO-provoca-LLUVIAS-aguanieve-y-NIEVE-en-Mexico-HOY-Conagua-20231206-0051.html,[],{},{}
+95,https://www.guadalajaradiario.es/provincia/58869-crecida-del-henares-por-el-desembalse-de-belena.html,[],{},{}
+96,https://www.newtral.es/tiempo-puente-diciembre-lluvia-calor/20231207/,[],{},{}
+97,https://chivaspasion.bolavip.com/femenil/y-licha-cervantes-las-convocadas-por-tano-spinelli-a-la-pretemporada-de-chivas-femenil-20231208-CHI-38100.html,[],{},{}
+98,https://www.huelvainformacion.es/huelva/tiempo-Huelva-Tregua-lluvias-intensas_0_1843616656.html,[],{},{}
+99,https://www.huelvainformacion.es/provincia/Evacuados-inundacion-Palmares-San-Juan_0_1843615838.html,"['Transporte', 'Sanidad']",{'Transporte': 0.4375},"{7: 0.75, 8: 1.0}"
+100,https://www.huelvainformacion.es/galerias_graficas/Imagenes-Juan-Puerto-Trigueros-Niebla_3_1843645629.html,[],{},{}
+101,https://www.elconfidencial.com/espana/2023-10-31/aemet-alerta-nueva-borrasca-ciaran-vientos-lluvias_3764475/,[],{},{}
+102,https://www.ideal.es/andalucia/chorro-polar-llega-andalucia-viento-lluvias-fuertas-20231026103331-nt.html,[],{},{}
+103,https://www.huelvainformacion.es/provincia/Aumenta-Rio-Tinto-precipitaciones-Huelva-video_0_1888911611.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+104,https://www.elmundo.es/andalucia/2023/10/30/653ffa4dfdddffdd5f8b45c1.html,"['Transporte', 'Sanidad']","{'Transporte': 0.5, 'Sanidad': 0.08333333333333333}","{7: 1.0, 8: 1.0, 10: 0.0, 11: 0.25}"
+105,https://www.diariodehuelva.es/articulo/area-metropolitana/aemet-concluye-que/20231106203004310647.html,['Transporte'],{'Transporte': 0.6875},"{5: 1.0, 6: 1.0, 8: 0.75}"
+106,https://elpais.com/espana/2023-10-25/las-borrascas-aline-y-bernard-dejan-casi-cuatro-veces-mas-agua-de-la-que-suele-caer-estos-dias-de-octubre.html,[],{},{}
+107,https://www.huelvainformacion.es/huelva/noticias-destacadas-sabado-octubre-Huelva_0_1843016658.html,[],{},{}
+108,https://www.huelvainformacion.es/huelva/Octubre-Recuerdas-fuerte-temporal-viento_0_1842717419.html,[],{},{}
+109,https://www.heraldo.es/noticias/nacional/2023/05/27/pronostico-meteorologico-jornada-electoral-28-m-lluvias-1654559.html,[],{},{}
+110,https://www.antena3.com/noticias/el-tiempo/actualidad/ultima-hora-dana-directo-varias-comunidades-alerta-fuertes-lluvias_20230526647050b2910a1b0001dfd51a.html,"['Transporte', 'Agua y Alimentos']","{'Transporte': 0.25, 'Agua y Alimentos': 0.6666666666666666}","{8: 1.0, 14: 1.0, 16: 1.0}"
+111,https://blogs.diariosur.es/tormentas-y-rayos/2023/11/05/efemerides-de-noviembre-y-valores-extremos-en-malaga-aeropuerto/,[],{},{}
+112,https://www.abc.es/sociedad/directo-ultima-hora-invidencias-avisos-aemet-paso-20231102080248-di.html,[],{},{}
+113,https://www.20minutos.es/minuteca/inundaciones/5/,[],{},{}
+114,https://www.laopiniondemurcia.es/comunidad/2023/09/25/gobierno-declara-region-murcia-zona-92532090.html,"['Energia', 'Transporte']","{'Energia': 0.23809523809523808, 'Transporte': 0.4375}","{0: 0.5, 7: 0.75, 8: 1.0}"
+115,https://cadenaser.com/castillalamancha/2023/09/25/declarada-la-zona-catastrofica-para-diversos-municipios-de-castilla-la-mancha-la-mayoria-en-la-provincia-de-toledo-ser-toledo/,['Transporte'],{'Transporte': 0.4375},"{7: 0.75, 8: 1.0}"
+116,https://www.interior.gob.es/opencms/es/detalle/articulo/El-Gobierno-declara-zona-catastrofica-y-aprueba-ayudas-para-los-afectados-por-las-DANA-de-septiembre/,"['Energia', 'Transporte']","{'Energia': 0.5952380952380952, 'Transporte': 0.4375}","{0: 0.75, 1: 1.0, 7: 0.75, 8: 1.0}"
+117,https://aemetblog.es/2023/02/01/informe-operativo-semanal-semana-del-16-al-22-de-enero-de-2023/,[],{},{}
+118,https://www.europapress.es/illes-balears/noticia-enero-fue-mes-normal-baleares-partes-diferenciadas-temperaturas-encima-debajo-media-20230203143419.html,[],{},{}
+119,https://www.antena3.com/noticias/el-tiempo/actualidad/paso-borrasca-juliette-directo-frio-artico-nieve-varias-comunidades-riesgo_2023022863fdb09faf4bff00016eb340.html,"['Energia', 'Transporte']","{'Energia': 0.47619047619047616, 'Transporte': 0.5}","{0: 1.0, 6: 1.0, 8: 1.0}"
+120,https://www.elnacional.cat/es/sociedad/borrasca-juliette-provoca-caos-mallorca-nieve-inundaciones-cortes-luz_979098_102.html,"['Energia', 'Transporte']","{'Energia': 0.5357142857142857, 'Transporte': 0.75}","{0: 0.75, 1: 0.75, 5: 1.0, 6: 1.0, 8: 1.0}"
+121,https://www.menorca.info/menorca/local/2023/03/06/1894273/febrero-menorca-mas-frio-mas-lluvioso-normal.html,[],{},{}
+122,https://www.europapress.es/illes-balears/noticia-febrero-fue-mes-frio-baleares-temperatura-media-98c-226-mas-lluvia-juliette-20230306171903.html,"['Energia', 'Transporte']","{'Energia': 0.7142857142857143, 'Transporte': 0.5625}","{0: 1.0, 1: 1.0, 5: 0.25, 6: 1.0, 8: 1.0}"
+123,https://www.cronicabalear.es/2023/se-derrumba-el-techo-de-un-edificio-de-la-uib-por-el-fuerte-temporal/,[],{},{}
+124,https://www.ultimahora.es/noticias/local/2023/02/28/1890767/tiempo-mallorca-diecinueve-records-lluvia-solo-dia.html,[],{},{}
+125,https://tirant.com/actualidad-juridica/noticia-despido-nulo-por-incapacidad-temporal-en-periodo-de-prueba/,[],{},{}
+126,https://www.ultimahora.es/noticias/local/2023/08/27/2001873/tiempo-mallorca-temporal-sacude-isla.html,"['Transporte', 'Sanidad']","{'Transporte': 0.75, 'Sanidad': 0.16666666666666666}","{5: 1.0, 6: 1.0, 8: 1.0, 11: 0.5}"
+127,https://www.ultimahora.es/noticias/local/2023/08/27/2001925/caos-aeropuestos-decenas-vuelos-anulados-retrasados.html,"['Energia', 'Transporte']","{'Energia': 0.35714285714285715, 'Transporte': 0.25}","{0: 0.5, 1: 0.5, 5: 1.0, 7: 0.0}"
+128,https://www.elnacional.cat/es/sociedad/temporal-causa-estragos-mallorca-videos_1083465_102.html,"['Energia', 'Transporte']","{'Energia': 0.4166666666666667, 'Transporte': 0.6875}","{0: 0.5, 1: 0.75, 6: 1.0, 7: 0.75, 8: 1.0}"
+129,https://www.periodicodeibiza.es/pitiusas/ibiza/2023/08/27/2001613/tiempo-ibiza-formentera-borrasca-betty.html,"['Energia', 'Transporte', 'Aguas Residuales']","{'Energia': 0.5952380952380952, 'Transporte': 0.25, 'Aguas Residuales': 1.0}","{0: 0.75, 1: 1.0, 8: 1.0, 17: 1.0, 18: 1.0, 19: 1.0}"
+130,https://www.publico.es/sociedad/buque-750-pasajeros-salio-valencia-colisiona-muelle-ibiza-causa-borrasca-betty.html,['Transporte'],{'Transporte': 0.75},"{5: 1.0, 6: 1.0, 8: 1.0}"
+131,https://www.ultimahora.es/sucesos/ultimas/2023/08/28/2002135/tiempo-mallorca-borrasca-betty-provoca-429-incidencias.html,['Transporte'],{'Transporte': 0.4375},"{7: 0.75, 8: 1.0}"
+132,https://www.menorca.info/menorca/local/2023/08/29/2002775/tiempo-menorca-dana-afectara-isla.html,[],{},{}
+133,https://www.ultimahora.es/noticias/local/2023/08/29/2002715/tiempo-mallorca-dana-afectara-isla.html,[],{},{}
+134,https://www.ultimahora.es/noticias/local/2023/08/27/2001615/tiempo-mallorca-impresionante-tormenta-fuertes-rachas-viento-sur.html,"['Energia', 'Transporte']","{'Energia': 0.5357142857142857, 'Transporte': 0.375}","{0: 0.75, 1: 0.75, 5: 0.75, 8: 0.75}"
+135,https://www.elmundo.es/baleares/2023/08/28/64ec35ad21efa0d1338b4576.html,['Transporte'],{'Transporte': 0.9375},"{5: 1.0, 6: 1.0, 7: 0.75, 8: 1.0}"
+136,https://www.lavanguardia.com/local/sevilla/20230915/9230239/inundaciones-rios-desbordados-carreteras-cortadas-andalucia-central-tormentas.html,"['Transporte', 'Agua y Alimentos']","{'Transporte': 0.25, 'Agua y Alimentos': 0.5833333333333334}","{8: 1.0, 14: 0.75, 15: 1.0}"
+137,https://www.canalsur.es/noticias/andalucia/rios-de-agua-por-las-calles-de-sierra-de-yeguas-alcala-la-real-o-constantina/1964172.html,"['Transporte', 'Agua y Alimentos']","{'Transporte': 0.5, 'Agua y Alimentos': 1.0}","{7: 1.0, 8: 1.0, 14: 1.0, 15: 1.0, 16: 1.0}"
+138,https://lacontradejaen.eldiario.es/otra-semana-con-avisos-por-lluvias-jaen/,['Agua y Alimentos'],{'Agua y Alimentos': 0.4166666666666667},"{14: 0.75, 16: 0.5}"
+139,https://www.canalsur.es/noticias/andalucia/tormentas-y-desbordamientos-de-rios-en-jaen-donde-alcala-la-real-es-la-poblacion-mas-afectada/1963993.html,['Transporte'],{'Transporte': 0.1875},{8: 0.75}
+140,https://www.diariodesevilla.es/provincia/Constantina-inunda-espectacular-tormenta-media-hora-video_0_1830117183.html,[],{},{}
+141,https://www.larazon.es/el-tiempo/aemet-emite-comunicado-urgente-dana-chubascos-tormentas-muy-fuertes-granizo-amplias-zonas-espana_2024082766cdcb17ddf3680001af86f4.html,[],{},{}
+142,https://www.ideal.es/jaen/jaen/danos-olivar-sierra-sur-jaen-fuerte-temporal-20230915183111-nt.html,[],{},{}
+143,https://www.canalsur.es/noticias/andalucia/jaen/el-granizo-causa-danos-en-los-olivares-de-la-sierra-sur-jiennense/1964267.html,['Agua y Alimentos'],{'Agua y Alimentos': 0.6666666666666666},"{14: 1.0, 16: 1.0}"
+144,https://www.diariodesevilla.es/andalucia/Balance-efectos-tormentas-septiembre-Andalucia_0_1830117363.html,[],{},{}
+145,https://extrajaen.com/actualidad/el-granizo-causa-estragos-en-pozo-alcon,[],{},{}
+146,https://www.canalsur.es/noticias/andalucia/jaen/quince-minutos-de-caos-por-una-fuerte-granizada-en-pozo-alcon/1965560.html,['Agua y Alimentos'],{'Agua y Alimentos': 0.6666666666666666},"{14: 1.0, 16: 1.0}"
+147,https://www.ideal.es/culturas/jaen/premio-pintura-rafael-zabaleta-quesada-marcha-rioja-20230716130246-nt.html,[],{},{}
+148,https://www.ellitoral.com/nacionales/operativo-rescate-joven-perdido-parque-nacional-rioja-gendarmeria_0_EPpuTWwjzH.html,[],{},{}
+149,https://www.eltiempo.es/noticias/la-vendimia-de-la-sequia-y-las-inundaciones-como-sera-la-temporada,[],{},{}
+150,https://mendozatoday.com.ar/2023/11/10/bajo-el-zonda-al-llano-y-hay-alerta-amarilla/,[],{},{}
+151,https://www.aemet.es/en/conocermas/borrascas/2023-2024/estudios_e_impactos/domingos,[],{},{}
+152,https://www.rtve.es/noticias/20231105/borrasca-domingos-5-noviembre-2023-riesgo-peninsula/2460055.shtml,[],{},{}
+153,https://www.larioja.com/la-rioja/borrasca-despide-incidencias-logrono-villamediana-najera-20231106214200-nt.html,[],{},{}
+154,https://www.epe.es/es/espana/20231105/borrasca-domingos-espana-peninsula-alerta-vientos-lluvias-directo-94109465,[],{},{}
+155,https://www.canarias7.es/canarias/balsa-agua-obliga-cerrar-acceso-subterraneo-perez-20231212205426-nt.html,['Transporte'],{'Transporte': 0.125},{8: 0.5}
+156,https://www.canarias7.es/canarias/fuerteventura/fotografia-gavia-fuerteventura-ganadora-concurso-onu-20231207085651-nt.html,[],{},{}
+157,https://www.eluniverso.com/noticias/ecuador/unas-60-comunidades-rurales-y-12-barrios-de-muisne-en-emergencia-por-desbordamientos-de-rios-nota/,"['Energia', 'Transporte', 'Sanidad', 'Agua y Alimentos', 'Aguas Residuales']","{'Energia': 0.5357142857142857, 'Transporte': 0.25, 'Sanidad': 0.25, 'Agua y Alimentos': 1.0, 'Aguas Residuales': 1.0}","{0: 0.75, 1: 0.75, 8: 1.0, 10: 0.75, 14: 1.0, 15: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0}"
+158,https://esmeraldasnews.com/muisne/decenas-de-familias-afectadas-por-desbordamiento-de-rios-en-muisne/,"['Energia', 'Transporte', 'Agua y Alimentos']","{'Energia': 0.47619047619047616, 'Transporte': 0.25, 'Agua y Alimentos': 0.6666666666666666}","{0: 0.5, 1: 1.0, 8: 1.0, 14: 1.0, 16: 1.0}"
+159,https://leon24horas.net/actualidad/el-fuerte-temporal-de-viento-y-lluvia-provoca-varios-incidentes-en-leon/,[],{},{}
+160,https://lasillarota.com/guanajuato/vida/2023/11/11/frente-frio-provoca-este-11-de-noviembre-mas-lluvias-fuertes-para-guanajuato-456308.html,[],{},{}
+161,https://www.nmas.com.mx/nacional/clima/pronostico-del-clima-en-mexico-hoy-12-de-noviembre-de-2023-lluvias-fuertes/,[],{},{}
+162,https://www.elfinanciero.com.mx/nacional/2023/11/09/granizadas-heladas-y-tornados-a-29-estados-les-llovera-este-jueves-9-de-noviembre/,[],{},{}
+163,https://www.radioformula.com.mx/nacional/2023/11/5/frente-frio-se-acerca-que-estados-afectara-con-lluvias-vientos-esta-semana-788616.html,[],{},{}
+164,https://www.burgosconecta.es/provincia/burgos-registra-327-llamadas-emergencias-causa-fuertes-20231105201503-nt.html,[],{},{}
+165,https://www.telediario.mx/nacional/frente-frio-noviembre-2023-cuando-entra-el-proximo-mexico,[],{},{}
+166,https://www.infobae.com/espana/2023/06/30/inundaciones-arboles-caidos-y-coches-arrastrados-por-la-corriente-en-cataluna/,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+167,https://elpais.com/espana/catalunya/2023-07-01/cataluna-empieza-a-ver-el-final-del-tunel-de-la-gran-sequia-tras-las-lluvias-de-junio.html,['Agua y Alimentos'],{'Agua y Alimentos': 0.5},"{14: 0.75, 16: 0.75}"
+168,https://www.elnacional.cat/es/sociedad/tormenta-electrica-espectacular-catalunya-video_1053531_102.html,['Transporte'],{'Transporte': 0.3125},"{7: 0.5, 8: 0.75}"
+169,https://www.segre.com/es/sociedad/230802/dos-comarcas-lleida-cuadruplicaron-julio-promedio-historico-lluvias_182819.html,['Energia'],{'Energia': 0.23809523809523808},"{0: 0.25, 1: 0.5}"
+170,https://enfoques.gal/lugo/las-inundaciones-afectan-a-una-docena-de-casas-en-begonte/,"['Energia', 'Transporte']",{'Transporte': 0.1875},{8: 0.75}
+171,https://salamancartvaldia.es/noticia/2023-01-17-galicia-se-acerca-al-millar-de-incidencias-por-el-temporal-accidentes-inundaciones-y-problemas-en-carreteras-313589,['Transporte'],{'Transporte': 0.5},"{5: 1.0, 8: 1.0}"
+172,https://metropolitano.gal/enfoque/galicia-acumula-mas-de-600-incidencias-por-el-temporal-inundaciones-de-vias-y-accidentes-por-arboles/,"['Energia', 'Transporte']","{'Energia': 0.11904761904761904, 'Transporte': 0.3125}","{0: 0.25, 7: 0.25, 8: 1.0}"
+173,https://www.galiciapress.es/articulo/sociedad/2023-01-17/4142586-caida-arboles-rotulos-principales-incidencias-coruna,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+174,https://www.antena3.com/noticias/el-tiempo/actualidad/alerta-galicia-posible-desbordamiento-18-rios_2023011863c83371d3521e0001c08970.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+175,https://www.economiadigital.es/galicia/politica/balance-del-temporal-inundaciones-caida-de-arboles-y-mas-de-600-incidencias-en-galicia.html,"['Energia', 'Transporte']","{'Energia': 0.0, 'Transporte': 0.5625}","{0: 0.0, 5: 0.75, 7: 0.5, 8: 1.0}"
+176,https://www.elespanol.com/ciencia/meteorologia/20230118/llega-temporal-borrasca-fien-aemet-grandes-nevadas/734426653_0.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+177,https://www.elprogreso.es/articulo/comarcas/temporal-empeora-inundaciones-llega-mas-nieve-frio-polar/202301171024051632368.html,"['Energia', 'Transporte']","{'Energia': 0.23809523809523808, 'Transporte': 0.5625}","{0: 0.5, 5: 1.0, 7: 0.25, 8: 1.0}"
+178,https://www.elidealgallego.com/articulo/sociedad/crecida-mino-inunda-balneario-lugo-mantiene-calles-cortadas-4142517,[],{},{}
+179,https://www.galiciapress.es/articulo/sociedad/2024-03-08/4750261-coches-atrapados-carreteras-cortadas-nieve-varios-puntos-galicia-sobre-todo-ourense,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+180,https://www.cope.es/emisoras/galicia/lugo-provincia/lugo/lugo-provincia/noticias/temporal-deja-reguero-incidencias-provincia-lugo-con-n-vi-cortada-begonte-20230117_2499095,['Transporte'],{'Transporte': 0.3125},"{7: 0.25, 8: 1.0}"
+181,https://www.elprogreso.es/articulo/galicia/rio-mino-riesgo-alto-inundacion-paso-peroxa/202301202118301633208.html,[],{},{}
+182,https://www.lavozdegalicia.es/noticia/galicia/2023/01/20/mino-pasa-estado-emergencia-riesgo-alto-desbordamiento-paso-peroxa/00031674211686648560354.htm,[],{},{}
+183,https://www.europapress.es/galicia/noticia-rio-mino-riesgo-alto-inundacion-paso-peroxa-ourense-20230120182102.html,[],{},{}
+184,https://www.antena3.com/noticias/el-tiempo/actualidad/deshielo-crecida-rios-principales-consecuencias-remision-nevadas-toda-espana_2023012063ca4be9f0501d0001389b4f.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+185,https://www.elprogreso.es/articulo/lugo/tormentas-vuelven-poner-lugo-alerta/202306120937101672943.html,['Agua y Alimentos'],{'Agua y Alimentos': 1.0},"{14: 1.0, 15: 1.0, 16: 1.0}"
+186,https://concellodelugo.gal/es/noticias/dispositivo-especial-del-ayuntamiento-ante-la-tormenta-de-granizo-y-lluvia,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+187,https://lineadirectaportal.com/clima/condiciones-para-lluvias-y-frio-le-esperan-a-mexico-a-partir-de-hoy-por-el-frente-frio-8-y-pilar-2023-10-30__970139,[],{},{}
+188,https://www.elnueve.com/urgente-volvio-a-caer-granizo-en-rivadavia-y-santa-rosa,['Agua y Alimentos'],{'Agua y Alimentos': 0.6666666666666666},"{14: 1.0, 16: 1.0}"
+189,https://www.elprogreso.es/articulo/galicia/borrasca-ciaran-llegara-miercoles-fuertes-lluvias-viento-galicia-nevada-manzaneda/202310301211001703973.html,[],{},{}
+190,https://www.elconfidencial.com/espana/2023-10-29/aemet-borrasca-celine-lluvias-vientos_3763736/,['Transporte'],{'Transporte': 0.5625},"{6: 0.75, 7: 0.5, 8: 1.0}"
+191,https://www.europapress.es/galicia/noticia-borrasca-ciaran-entrara-galicia-miercoles-traera-rachas-viento-100-km-temporal-costero-20231031141827.html,[],{},{}
+192,https://www.lavanguardia.com/natural/20231030/9339054/nuevo-aviso-aemet-llega-borrasca-ciaran-vientos-fuertes-lluvias-generalizadas-pmv.html,[],{},{}
+193,https://www.farodevigo.es/sociedad/2023/10/30/borrasca-ciaran-ciclogenesis-explosiva-vientos-fuertes-galicia-93988342.html,[],{},{}
+194,https://www.elplural.com/sociedad/borrasca-celine-espana-mario-picazo_319228102,[],{},{}
+195,https://www.elprogreso.es/articulo/lugo/pulpo-valio-euros-mas/202311020837161704611.html,[],{},{}
+196,https://www.elprogreso.es/articulo/comarcas/lugo-suma-mas-borrasca-domingos/202311051125151705449.html,"['Energia', 'Transporte']","{'Energia': 0.5952380952380952, 'Transporte': 0.4375}","{0: 0.75, 1: 1.0, 5: 0.75, 8: 1.0}"
+197,https://elpais.com/internacional/2023-06-05/las-inundaciones-en-haiti-dejan-al-menos-42-muertos.html,['Agua y Alimentos'],{'Agua y Alimentos': 0.6666666666666666},"{14: 1.0, 16: 1.0}"
+198,https://www.abc.es/espana/madrid/tormenta-perfecta-inundo-m30-bernabeu-1995-20230612182923-nt.html,[],{},{}
+199,https://www.14ymedio.com/cuba/fallecidos-inundaciones-cuba-informacion-relegada_1_1092906.html,"['Transporte', 'Agua y Alimentos', 'Infraestructura digital']","{'Transporte': 0.4375, 'Agua y Alimentos': 1.0}","{7: 0.75, 8: 1.0, 14: 1.0, 15: 1.0, 16: 1.0}"
+200,https://www.europapress.es/nacional/noticia-portadas-periodicos-jueves-junio-20230608003750.html,['Agua y Alimentos'],{'Agua y Alimentos': 1.0},"{14: 1.0, 15: 1.0, 16: 1.0}"
+201,https://www.20minutos.es/noticia/5177205/0/recuperacion-puente-pedrera-tratara-salvar-las-partes-siglo-xviii/,[],{},{}
+202,https://www.20minutos.es/noticia/5175583/0/consejo-ministros-declara-madrid-como-zona-catastrofica-por-dana-principios-septiembre/,[],{},{}
+203,https://www.elespanol.com/madrid/sociedad/aemet-avisa-lluvias-madrid-horas-zonas-va-llover-domingo/805669445_0.html,"['Transporte', 'Sanidad']","{'Transporte': 0.25, 'Sanidad': 0.6666666666666666}","{8: 1.0, 10: 1.0, 11: 1.0}"
+204,https://www.telemadrid.es/programas/madrid-directo/Inundaciones-en-Camarma-de-Esteruelas-por-el-desbordamiento-del-arroyo-2-2620257990--20231201073629.html,[],{},{}
+205,https://gacetinmadrid.com/2023/12/01/cerrada-la-estacion-de-metro-de-bambu-por-inundacion/,['Transporte'],{},{}
+206,https://www.elmundo.es/madrid/2023/12/01/656995bce4d4d8ad3e8b4570.html,['Transporte'],{'Transporte': 0.4375},"{7: 0.75, 8: 1.0}"
+207,https://www.elespanol.com/temas/tormentas/5/,[],{},{}
+208,https://zonaretiro.com/transporte/inundaciones-metro-madrid-bambu-1-diciembre-2023/,['Transporte'],{'Transporte': 0.1875},{7: 0.75}
+209,https://www.miracorredor.tv/inundaciones-en-camarma-de-esteruelas-por-el-desbordamiento-del-arroyo-camarmilla/,[],{},{}
+210,https://www.telemadrid.es/programas/telenoticias-fin-de-semana/Cobena-no-deja-de-achicar-agua-tres-inundaciones-en-tres-meses-2-2620557924--20231202023004.html,[],{},{}
+211,https://www.telemadrid.es/programas/buenos-dias-madrid/Se-restablece-el-servicio-en-la-estacion-de-Bambu-de-la-Linea-10-de-Metro-0-2620237952--20231201082502.html,['Transporte'],{'Transporte': 0.1875},{7: 0.75}
+212,https://cadenaser.com/nacional/2023/12/05/la-aemet-avisa-de-un-cambio-importante-en-mitad-del-puente-de-la-constitucion-y-la-inmaculada-cadena-ser/,[],{},{}
+213,https://www.elespanol.com/madrid/sociedad/tiempo-madrid-puente-diciembre-aemet/814918807_0.html,[],{},{}
+214,https://www.elconfidencial.com/espana/2023-12-01/tiempo-espana-clima-lluvias-tormentas-nieve_3785302/,[],{},{}
+215,https://www.elespanol.com/madrid/sociedad/20231201/inundacion-camarma-esteruelas-madrid-colegio-desalojado-viviendas-anegadas/813918981_0.html,[],{},{}
+216,https://www.telemadrid.es/noticias/madrid/Vecinos-de-Camarma-se-recuperan-tras-la-tromba-de-agua-y-las-inundaciones-0-2620237998--20231201040321.html,['Transporte'],{'Transporte': 0.125},{8: 0.5}
+217,https://www.miracorredor.tv/las-inundaciones-de-camarma-de-esteruelas-vistas-desde-el-aire/,[],{},{}
+218,https://www.larazon.es/el-tiempo/dana-pone-riesgo-fuertes-lluvias-tormentas-varias-comunidades_20230920650a8ea798383a00012868bd.html,"['Transporte', 'Agua y Alimentos']","{'Transporte': 0.3125, 'Agua y Alimentos': 0.6666666666666666}","{6: 0.25, 8: 1.0, 14: 1.0, 16: 1.0}"
+219,https://cadenaser.com/murcia/2023/09/26/un-ano-despues-de-la-riada-mortal-en-javali-viejo-los-vecinos-denuncian-que-todo-sigue-igual-radio-murcia/,[],{},{}
+220,https://www.laverdad.es/murcia/aviso-amarillo-lluvias-tormentas-region-murcia-martes-20230918115603-nt.html,[],{},{}
+221,https://www.laopiniondemurcia.es/comunidad/2023/09/18/alerta-amarilla-region-fuertes-tormentas-92230793.html,[],{},{}
+222,https://www.laverdad.es/murcia/escudo-protector-presas-region-murcia-20230925003211-nt.html,[],{},{}
+223,https://www.telemadrid.es/programas/buenos-dias-madrid/La-lluvia-provoca-inundaciones-en-Murcia-Navarra-y-Guipuzcoa-2-2562663719--20230523092414.html,['Transporte'],{'Transporte': 0.5},"{7: 1.0, 8: 1.0}"
+224,https://www.diariovasco.com/gipuzkoa/historia/tolosa-inundacion-20230531180255-nt.html,[],{},{}
+225,https://www.elmundo.es/espana/2023/05/31/6476e741fdddffd7b28b4572.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+226,https://www.diariodenavarra.es/tags/temas/inundaciones-navarra.html/3,[],{},{}
+227,https://www.noticiasdenavarra.com/sociedad/2023/07/07/6-julio-pamplona-lluvia-acumulada-7019749.html,['Transporte'],{'Transporte': 0.1875},{8: 0.75}
+228,https://www.navarratelevision.es/noticia/zed0738f9-a172-72ac-ca4e7862f878d1aa/202307/activado-el-nivel-2-de-emergencias-por-lluvia-en-caparroso,['Transporte'],{'Transporte': 0.1875},{8: 0.75}
+229,https://navarra.okdiario.com/articulo/sucesos/caparroso-lluvias-intensas-navarra/20230707200210488193.html,[],{},{}
+230,https://elpais.com/espana/2023-07-07/una-inmensa-tromba-de-agua-deja-un-reguero-de-danos-materiales-en-la-rioja.html,"['Transporte', 'Agua y Alimentos']","{'Transporte': 0.4375, 'Agua y Alimentos': 0.5}","{7: 0.75, 8: 1.0, 14: 0.75, 16: 0.75}"
+231,https://www.diariodenavarra.es/noticias/navarra/sanguesa-merindad/2023/09/18/el-barranco-desagua-el-convento-artieda-esto-no-habia-pasado-nunca-582826-1010.html,[],{},{}
+232,https://www.heraldo.es/noticias/aragon/zaragoza/2023/09/13/che-inicia-el-proyecto-para-mejorar-la-resiliencia-ante-inundaciones-entre-osera-y-fuentes-1677709.html,[],{},{}
+233,https://www.navarra.es/es/-/nota-prensa/sos-navarra-atendio-un-total-de-450-llamadas-durante-la-dana-el-pasado-fin-de-semana,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+234,https://www.noticiasdenavarra.com/sociedad/2023/09/17/val-aibar-registra-lluvias-torrenciales-7270361.html,"['Transporte', 'Agua y Alimentos']","{'Transporte': 0.1875, 'Agua y Alimentos': 0.5833333333333334}","{8: 0.75, 14: 1.0, 16: 0.75}"
+235,https://www.diariodenavarra.es/noticias/navarra/2023/09/10/intensas-tormentas-madrugada-dejan-granizo-ribera-581901-300.html,[],{},{}
+236,https://www.diariodenavarra.es/noticias/navarra/2023/09/17/tormentas-acumulan-30-50-litros-dos-horas-zonas-centro-navarra-582736-300.html,['Transporte'],{'Transporte': 0.1875},{8: 0.75}
+237,https://www.navarraconfidencial.com/espana/no-iba-a-llover-nunca-mas/,[],{},{}
+238,https://www.diariodenavarra.es/noticias/navarra/2023/09/13/embalses-navarra-semana-11-septiembre-582232-300.html,[],{},{}
+239,https://elpais.com/espana/2023-09-10/una-intensa-granizada-golpea-tres-municipios-de-navarra.html,"['Sanidad', 'Agua y Alimentos']",{'Agua y Alimentos': 0.6666666666666666},"{14: 1.0, 16: 1.0}"
+240,https://www.laregion.es/articulo/ourense/infografia-inundaciones-riesgo-frecuente-ourense/202301221740401191870.html,['Energia'],{'Energia': 0.7142857142857143},"{0: 1.0, 1: 1.0}"
+241,https://www.lavozdegalicia.es/noticia/coruna/mino/2023/01/21/rio-mino-crecio-inundo-n-120-paso-ourense/0003_202301O21C2991.htm,[],{},{}
+242,https://www.laregion.es/articulo/ourense/desborda-rio-mino-zona-termal-tinteiro-fuertes-lluvias/202301171122171190555.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+243,https://www.galiciapress.es/articulo/sociedad/2023-01-19/4145123-hay-cortes-a8-alertas-lluvias-casi-toda-galicia-riesgo-inundaciones-pero-temporal-remite,['Transporte'],{'Transporte': 0.4375},"{7: 0.75, 8: 1.0}"
+244,https://www.laregion.es/articulo/tiempo/meteo-tiempo-ourense-hoy-viernes-20-enero/202301191525421191150.html,[],{},{}
+245,https://www.farodevigo.es/ourense/2023/01/21/lata-avisa-narciso-mino-amenaza-81492324.html,[],{},{}
+246,https://www.laregion.es/articulo/ourense/portada-region-martes-17-enero/202301170729411190530.html,[],{},{}
+247,https://www.laregion.es/articulo/ourense/tormenta-recupera-colapso-ourense/202306122133091226650.html,"['Transporte', 'Agua y Alimentos', 'Aguas Residuales']","{'Transporte': 0.25, 'Agua y Alimentos': 0.6666666666666666, 'Aguas Residuales': 1.0}","{8: 1.0, 14: 1.0, 16: 1.0, 17: 1.0, 18: 1.0, 19: 1.0}"
+248,https://www.laregion.es/articulo/ourense/temporal-vuelve-inundar-ourense/202306121802281226539.html,"['Transporte', 'Aguas Residuales']","{'Transporte': 0.25, 'Aguas Residuales': 0.7058823529411765}","{8: 1.0, 18: 1.0, 19: 1.0}"
+249,https://www.lavozdegalicia.es/noticia/ourense/ourense/2023/11/04/mino-desborda-ourense-deja-bajo-aguas-zonas-termales-chavasqueira-tinteuro/00031699109675114319332.htm,"['Energia', 'Transporte']","{'Energia': 0.47619047619047616, 'Transporte': 0.25}","{0: 0.5, 1: 1.0, 8: 1.0}"
+250,https://www.lavozdegalicia.es/noticia/galicia/2023/11/04/borrasca-domingos-sacude-galicia-vientos-120-kilometros-hora-lluvias-intensas/00031699082010531561352.htm,['Transporte'],{'Transporte': 1.0},"{5: 1.0, 6: 1.0, 7: 1.0, 8: 1.0}"
+251,https://www.diariodecastillayleon.es/castilla-y-leon/230612/37965/112-registra-61-llamadas-leon-palencia-fuertes-lluvias.html,[],{},{}
+252,https://www.diariodevalderrueda.es/texto-diario/mostrar/4328812/graves-inundaciones-cervera-pisuerga-tormentas,['Transporte'],{'Transporte': 0.1875},{8: 0.75}
+253,https://www.farodevigo.es/pontevedra/2023/10/27/temporal-provoca-desbordamiento-rios-inundaciones-93851241.html,"['Transporte', 'Infraestructura digital']","{'Transporte': 0.25, 'Infraestructura digital': 0.045454545454545456}","{8: 1.0, 21: 0.25}"
+254,https://www.pontevedraviva.com/xeral/99196/borrasca-celine-deja-multiples-incidencias/?lang=es,"['Transporte', 'Aguas Residuales']","{'Transporte': 0.25, 'Aguas Residuales': 1.0}","{8: 1.0, 17: 1.0, 18: 1.0, 19: 1.0}"
+255,https://www.galiciapress.es/articulo/el-tiempo-galicia/2023-10-25/4489673-declarada-alerta-naranja-interior-pontevedra-desde-costa-da-morte-hasta-ortegal-temporal,[],{},{}
+256,https://www.lavozdegalicia.es/noticia/pontevedra/pontevedra/2023/10/28/supermarea-lluvias-anegan-combarro-cortan-autovia-marin-llevan-lerez-limite-capacidad-pontevedra/00031698503266897896106.htm,"['Transporte', 'Aguas Residuales']","{'Transporte': 0.25, 'Aguas Residuales': 1.0}","{8: 1.0, 17: 1.0, 18: 1.0, 19: 1.0}"
+257,https://www.elcorreogallego.es/galicia/2023/10/28/galicia-borrasca-borrasca-ahora-golpea-93930107.html,['Transporte'],{'Transporte': 0.875},"{5: 0.75, 6: 1.0, 7: 0.75, 8: 1.0}"
+258,https://www.atlantico.net/articulo/vigo/malas-noticias-amantes-sol-va-seguir-lloviendo-vigo/202310260800001005058.html,[],{},{}
+259,https://www.cope.es/emisoras/galicia/noticias/temporal-galicia-inundaciones-fene-neda-arbol-grandes-dimensiones-cae-santiago-20231114_2999287,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+260,https://www.lavozdegalicia.es/noticia/pontevedra/pontecaldelas/2023/11/04/desbordamiento-verdugo-sume-caos-ponte-caldelas-solo-ganas-llorar/00031699105866692514702.htm,['Agua y Alimentos'],{'Agua y Alimentos': 0.3333333333333333},{16: 1.0}
+261,https://pontevedraviva.com/xeral/99451/pontevedra-ante-uno-otonos-mas-lluviosos-ultimos-40-anos/?lang=es,[],{},{}
+262,https://www.farodevigo.es/sociedad/2023/10/28/galicia-borrasca-borrasca-tiro-toca-93919007.html,['Transporte'],{'Transporte': 0.75},"{5: 1.0, 6: 1.0, 8: 1.0}"
+263,https://metropolitano.gal/enfoque/el-temporal-no-remite-por-ahora-en-galicia-y-se-mantiene-la-alerta-por-lluvia-hasta-el-jueves/,[],{},{}
+264,https://efe.com/medio-ambiente/2023-10-26/tiempo-alerta-viento-lluvia/,[],{},{}
+265,https://www.pontevedraviva.com/xeral/99249/prevision-asusta-ciclogenesis-explosiva-fuerte-viento-ciaran/?lang=es,[],{},{}
+266,https://www.infobae.com/espana/2023/10/30/lluvia-nieve-viento-y-avisos-costeros-la-borrasca-celine-deja-paso-a-la-ciaran-esta-semana/,[],{},{}
+267,https://pontevedraviva.com/xeral/99223/pontevedra-acumula-15-dias-seguidos-lluvia-pronostico-apunta-seran-mas/?lang=es,['Transporte'],{'Transporte': 0.375},"{6: 0.75, 8: 0.75}"
+268,https://www.diariodepontevedra.es/articulo/pontevedra/pontevedra-encadena-30-dias-seguidos-lluvia-otono-mas-humedo-anos/202311140902031279091.html,['Agua y Alimentos'],{'Agua y Alimentos': 0.3333333333333333},{16: 1.0}
+269,https://pontevedraviva.com/xeral/99389/troncos-ria-pontevedra-temporal-recollida/?lang=es,[],{},{}
+270,https://www.20minutos.es/noticia/5189364/0/aemet-desmiente-alerta-llegada-huracan-categoria-cuatro-espana/,[],{},{}
+271,https://www.laprovincia.es/gran-canaria/2024/08/21/altas-temperaturas-rebosos-gran-canaria-107227302.html,[],{},{}
+272,https://www.atlanticohoy.com/tenerife/varias-playas-tenerife-con-bandera-roja-por-fuerte-oleaje_1520337_102.html,[],{},{}
+273,https://www.atlanticohoy.com/tenerife/naviera-armas-desvia-sus-ferris-sc-tenerife-por-oleaje-en-puerto-cristianos_1520335_102.html,['Transporte'],{'Transporte': 0.1875},{6: 0.75}
+274,https://cadenaser.com/castillayleon/2023/06/18/el-desbordamiento-del-aguisejo-provoca-inundaciones-en-ayllon-radio-segovia/,[],{},{}
+275,https://www.acueducto2.com/el-aguisejo-inunda-ayllon-por-una-tormenta-de-granizo-y-agua/147994,[],{},{}
+276,https://www.eladelantado.com/provincia-de-segovia/danos-al-desbordarse-el-rio-aguisejo-por-una-tormenta/,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+277,https://www.abc.es/espana/castilla-leon/tormenta-agua-granizo-desborda-rio-aguisejo-anega-20230619095813-nt.html,[],{},{}
+278,https://www.cyltv.es/videoSH/3a332bf1-75a6-479c-b6c8-d9a8644f060f/La-tormenta-desborda-el-rio-e-inunda-Ayllon,[],{},{}
+279,https://www.acueducto2.com/las-tormentas-se-ensanan-con-el-espinar-y-dejan-10-desalojados-en-segovia/150099,[],{},{}
+280,https://www.eldiasegovia.es/noticia/zbff2bcfb-b3ea-61de-c238e78f675eba8e/202309/galeria-de-fotos-y-video-de-las-inundaciones-en-el-espinar,[],{},{}
+281,https://www.elespanol.com/castilla-y-leon/region/20230904/consecuencias-dana-castilla-leon-llamadas-litros-pueblo-inundaciones-techos-colapsados/791920830_0.html,['Energia'],{'Energia': 0.23809523809523808},{0: 0.5}
+282,https://www.elnortedecastilla.es/segovia/bomberos-intervienen-varias-calles-segovia-reducir-agua-20230904141417-nt.html,[],{},{}
+283,https://www.diariodecastillayleon.es/segovia/230904/2229/paso-dana-castilla-leon-espinar-segovia-zona-catastrofica.html,[],{},{}
+284,https://www.rtve.es/noticias/20230904/mapa-precipitaciones-dejado-dana-tres-dias-por-toda-espana/2455151.shtml,['Transporte'],{'Transporte': 0.5},"{7: 1.0, 8: 1.0}"
+285,https://www.elmundo.es/espana/2023/09/04/64f57ae3fb7e8000298e056f-directo.html,"['Transporte', 'Sanidad', 'Agua y Alimentos']","{'Transporte': 0.5, 'Sanidad': 0.3333333333333333, 'Agua y Alimentos': 0.3333333333333333}","{7: 1.0, 8: 1.0, 11: 1.0, 15: 1.0}"
+286,https://www.eldiasegovia.es/noticia/zbb53d396-abc1-da26-08cfed80776cb592/202309/cientos-de-casas-inundadas-en-el-espinar-por-la-dana,[],{},{}
+287,https://www.elnortedecastilla.es/segovia/san-rafael-registra-litros-metro-cuadrado-cuatro-20230904081906-nt.html,[],{},{}
+288,https://www.elnortedecastilla.es/segovia/subir-corriendo-piso-perdido-20230905004321-nt.html,[],{},{}
+289,https://www.eldiasegovia.es/noticia/zc87f435e-de1f-c91d-a7bb466fa3eadf53/202309/la-junta-decreta-el-fin-de-la-alerta-por-lluvias-y-tormentas,['Energia'],{'Energia': 0.23809523809523808},{0: 0.5}
+290,https://www.telesurtv.net/news/espana-continuara-lluvias-inundaciones-dana-20230904-0001.html,['Transporte'],{'Transporte': 0.4375},"{7: 0.75, 8: 1.0}"
+291,https://www.elconfidencial.com/espana/2023-09-04/ranking-lluvias-espana-aemet-localidad-mas-agua-cayo_3728621/,['Transporte'],{'Transporte': 0.5},"{7: 1.0, 8: 1.0}"
+292,https://www.eldiadevalladolid.com/noticia/zb94a4049-f705-947e-85816ee54cc672e9/202309/valladolid-registra-101-avisos-a-emergencias-por-las-lluvias,['Energia'],{'Energia': 0.11904761904761904},{0: 0.25}
+293,https://www.analitica.com/actualidad-internacional/dana-dejo-en-espana-dos-muertos-dos-desaparecidos-y-numerosos-incidentes/,['Transporte'],{},{}
+294,https://www.elconfidencial.com/espana/2023-09-04/tiempo-espana-hoy-dana-aemet-directo_3728442/,"['Transporte', 'Sanidad']","{'Transporte': 0.5, 'Sanidad': 0.5}","{7: 1.0, 8: 1.0, 10: 0.75, 11: 0.75}"
+295,https://www.eldiasegovia.es/noticia/zb5101b1c-d6cc-5cef-53bee85d15840724/202309/la-dana-se-retira-pero-mantienen-en-alerta-a-cinco-comunidades,[],{},{}
+296,https://www.20minutos.es/noticia/5169346/0/-dana-deja-159-litros-por-metro-cuadrado-acumulados-san-rafael-42-una-hora/,[],{},{}
+297,https://www.eladelantado.com/provincia-de-segovia/la-dana-el-espinar-catastrofe/,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+298,https://elpais.com/espana/2023-11-04/la-borrasca-domingos-vuelve-a-poner-a-toda-espana-bajo-aviso-por-temporal-salvo-canarias.html,[],{},{}
+299,https://www.eladelantado.com/provincia-de-segovia/la-borrasca-ciaran-deja-destrozos-en-cantimpalos/,[],{},{}
+300,https://www.diariopalentino.es/noticia/z7ddaf325-0212-c912-60c4046af5e77e24/202311/dos-personas-heridas-por-los-efectos-del-fuerte-viento,['Sanidad'],{},{}
+301,https://www.abc.es/sevilla/provincia/sevilla-acumula-primera-quincena-septiembre-tercio-lluvias-20230915144710-nts.html,[],{},{}
+302,https://www.wsws.org/es/articles/2023/09/11/inun-s11.html,"['Transporte', 'Sanidad']","{'Transporte': 0.75, 'Sanidad': 0.5833333333333334}","{5: 1.0, 7: 1.0, 8: 1.0, 10: 1.0, 11: 0.75}"
+303,https://www.sevillaactualidad.com/provincia/529995-una-tromba-de-agua-provoca-grandes-inundaciones-en-constantina/,[],{},{}
+304,https://www.abc.es/sevilla/provincia/fuertes-lluvias-madrugada-dejan-inundaciones-constantina-20230915090907-nts.html,[],{},{}
+305,https://www.20minutos.es/noticia/5169241/0/llega-dana-historica-espana-directo-ultimas-noticias-lluvias-tormentas/,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+306,https://www.eldiario.es/sevilla/vuelve-lluvia-sevilla-final-semana-temperaturas-alza_1_10502722.html,[],{},{}
+307,https://www.diariodesevilla.es/provincia/Espectacular-riada-Estepa-tromba-agua-video_0_1830417189.html,[],{},{}
+308,https://www.ecuavisa.com/noticias/ecuador/fenomeno-el-nino-ecuador-provincias-inundaciones-movimientos-masa-XY6001077,[],{},{}
+309,https://elpais.com/hemeroteca/2023-10-22/,[],{},{}
+310,https://www.antena3.com/noticias/sociedad/borrasca-aline-deja-noche-intensas-lluvias-destrozos-madrid-sevilla_2023102065322b8f32dc7500019ca32c.html,['Transporte'],{'Transporte': 0.5},"{5: 1.0, 8: 1.0}"
+311,https://boyaca7dias.com.co/2023/10/24/sigue-la-alerta-tras-aguacero-torrencial-que-ocasiono-inundaciones-en-diferentes-sectores-de-duitama/,"['Transporte', 'Sanidad', 'Aguas Residuales']","{'Transporte': 0.1875, 'Sanidad': 0.6666666666666666, 'Aguas Residuales': 0.8529411764705882}","{8: 0.75, 10: 1.0, 11: 1.0, 17: 1.0, 18: 1.0, 19: 0.75}"
+312,https://elpais.com/espana/2023-10-22/la-borrasca-bernard-interrumpe-el-trafico-maritimo-en-el-estrecho-corta-la-autovia-de-cadiz-y-causa-danos-en-toda-andalucia.html,['Transporte'],{'Transporte': 0.5},"{6: 1.0, 8: 1.0}"
+313,https://www.ideal.es/andalucia/ciclogenesis-explosiva-llega-andalucia-efectos-20231030113226-nt.html,[],{},{}
+314,https://www.heraldo.es/noticias/aragon/zaragoza/2023/10/20/arcoiris-cielo-zaragoza-hoy-viernes-20octubre-2023-1685439.html,[],{},{}
+315,https://www.milenio.com/estados/otis-vivo-trayectoria-ciclon-paso-mexico-26-octubre,[],{},{}
+316,https://www.diariodesevilla.es/sevilla/temporal-agua-embalses-octubre-Sevilla-50-dias-consumoi_0_1841816202.html,[],{},{}
+317,https://www.abc.es/espana/andalucia/borrasca-dana-lluvia-era-andalucia-20231023144025-nts.html,[],{},{}
+318,https://www.diariodesevilla.es/sevilla/arboles-procesiones-caidas-Sevilla-borrasca-Bernard_0_1841216785.html,['Transporte'],{'Transporte': 0.5},"{7: 1.0, 8: 1.0}"
+319,https://fuentesdeandalucia.org/el-ayuntamiento-solicita-que-el-municipio-sea-declarado-zona-catastrofica-ante-los-destrozos-causados-por-la-borrasca-bernard/,['Infraestructura digital'],{'Infraestructura digital': 0.6136363636363636},"{21: 1.0, 22: 0.25, 23: 1.0, 24: 1.0}"
+320,https://elpais.com/espana/2023-10-23/un-muerto-en-huelva-por-el-paso-de-la-borrasca-bernard.html,"['Transporte', 'Sanidad']","{'Transporte': 0.4375, 'Sanidad': 0.16666666666666666}","{7: 0.75, 8: 1.0, 11: 0.5}"
+321,https://www.andaluciacentro.com/sevilla/ecija/fuentes-de-andalucia/39414/fuentes-de-andalucia-pedira-la-declaracion-de-zona-catastrofica-por-la-borrasca-bernard,[],{},{}
+322,https://cadenaser.com/andalucia/2023/10/23/mas-de-500-incidencias-en-sevilla-por-la-borrasca-bernard-radio-sevilla/,['Transporte'],{'Transporte': 0.5},"{7: 1.0, 8: 1.0}"
+323,https://www.telecinco.es/noticias/sociedad/20231022/borrasca-bernard-afecta-cadiz-sevilla-huelva-caos-trenes-arboles_18_010774629.html,['Transporte'],{'Transporte': 0.5},"{7: 1.0, 8: 1.0}"
+324,https://www.antena3.com/noticias/el-tiempo/actualidad/borrasca-bernard-directo-ultima-hora-lluvias-viento-oleaje-hoy_202310236536302832dc750001b59441.html,"['Transporte', 'Sanidad']","{'Transporte': 0.4375, 'Sanidad': 0.16666666666666666}","{7: 0.75, 8: 1.0, 11: 0.5}"
+325,https://www.aemet.es/en/conocermas/borrascas/2023-2024/estudios_e_impactos/bernard,['Transporte'],{'Transporte': 0.6875},"{5: 0.75, 6: 1.0, 8: 1.0}"
+326,https://www.diarimes.com/es/camp-tarragona/231027/altafulla-avalua-les-afectacions-causades-pel-fort-onatge-passeig-maritim_136253.html,[],{},{}
+327,https://www.diaridetarragona.com/costa/el-mar-se-la-tiene-jurada-a-altafulla-engulle-parte-del-paseo-OD17367867,[],{},{}
+328,https://www.telecinco.es/noticias/catalunya/20231020/chiringuitos-destrozados-torredembarra-borrasca-aline-playa-tarragona_18_010760668.html,[],{},{}
+329,https://www.europapress.es/sociedad/noticia-bernard-deja-vientos-huracanados-193-km-sierra-nevada-42-m2-hora-huelva-20231023113720.html,[],{},{}
+330,https://cronicaglobal.elespanol.com/vida/20231025/vuelca-embarcacion-en-coma-ruga-muere-hermano-estado/804669841_0.html,['Sanidad'],{},{}
+331,https://www.diarimes.com/es/camp-tarragona/231023/roda-bera-pide-ayuda-govern-para-reparar-los-danos-paseo_136008.html,[],{},{}
+332,https://www.diaridetarragona.com/costa/salou-pierde-la-playa-en-el-primer-temporal-de-otono-DN17292199,[],{},{}
+333,https://cronicaglobal.elespanol.com/vida/20230915/las-intensas-empiezan-en-cataluna-carreteras-tarragona/794670711_0.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+334,https://www.diaridetarragona.com/ebre/las-fuertes-lluvias-llegan-a-tarragona-y-cortan-la-n-340-en-amposta-BN16937879,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+335,https://www.diaridetarragona.com/tarragona/la-lluvia-amenaza-los-primeros-dias-de-actos-de-santa-tecla-GM16925311,[],{},{}
+336,https://cronicaglobal.elespanol.com/vida/20230916/las-en-cataluna-de-sant-pere-ribes/794920662_0.html,['Transporte'],{'Transporte': 0.1875},{8: 0.75}
+337,https://www.elnacional.cat/es/sociedad/tiempo-hoy-catalunya-barcelona-directo_10377_126.html,[],{},{}
+338,https://www.rtve.es/noticias/20230915/intensas-lluvias-alerta-espana-tormentas/2456035.shtml,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+339,https://www.lavanguardia.com/local/tarragona/20230919/9236976/masdenverge-reclama-rebajar-cauce-galera-atenuar-danos-aguaceros.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+340,https://www.diaridetarragona.com/costa/graves-inundaciones-en-torredembarra-tras-caer-mas-de-100-litros-por-metro-cuadrado-FG16986883,['Transporte'],{'Transporte': 0.375},"{7: 0.5, 8: 1.0}"
+341,https://elpais.com/espana/catalunya/2023-09-21/mas-de-700000-catalanes-viven-en-zonas-inundables-fluviales.html,[],{},{}
+342,https://www.elperiodico.com/es/tiempo/20230920/tiempo-ultima-hora-dana-lluvias-barcelona-catalunya-tarragona-alerta-directo-89148735,[],{},{}
+343,https://www.elnacional.cat/es/sociedad/desactivan-el-plan-plano-inuncat-despues-de-lluvias-intensas-en-el-campo-de-tarragona-y-al-penedes_1096560_102.html,[],{},{}
+344,https://www.antena3.com/noticias/el-tiempo/la-prevision/mercedes-martin-llega-frio-domingo-lluvias-fuertes_202310206532b24c32dc75000164d45b.html,[],{},{}
+345,https://www.elperiodicodearagon.com/teruel/2023/06/03/fuerte-tormenta-teruel-provoca-multiples-avisos-inundaciones-ciudad-88269927.html,[],{},{}
+346,https://www.diariodeteruel.es/teruel/una-fuerte-tromba-de-agua-sobre-teruel-obliga-a-realizar-una-quincena-de-salidas-a-los-bomberos,[],{},{}
+347,https://www.aragondigital.es/articulo/teruel/una-tromba-de-agua-en-teruel-deja-una-quincena-de-avisos-por-inundaciones/20230604100000810145.html,[],{},{}
+348,https://www.heraldo.es/noticias/aragon/teruel/2023/06/04/la-tormenta-de-teruel-deja-una-treintena-de-ascensores-estropeados-y-decenas-de-bajos-inundados-1656499.html,[],{},{}
+349,https://elpais.com/espana/2023-07-07/los-estragos-de-la-tormenta-de-zaragoza-cientos-de-vecinos-sin-luz-carreteras-cortadas-y-colegios-destrozados.html,"['Energia', 'Transporte']","{'Energia': 0.5357142857142857, 'Transporte': 0.25}","{0: 0.75, 1: 0.75, 8: 1.0}"
+350,https://cadenaser.com/aragon/2023/07/06/graves-danos-en-el-bajo-aragon-por-las-tormentas-radio-zaragoza/,"['Energia', 'Transporte']","{'Energia': 0.47619047619047616, 'Transporte': 0.5}","{0: 0.5, 1: 1.0, 7: 1.0, 8: 1.0}"
+351,https://www.elmundo.es/espana/2023/07/08/64a93a97e4d4d8d7478b4571.html,"['Transporte', 'Sanidad']","{'Transporte': 0.25, 'Sanidad': 0.3333333333333333}","{8: 1.0, 10: 0.75, 11: 0.25}"
+352,https://www.eldiario.es/castilla-la-mancha/provincias/toledo/inundaciones-localidad-toledana-consuegra-abre-oficina-damnificados_1_10270192.html,[],{},{}
+353,https://www.cmmedia.es/noticias/castilla-la-mancha/fuertes-tormentas-dejan-trombas-agua-e-inundaciones-pueblos-castilla-mancha.html,"['Transporte', 'Agua y Alimentos']","{'Transporte': 0.25, 'Agua y Alimentos': 0.5833333333333334}","{8: 1.0, 14: 1.0, 16: 0.75}"
+354,https://www.eloccidental.com.mx/local/lemus-y-frangie-confian-que-trabajos-en-canal-de-patria-eviten-inundaciones-10179130.html,[],{},{}
+355,https://www.elespanol.com/eldigitalcastillalamancha/region/toledo/20230621/tromba-granizo-provoca-incidentes-toledo-inundaciones-arboles/773173064_0.html,[],{},{}
+356,https://www.elespanol.com/eldigitalcastillalamancha/region/toledo/20230928/catedra-tajo-alerta-inundaciones-iran-toledo-propone-soluciones/797920245_0.html,[],{},{}
+357,https://cadenaser.com/castillalamancha/2023/09/28/que-se-puede-hacer-para-evitar-danos-en-la-proxima-dana-ser-toledo/,[],{},{}
+358,https://www.cmmedia.es/noticias/castilla-la-mancha/plazos-ayuda-dana-toledo.html,[],{},{}
+359,https://www.castillalamancha.es/actualidad/notasdeprensa/el-gobierno-regional-valora-la-r%C3%A1pida-respuesta-la-solicitud-de-ayudas-para-municipios-afectados-por,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+360,https://efe.com/castilla-la-mancha/2023-09-21/danos-dana-300-millones/,[],{},{}
+361,https://www.latribunadetoledo.es/noticia/z0f008e0a-d654-f3a8-14a152e99f91a255/202310/toledo-pide-a-la-cht-solucion-en-azucaica-amianto-y-azudes,[],{},{}
+362,https://www.encastillalamancha.es/castilla-la-mancha-cat/toledo/video-la-lluvia-deja-mas-inundaciones-en-toledo-azucaica-el-barrio-mas-castigado/,['Aguas Residuales'],{'Aguas Residuales': 1.0},"{17: 1.0, 18: 1.0, 19: 1.0}"
+363,https://cadenaser.com/castillalamancha/2023/10/23/la-borrasca-bernard-deja-calles-inundadas-en-varios-barrios-de-toledo-los-vecinos-de-azucaica-piden-soluciones-ser-toledo/,['Aguas Residuales'],{'Aguas Residuales': 1.0},"{17: 1.0, 18: 1.0, 19: 1.0}"
+364,https://www.elespanol.com/eldigitalcastillalamancha/region/20231023/toda-castilla-la-mancha-alerta-lunes-viento-lluvias-intensas-toledo/804169589_0.html,[],{},{}
+365,https://elpais.com/espana/2023-10-30/la-borrasca-ciaran-dejara-vientos-muy-fuertes-mala-mar-lluvias-y-nieve-en-las-montanas-a-partir-del-miercoles.html,[],{},{}
+366,https://www.encastillalamancha.es/castilla-la-mancha-cat/toledo/toledo-miedo-desesperacion-vecinos-azucaica-inundaciones-estamos-hartos/,['Aguas Residuales'],{'Aguas Residuales': 1.0},"{17: 1.0, 18: 1.0, 19: 1.0}"
+367,https://www.latribunadetoledo.es/noticia/z08556fe1-97fa-170a-a2ddb89fa427ce8e/202310/un-aliviadero-de-la-a-5-trae-en-jaque-a-un-vecino-de-otero,[],{},{}
+368,https://ahoraclm.com/la-dana-de-septiembre-provoco-en-toledo-danos-por-valor-de-47-millones-de-euros,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+369,https://www.castillalamancha.es/actualidad/notasdeprensa/el-gobierno-regional-entrega-equipos-electr%C3%B3genos-y-bombas-para-inundaciones-29-entidades-locales,[],{},{}
+370,https://www.elespanol.com/eldigitalcastillalamancha/region/toledo/20231205/preocupacion-constantes-inundaciones-pueblo-toledo-va-costar-caro/814918925_0.html,[],{},{}
+371,https://www.latribunadetoledo.es/noticia/z7621e165-f1d0-ff29-8170ae805b830d8e/202312/el-desbordamiento-de-3-arroyos-inunda-fincas-en-n-502-y-cm4101,"['Transporte', 'Agua y Alimentos']","{'Transporte': 0.25, 'Agua y Alimentos': 0.6666666666666666}","{8: 1.0, 14: 1.0, 16: 1.0}"
+372,https://www.elespanol.com/eldigitalcastillalamancha/region/toledo/20231201/madrugada-pesadilla-pareja-atrapada-agua-cerca-talavera-reina/813918774_0.html,[],{},{}
+373,https://www.abc.es/espana/castilla-la-mancha/toledo/pueblos/policias-rescatan-dos-estudiantes-coche-riada-dejan-20231201163514-nt.html,[],{},{}
+374,https://efectococuyo.com/la-humanidad/municipios-de-carabobo-afectados-por-fuertes-lluvias-de-este-30-de-mayo/,[],{},{}
+375,https://efeverde.com/inundaciones-y-rescates-por-las-fuertes-lluvias-que-persisten-en-el-centro-y-este-peninsular/,[],{},{}
+376,https://www.antena3.com/noticias/el-tiempo/actualidad/dana-continua-azotando-espana-deja-paisaje-catastrofico-valencia_20230527647232016cbd630001c945b3.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+377,https://primicia.com.ve/nacion/varias-familias-afectadas-por-desbordamiento-de-cano-en-valencia-video/,"['Energia', 'Transporte']","{'Energia': 0.11904761904761904, 'Transporte': 0.25}","{0: 0.25, 8: 1.0}"
+378,https://www.eluniversal.com/venezuela/156409/afectadas-familias-tras-el-desbordamiento-de-cano-en-valencia,[],{},{}
+379,https://www.miteco.gob.es/es/agua/temas/gestion-de-los-riesgos-de-inundacion/planes-gestion-riesgos-inundacion/objetivos_planes_gestion_ri.html,[],{},{}
+380,https://www.larazon.es/sociedad/inundaciones-rescates-debido-precipitaciones-torrenciales_2023052664710c6eea31940001bda3a0.html,"['Transporte', 'Agua y Alimentos']","{'Transporte': 0.25, 'Agua y Alimentos': 0.6666666666666666}","{8: 1.0, 14: 1.0, 16: 1.0}"
+381,https://www.elconfidencial.com/espana/2023-05-26/dana-lluvias-comunidades-alerta_3637260/,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+382,https://www.publico.es/sociedad/dana-causa-inundaciones-pais-valencia-y-pamplona.html,['Transporte'],{'Transporte': 0.4375},"{7: 0.75, 8: 1.0}"
+383,https://www.antena3.com/noticias/sociedad/ultima-hora-temporal-dana-alerta-roja-madrid-inundaciones-valencia-confinamiento-tarragona_2023090364f45fc5714dff0001d13beb.html,"['Transporte', 'Sanidad']","{'Transporte': 0.75, 'Sanidad': 0.75}","{5: 1.0, 7: 1.0, 8: 1.0, 10: 1.0, 11: 0.75, 13: 1.0}"
+384,https://valenciaplaza.com/lluvias-valencia,['Transporte'],{'Transporte': 0.375},"{7: 0.5, 8: 1.0}"
+385,https://www.antena3.com/noticias/el-tiempo/actualidad/diluvio-comunidad-valenciana-dejan-inundaciones-numerosas-incidencias-sur-provincia-valencia_202309146502eac31fb4a6000131da13.html,[],{},{}
+386,https://www.levante-emv.com/comunitat-valenciana/camp-de-turia/2023/09/17/gran-tromba-agua-acompanada-granizo-92210102.html,[],{},{}
+387,https://www.20minutos.es/noticia/5172858/0/buscan-persona-arrastrada-agua-bicicleta-barranco/,['Transporte'],{'Transporte': 0.25},"{7: 0.5, 8: 0.5}"
+388,https://www.lasprovincias.es/comunitat/el-tiempo/dana-irregular-deja-fuertes-trombas-valencia-litros-20230919184037-nt.html,[],{},{}
+389,https://www.levante-emv.com/comunitat-valenciana/requena-utiel/2023/09/17/tormenta-barre-comarca-requena-utiel-92207029.html,['Agua y Alimentos'],{'Agua y Alimentos': 0.6666666666666666},"{14: 1.0, 16: 1.0}"
+390,https://www.20minutos.es/noticia/5174176/0/granizadas-tormentas-electricas-trombas-agua-inundaciones-los-efectos-dana-comunidad-valenciana/,['Transporte'],{'Transporte': 0.375},"{7: 0.5, 8: 1.0}"
+391,https://www.lasprovincias.es/ribera-costera/albalat-ribera-algemesi-suspenden-clases-tras-tromba-20230914092555-nt.html,[],{},{}
+392,https://www.lasprovincias.es/comunitat/el-tiempo/aemet-reactiva-doble-alerta-lluvias-intensas-valencia-dana-bfa-20230913174327-nt.html,[],{},{}
+393,https://www.valenciaextra.com/es/el-tiempo/cuando-volvera-llover-en-valencia-prevision-meteorologica_525393_102.html,[],{},{}
+394,https://www.informacion.es/alicante/2023/09/18/dana-adelanta-comunidad-valenciana-92250684.html,[],{},{}
+395,https://www.lasprovincias.es/comunitat/el-tiempo/aemet-anuncia-lluvias-intensas-llegada-dana-valencia-20230915180008-nt.html,[],{},{}
+396,https://www.levante-emv.com/comunitat-valenciana/2023/09/13/semana-dana-92001859.html,[],{},{}
+397,https://www.lasprovincias.es/comunitat/el-tiempo/primeras-alertas-dana-aemet-preve-horas-fuerte-lluvias-valencia-20230918182217-nt.html,[],{},{}
+398,https://www.lasprovincias.es/comunitat/el-tiempo/aemet-activa-alerta-amarilla-valencia-preve-lluvias-20230911180016-nt.html,[],{},{}
+399,https://www.lasprovincias.es/comunitat/directo-temporal-lluvias-azota-comunitat-valenciana-20230915164442-di.html,[],{},{}
+400,https://www.rtve.es/noticias/20230917/intensas-lluvias-provocan-incidencias-castellon-valencia-alerta-naranja/2456177.shtml,['Transporte'],{'Transporte': 0.1875},{7: 0.75}
+401,https://www.lasprovincias.es/comunitat/lluvia-afecta-comunitat-primera-hora-ceba-aeropuerto-20230915092823-nt.html,['Transporte'],{'Transporte': 0.5},"{5: 1.0, 8: 1.0}"
+402,https://www.elimpulso.com/tag/el-lago-de-valencia/,[],{},{}
+403,https://noticiasdeaqui.co/2023/09/13/denuncian-que-crecida-del-lago-de-valencia-afecta-a-familias-de-maracay/,[],{},{}
+404,https://elpais.com/espana/2023-09-17/la-alerta-naranja-deja-fuertes-tormentas-en-castellon-valencia-y-huesca.html,['Transporte'],{'Transporte': 0.0},{7: 0.0}
+405,https://www.elperiodicoextremadura.com/extremadura/2023/09/16/trombas-agua-valencia-de-alcantara-extremadura-92164982.html,[],{},{}
+406,https://www.levante-emv.com/comunitat-valenciana/2023/09/19/dana-descarga-fuerza-mitad-norte-92306156.html,[],{},{}
+407,https://elpais.com/espana/2023-09-18/una-dana-dejara-fuertes-lluvias-en-el-este-baleares-y-martes-y-miercoles-y-un-frente-barrera-el-pais-el-jueves.html,[],{},{}
+408,https://www.elmundo.es/espana/2023/09/20/650a8a5c21efa0aa138b45b5.html,"['Transporte', 'Agua y Alimentos']","{'Transporte': 0.1875, 'Agua y Alimentos': 0.6666666666666666}","{8: 0.75, 14: 1.0, 16: 1.0}"
+409,https://www.valenciaextra.com/es/el-tiempo/nueva-dana-llega-valencia-proxima-semana_525470_102.html,[],{},{}
+410,https://www.larazon.es/el-tiempo/dana-dejara-lluvias-torrenciales-fuertes-tormentas-granizo-todas-estas-zonas-espana_2024082866cecd3b1dd4400001785755.html,[],{},{}
+411,https://www.lasprovincias.es/comunitat/el-tiempo/aemet-actualiza-prevision-dana-anuncia-varios-cambios-valencia-20230919175100-nt.html,[],{},{}
+412,https://www.levante-emv.com/comunitat-valenciana/2023/09/16/nueva-dana-miercoles-jueves-92138736.html,[],{},{}
+413,https://www.lasprovincias.es/comunitat/el-tiempo/municipios-valencianos-lloviendo-dana-20230919172358-nt.html,[],{},{}
+414,https://www.levante-emv.com/comunitat-valenciana/2023/08/27/ultimo-semana-agosto-deja-truenos-91380597.html,['Transporte'],{'Transporte': 0.0625},{7: 0.25}
+415,https://www.tiempo.com/ram/avisos-episodio-fuertes-tormentas-intensas-lluvias-granizo.html,[],{},{}
+416,https://www.noticiascv.com/las-tormentas-obligan-a-30-intervenciones-bomberos-provincia-valencia/,[],{},{}
+417,https://valenciaplaza.com/leliana-estudia-solicitar-declaracion-zona-catastrofica-tras-tormenta,"['Energia', 'Infraestructura digital']","{'Energia': 0.5952380952380952, 'Infraestructura digital': 0.4090909090909091}","{0: 0.75, 1: 1.0, 20: 1.0, 21: 0.75, 24: 1.0}"
+418,https://www.lasprovincias.es/comunitat/el-tiempo/primeras-tormentas-lluvias-dejan-lm2-apenas-media-20230826185320-nt.html,[],{},{}
+419,https://www.levante-emv.com/comunitat-valenciana/2023/08/27/lluvias-granizo-valencia-hoy-tiempo-domingo-dv-91391731.html,[],{},{}
+420,https://www.lasprovincias.es/comunitat/el-tiempo/dana-llegara-comunitat-valenciana-lluvias-fuertes-tormentas-granizo-vendaval-20230831142104-nt.html,[],{},{}
+421,https://www.lasprovincias.es/comunitat/el-tiempo/aemet-lluvias-granizo-valencia-20230826102229-nt.html,[],{},{}
+422,https://www.levante-emv.com/comunitat-valenciana/2023/08/31/llega-dana-afectara-valencia-dv-91531539.html,[],{},{}
+423,https://www.tiempo.com/ram/temporal-otonal-precipitaciones-sequia.html,[],{},{}
+424,https://efe.com/espana/2023-08-28/diez-comunidades-alerta-viento-lluvia-tormentas/,"['Transporte', 'Sanidad']",{'Transporte': 0.75},"{5: 1.0, 6: 1.0, 7: 0.0, 8: 1.0}"
+425,https://www.valenciaextra.com/es/el-tiempo/temporal-betty-emergencias-activa-alerta-naranja-comunitat-valenciana_524881_102.html,[],{},{}
+426,https://efe.com/cultura/2023-08-27/suspendido-concierto-rauw-alejandro-palma/,['Transporte'],{'Transporte': 0.25},{5: 1.0}
+427,https://www.zaragoza.es/sede/servicio/noticia/324335,[],{},{}
+428,https://www.heraldo.es/noticias/aragon/zaragoza/2023/09/19/diluvio-con-granizo-a-paladas-entre-carinena-paniza-y-encinacorba-en-plena-vendimia-1678906.html,['Agua y Alimentos'],{'Agua y Alimentos': 0.6666666666666666},"{14: 1.0, 16: 1.0}"
+429,https://www.eltiempo.es/noticias/granizo-como-pelotas-de-tenis-y-tormentas-electricas-de-infarto,['Transporte'],{'Transporte': 0.0},{7: 0.0}
+430,https://www.eluniversal.com.mx/estados/tula-donde-el-miedo-se-niega-a-irse/,['Aguas Residuales'],{'Aguas Residuales': 0.8823529411764706},"{17: 1.0, 19: 1.0}"
+431,https://www.elperiodicodearagon.com/aragon/2023/09/19/tromba-agua-granizo-inunda-calles-paniza-92302456.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+432,https://www.heraldo.es/noticias/aragon/2023/09/19/prevision-tiempo-aragon-dana-lluvias-zaragoza-huesca-teruel-1678734.html,[],{},{}
+433,https://www.heraldo.es/noticias/aragon/zaragoza/2023/09/14/consorcio-danos-cien-millones-euros-tormenta-aragon-1677762.html,[],{},{}
+434,https://www.lavozdegalicia.es/noticia/coruna/vivir-coruna/2023/10/31/comarca-coruna-alerta-viento-lluvias-seran-peores-horas/00031698763055224673651.htm,[],{},{}
+435,https://efeverde.com/borrasca-ciaran/,[],{},{}
+436,https://www.aemet.es/en/conocermas/borrascas/2023-2024/estudios_e_impactos/aline,['Transporte'],{'Transporte': 0.75},"{6: 1.0, 7: 1.0, 8: 1.0}"
+437,https://www.antena3.com/noticias/el-tiempo/actualidad/consecuencias-borrasca-celine-galicia-comunidad-mas-afectada-456-incidencias_20231029653eaa2e32dc7500014e9e9e.html,[],{},{}
+438,https://www.laopinioncoruna.es/coruna/2023/11/03/coruna-cumple-22-dias-lluvia-94146579.html,"['Energia', 'Transporte']","{'Energia': 0.23809523809523808, 'Transporte': 0.3125}","{0: 0.5, 5: 0.75, 8: 0.5}"
+439,https://www.elidealgallego.com/articulo/a-coruna/temporal-obliga-cerrar-trafico-paseo-maritimo-4510241,['Transporte'],{'Transporte': 0.0},{8: 0.0}
+440,https://www.lavozdegalicia.es/noticia/coruna/2023/10/26/lluvia-acumulada-octubre-coruna-0-140-13-dias/00031698314404290652325.htm,[],{},{}
+441,https://as.com/actualidad/sociedad/vientos-de-150-kmh-trenes-cancelados-problemas-aereos-los-efectos-de-la-borrasca-ciaran-n/,"['Energia', 'Transporte', 'Sanidad']","{'Energia': 0.47619047619047616, 'Transporte': 0.5}","{0: 0.75, 1: 0.5, 5: 1.0, 7: 1.0}"
+442,https://www.infobae.com/america/mundo/2023/11/08/panico-en-un-crucero-al-menos-100-heridos-en-medio-de-una-tempestad-en-el-atlantico-norte/,['Transporte'],{'Transporte': 0.1875},{6: 0.75}
+443,https://www.elperiodico.com/es/temas/tormentas-1840316,[],{},{}
+444,https://www.laopinioncoruna.es/galicia/2023/11/06/galicia-espera-empeoramiento-tiempo-lunes-94257338.html,[],{},{}
+445,https://www.laopinioncoruna.es/coruna/2023/11/06/borrascas-ciaran-domingos-coruna-200-94271326.html,[],{},{}
+446,https://www.rtve.es/noticias/20230530/lluvias-provocan-inundaciones-sureste-peninsular/2448005.shtml,[],{},{}
+447,https://www.todoalicante.es/alicante-provincia/provincia-entra-alerta-amarilla-riesgo-tormentas-granizo-20230918072240-nt.html,[],{},{}
+448,https://www.elespanol.com/alicante/vivir/20230915/tormenta-estatica-sur-alicante-lluvias-intensas-prevision-dia/794420589_0.html,[],{},{}
+449,https://diariodealicante.net/temporal-alicante-tormentas-anclan-elche/,['Transporte'],{'Transporte': 0.375},"{5: 0.75, 8: 0.75}"
+450,https://www.canalsur.es/noticias/andalucia/almeria/mayo-ha-sido-el-mes-mas-lluvioso-de-los-ultimos-55-anos-en-almeria-capital/1940025.html,[],{},{}
+451,https://www.eltiempo.es/noticias/prevision-tiempo-febrero-espana,[],{},{}
+452,https://www.diariodealmeria.es/provincia/primera-Almeria-nevada_0_1760224145.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+453,https://www.eldiario.es/andalucia/el_tiempo/andalucia-temporal-regresa-riesgo-viento-lluvia-mano-borrascas-ciaran-domingos_1_10652224.html,[],{},{}
+454,https://www.elindependientedegranada.es/ciudadania/avisos-naranja-amarillo-jueves-toda-provincia-fuertes-vientos-llegada-borrasca-ciaran,[],{},{}
+455,https://blogs.diariosur.es/tormentas-y-rayos/2023/10/30/la-primera-ciclogenesis-explosiva-del-otono-dara-lugar-a-una-potente-borrasca-con-nombre-ciaran/,[],{},{}
+456,https://www.diariodealmeria.es/almeria/tiempo-Almeria-fuertes-vientos-provincia_0_1843917436.html,[],{},{}
+457,https://www.diariodealmeria.es/almeria/Almeria-alerta-viento-registrado-rachas_0_1844516192.html,['Transporte'],{'Transporte': 0.1875},{6: 0.75}
+458,https://almeria360.com/actualidad/prevista-alerta-naranja-por-vientos-y-oleaje-en-poniente-levante-y-almeria-capital-este-jueves/,[],{},{}
+459,https://www.elcorreo.com/alava/araba/chaparrones-fuertes-granizadas-afectan-parte-llanada-alavesa-20230706175320-nt.html,[],{},{}
+460,https://www.gasteizhoy.com/cuantos-litros-cayeron-este-jueves-en-vitoria-y-alava/,[],{},{}
+461,https://www.elcorreo.com/alava/araba/fortisima-granizada-colapsa-vitoria-inunda-calles-causa-20230706212152-nt.html,[],{},{}
+462,https://www.elcorreo.com/alava/araba/diputacion-alava-plantea-ayudas-extraordinarias-agricultores-tras-tormentas-granizo-20230707151541-nt.html,[],{},{}
+463,https://efeverde.com/fallecido-asturias-tractor-zona-inundada/,[],{},{}
+464,https://www.lavozdeasturias.es/noticia/asturias/2023/01/20/desactivado-plan-inundaciones-mejora-caudales-meteorologia/00031674221205850287123.htm,[],{},{}
+465,https://www.elcomercio.es/asturias/temporal-asturias-rios-inundaciones-pravia-plantaciones-kiwis-principado-desactiva-alerta-20230120203322-nt.html,['Agua y Alimentos'],{'Agua y Alimentos': 0.6666666666666666},"{14: 1.0, 16: 1.0}"
+466,https://www.rtpa.es/noticias-asturias:Cortado-el-acceso-al-puente-de-Quinzanas-por-la-crecida-del-rio-Narcea_111674292732.html,['Transporte'],{'Transporte': 0.1875},{8: 0.75}
+467,https://www.elcomercio.es/asturias/mas-concejos/pravia-inundaciones-crecida-rios-temporal-asturias-fotos-20230120204525-ga.html,[],{},{}
+468,https://cadenaser.com/nacional/2023/09/20/la-dana-se-aleja-y-abre-paso-a-un-nuevo-frente-que-amenaza-a-la-peninsula-con-fuertes-lluvias-y-tormentas-cadena-ser/,[],{},{}
+469,https://www.rtve.es/noticias/20230920/tiempo-dana-espana-tormentas-fuertes-precipitaciones/2456371.shtml,['Transporte'],{'Transporte': 0.5},"{6: 1.0, 8: 1.0}"
+470,https://www.elconfidencial.com/espana/2023-10-30/alerta-aemet-borrasca-espana-jueves-vientos-lluvias_3764082/,[],{},{}
+471,https://www.lne.es/asturias/2023/11/03/ciaran-asturias-alerta-roja-vientos-94159078.html,['Transporte'],{'Transporte': 0.6875},"{5: 0.75, 7: 1.0, 8: 1.0}"
+472,https://www.elcomercio.es/asturias/tiempo-hara-miercoles-octubre-asturias-gijon-oviedo-aviles-picos-europa-covadonga-aviles-20231024221053-nt.html,[],{},{}
+473,https://www.elcomercio.es/asturias/tiempo-hara-sabado-28-octubre-asturias-gijon-oviedo-aviles-picos-europa-covadonga-20231027161442-nt.html,[],{},{}
+474,https://www.ondacero.es/noticias/sociedad/que-tiempo-hara-puente-todos-santos-2023-prevision-aemet_20231027653b8d27a1cbe00001894aea.html,[],{},{}
+475,https://www.tvavila.icrt.cu/lamenta-primer-ministro-perdida-humana-y-material-en-oriente-de-cuba/,['Energia'],{'Energia': 0.5357142857142857},"{0: 0.75, 1: 0.75}"
+476,https://www.zacatecas.gob.mx/gobernador-david-monreal-cumple-a-genaro-codina-y-entrega-puente-y-colector-de-agua-danados-durante-contingencia/,"['Transporte', 'Aguas Residuales']","{'Transporte': 0.25, 'Aguas Residuales': 0.8529411764705882}","{8: 1.0, 17: 0.5, 18: 1.0, 19: 1.0}"
+477,https://www.tvavila.icrt.cu/continuan-labores-de-recuperacion-en-el-centro-y-oriente-del-pais-tras-intensas-lluvias/,['Transporte'],{},{}
+478,http://www.cubadebate.cu/noticias/2023/06/08/lluvias-intensas-provocan-inundaciones-en-localidades-del-centro-y-oriente-de-cuba/,"['Energia', 'Transporte']","{'Energia': 0.5952380952380952, 'Transporte': 0.25}","{0: 0.75, 1: 1.0, 8: 1.0}"
+479,https://es.euronews.com/2023/09/07/al-menos-37-muertos-y-miles-de-evacuados-en-brasil-por-el-ciclon-extratropical,[],{},{}
+480,https://elcomercio.pe/mundo/latinoamerica/rio-grande-do-sul-santa-catarina-brasil-ciclon-deja-al-menos-22-muertos-clima-inundaciones-lula-da-silva-noticia/,[],{},{}
+481,https://www.latribunadetoledo.es/noticia/z97e2a7ae-0aa2-ac8f-fdb3f60f8f61201b/202309/restablecido-el-servicio-del-ave-madrid-andalucia,['Transporte'],{'Transporte': 0.25},{7: 1.0}
+482,https://www.hoy.es/extremadura/roca-sierra-recupera-normalidad-pese-miedo-sufrir-20230906073119-nt.html,[],{},{}
+483,https://www.hoy.es/extremadura/fuertes-lluvias-impiden-circular-varios-trenes-extremenos-20230903183217-nt.html,['Transporte'],{'Transporte': 0.25},{7: 1.0}
+484,https://www.eldiario.es/sociedad/espana-inundable-millon-viviendas-casas-zonas-riesgo-inundacion-riadas_1_10485675.html,[],{},{}
+485,https://www.ondacero.es/noticias/sociedad/filomena-lluvias-ultima-hora-dana-cortes-carreteras-lluvias-torrenciales-madrid-toledo_2023090364f47f085df8e30001fbcbd9.html,['Transporte'],{'Transporte': 0.75},"{5: 1.0, 7: 1.0, 8: 1.0}"
+486,https://www.extremadura7dias.com/index.php/noticia/puente-gevora-cantillana-derruido-psoe-badajoz-junta-ayuntamiento,[],{},{}
+487,https://www.hoy.es/extremadura/penurias-extremena-madrid-mitad-dana-20230904140105-nt.html,[],{},{}
+488,https://efe.com/extremadura/2023-09-07/restablecida-la-circulacion-ferroviaria-madrid-caceres-tras-los-danos-de-la-dana/,['Transporte'],{'Transporte': 0.25},{7: 1.0}
+489,http://www.canalextremadura.es/noticias/extremadura/la-dana-se-aleja-dejando-incidentes-en-extremadura-y-en-todo-el-pais,['Transporte'],{'Transporte': 0.5},"{7: 1.0, 8: 1.0}"
+490,https://www.extremadura7dias.com/noticia/cortan-ex-310-badajoz-valverde-inundacion,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+491,https://www.extremadura7dias.com/index.php/noticia/bomberos-de-badajoz-en-alerta-toda-la-tarde-rescates-caidas-de-arboles-e-inundaciones,[],{},{}
+492,http://www.canalextremadura.es/noticias/provincia-de-badajoz/cortada-la-ex-310-a-la-salida-de-badajoz-por-inundacion-de-la-calzada,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+493,https://www.hoy.es/badajoz/lluvia-extremadura-borrasca-rescate-personas-finca-badajoz-20231030095411-nt.html,[],{},{}
+494,https://www.hoy.es/badajoz/lluvia-revela-fallos-drenaje-corredor-verde-badajoz-20231024072801-nt.html,[],{},{}
+495,http://www.canalextremadura.es/noticias/extremadura/la-borrasca-bernard-llena-de-agua-el-sur-de-la-provincia-de-badajoz,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+496,https://www.hoy.es/extremadura/primera-gran-borrasca-otono-deja-100-litros-20231019212233-nt.html,[],{},{}
+497,https://as.com/actualidad/sociedad/aemet-activa-la-alerta-amarilla-por-lluvias-y-viento-en-madrid-n/,[],{},{}
+498,https://motor.elpais.com/conducir/repelente-de-lluvia-para-el-coche-en-amazon/,[],{},{}
+499,https://www.hoy.es/extremadura/extremadura-lidera-ranking-localidades-lluviosas-espana-jueves-20231019093349-nt.html,[],{},{}
+500,https://www.extremadura7dias.com/noticia/federacion-de-asociaciones-de-vecinos-de-badajoz-poblados-ayuntamiento,['Aguas Residuales'],{'Aguas Residuales': 1.0},"{17: 1.0, 18: 1.0, 19: 1.0}"
+501,https://aemetblog.es/2023/10/22/informe-operativo-semanal-del-9-al-15-de-octubre-de-2023/,[],{},{}
+502,https://cultoro.es/actualidad/lili-jose-trujillo-morante-198242,[],{},{}
+503,https://www.eurekalert.org/news-releases/995166?language=spanish,[],{},{}
+504,https://www.elperiodico.com/es/tiempo/20231105/tiempo-barcelona-cataluna-espana-borrasca-domingos-lluvia-viento-ultima-hora-directo-94107236,['Transporte'],{'Transporte': 0.9375},"{5: 0.75, 6: 1.0, 7: 1.0, 8: 1.0}"
+505,https://es.e-noticies.cat/el-tiempo/los-danos-causados-borrasca-ciaran-impactantes-imagenes,"['Transporte', 'Sanidad']","{'Transporte': 0.25, 'Sanidad': 0.08333333333333333}","{8: 1.0, 11: 0.25}"
+506,https://www.elperiodico.com/es/tiempo/20231105/tiempo-catalunya-hoy-domingo-5-noviembre-2023-borrasca-domingos-dv-94228676,[],{},{}
+507,https://prensadigitalsj.com.ar/el-temporal-aflora-la-fragilidad-de-las-playas-en-cataluna,[],{},{}
+508,https://www.elperiodico.com/es/barcelona/20231105/tiempo-barcelona-hoy-domingo-5-noviembre-2023-borrasca-domingos-94228753,[],{},{}
+509,https://cronicavasca.elespanol.com/sociedad/20230117/el-gobierno-activa-de-alerta-inundaciones-bizkaia/734426562_0.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+510,https://www.diariovasco.com/sociedad/maxima-alerta-bizkaia-20230116204959-nt.html,[],{},{}
+511,https://www.bizkaia.eus/es/web/comunicacion/noticias/-/news/detailView/25142,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+513,https://www.eitb.eus/es/television/,[],{},{}
+514,https://www.eitb.eus/es/noticias/sociedad/detalle/9240731/tiempo-en-euskadi-intensas-precipitaciones-dejan-28-8-litrosm2-en-hora-en-laguardia-20-de-junio-de-2023/,['Sanidad'],{'Sanidad': 0.3333333333333333},{11: 1.0}
+515,https://www.eitb.eus/es/noticias/sociedad/detalle/9308787/llega-calma-a-bizkaia-tras-tormenta-de-lluvia-y-granizo-del-sabado-a-tarde/,"['Energia', 'Transporte', 'Aguas Residuales']","{'Energia': 0.47619047619047616, 'Transporte': 0.4375, 'Aguas Residuales': 0.9705882352941176}","{0: 0.5, 1: 1.0, 7: 0.75, 8: 1.0, 17: 1.0, 18: 0.75, 19: 1.0}"
+516,https://www.deia.eus/bizkaia/2023/09/16/balsas-agua-arboles-caidos-inundaciones-7268029.html,"['Transporte', 'Sanidad']",{'Transporte': 0.4375},"{7: 0.75, 8: 1.0}"
+517,https://www.antena3.com/noticias/el-tiempo/actualidad/fuertes-lluvias-descargan-vizcaya-inundan-campo-futbol-legarda_2023091665060d8b98383a000120dde5.html,['Energia'],{'Energia': 0.0},{0: 0.0}
+519,https://cadenaser.com/euskadi/2023/09/17/las-consecuencias-de-la-tormenta-en-bizkaia-arboles-caidos-cortes-de-trafico-y-calles-inundadas-radio-bilbao/,['Transporte'],{'Transporte': 0.4375},"{7: 0.75, 8: 1.0}"
+520,https://www.eltiempo.es/noticias/temporal-en-vizcaya-asi-fue-la-tormenta-que-lo-inundo-todo,['Energia'],{'Energia': 0.11904761904761904},{0: 0.25}
+521,https://www.elcorreo.com/bizkaia/videos-espectaculares-tromba-agua-bizkaia-20230916224623-nt.html,[],{},{}
+522,https://cadenaser.com/euskadi/2023/09/12/dima-mallabia-e-igorre-los-municipios-mas-afectados-por-las-fuertes-lluvias-nunca-habia-oido-ni-sentido-nada-igual-radio-bilbao/,[],{},{}
+523,https://www.elcorreo.com/bizkaia/nervion/agua-llegaba-cintura-momento-pense-llevaba-corriente-vecinos-kalero-tormenta-20230917173346-nt.html,[],{},{}
+524,https://www.elcorreo.com/bizkaia/efectos-tormenta-bizkaia-balsas-agua-arboles-caidos-20230916212436-nt.html,[],{},{}
+525,https://www.elcorreo.com/bizkaia/zona-basauri-quedado-inundada-20230916230607-vi.html,[],{},{}
+526,https://www.eitb.eus/es/noticias/sociedad/detalle/9304396/el-temporal-de-lluvias-amainara-12-septiembre-de-2023-tras-tormentas-virulentas-de-ayer/,[],{},{}
+527,https://nortexpres.com/record-de-lluvia-en-el-gorbea/,[],{},{}
+528,https://www.eldiario.es/euskadi/inundaciones-talleres-viviendas-desbordamientos-rio-balsas-agua-tormenta-lunes-euskadi_1_10506313.html,['Aguas Residuales'],{'Aguas Residuales': 0.8823529411764706},"{17: 1.0, 19: 1.0}"
+529,https://www.europapress.es/euskadi/noticia-fuertes-lluvias-granizo-causan-persona-herida-balsas-agua-algunas-inundaciones-bizkaia-gipuzkoa-20230912102808.html,"['Transporte', 'Aguas Residuales']","{'Transporte': 0.25, 'Aguas Residuales': 0.8970588235294118}","{8: 1.0, 17: 0.75, 18: 0.75, 19: 1.0}"
+530,https://www.elperiodico.com/es/tiempo/20230912/granizo-lluvias-tormenta-bizcaia-gipuzkoa-vizcaya-guipuzcoa-dv-91989300,"['Transporte', 'Aguas Residuales']","{'Transporte': 0.25, 'Aguas Residuales': 0.9411764705882353}","{8: 1.0, 17: 1.0, 18: 0.5, 19: 1.0}"
+531,https://www.elcorreo.com/bizkaia/espectacular-granizada-causa-danos-vehiculos-igorre-20230911180504-nt.html,[],{},{}
+532,https://www.elcorreo.com/bizkaia/brote-hongos-calor-lluvias-anima-inicio-temporada-20230924010006-nt.html,[],{},{}
+533,https://www.elcorreo.com/bizkaia/inversiones-millonarias-contener-desbordamiento-red-saneamiento-bizkaia-20230924011835-nt.html,['Aguas Residuales'],{'Aguas Residuales': 0.7058823529411765},"{18: 1.0, 19: 1.0}"
+534,https://www.infobae.com/tag/tempestad/,[],{},{}
+535,https://www.lavanguardia.com/internacional/20231108/9363169/crucero-heridos-danos-sorprendido-temporal.html,"['Transporte', 'Sanidad']",{'Transporte': 0.25},{6: 1.0}
+536,https://www.elcorreo.com/bizkaia/crucero-vapuleado-borrasca-busca-refugio-getxo-averias-20231103005158-nt.html,[],{},{}
+537,https://www.diariodeburgos.es/noticia/z1d060ff1-00c4-1622-6867881806c3c0af/202306/los-bomberos-cuadruplican-en-20-dias-las-salidas-por-la-lluvia,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+538,https://www.burgosconecta.es/provincia/viento-causa-estragos-burgos-20231104141102-nt.html,[],{},{}
+539,https://www.elcorreodeburgos.com/burgos/231115/188532/nueva-bandera-espana-ondea-mastil-avenida-paz.html,[],{},{}
+540,https://www.larazon.es/el-tiempo/borrascas-llega-gran-cambio-tiempo-espana-esto-que-pasara-partir-este-lunes_202311066548b2c6b2761500019bdcae.html,[],{},{}
+541,https://www.burgosconecta.es/provincia/primeras-heladas-frio-vuelven-burgos-martes-20231106192333-nt.html,[],{},{}
+542,https://www.elcorreodeburgos.com/burgos/231106/188361/desactivada-situacion-emergencia-inuncyl-burgos.html,[],{},{}
+543,https://www.diariodeburgos.es/noticia/z9d5efd29-c417-30c8-0ca9e3bc69a87680/202311/los-temporales-de-viento-dan-paso-a-las-primeras-nevadas,[],{},{}
+544,https://www.burgosconecta.es/burgos/ramas-caidas-fuerte-viento-burgos-20240825111617-vi.html,[],{},{}
+545,https://www.burgosconecta.es/burgos/rachas-viento-causan-cientos-incidencias-burgos-20231105113015-nt.html,[],{},{}
+546,https://www.burgosconecta.es/economia/trabajo/criticas-sindicatos-ante-erte-bridgestone-20231114200552-nt.html,[],{},{}
+547,http://www.canalextremadura.es/noticias/provincia-de-caceres/navaconcejo-mantiene-activo-el-plan-de-riesgo-por-inundaciones-por-la,[],{},{}
+548,https://www.eleconomista.es/actualidad/noticias/d8275/10/23/Alerta-roja-por-lluvias-en-directo-ultimas-noticias-de-Madrid-Extremadura-cortes-de-trafico-Metro-estado-de-las-carreteras-incidencias-e-inundaciones-en-Espana.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+549,https://www.20minutos.es/noticia/5182944/0/temporal-por-borrasca-aline-directo-carreteras-cortadas-trenes-suspendidos-lineas-metro-afectadas/,[],{},{}
+550,https://www.elperiodico.com/es/medio-ambiente/20240825/barcelona-espana-zonas-bajo-agua-2050-nasa-video-dv-102470923,[],{},{}
+551,https://www.hoy.es/extremadura/extremadura-recupera-normalidad-tras-danos-causados-borrasca-20231020210001-nt.html,[],{},{}
+552,https://www.elindependiente.com/futuro/meteorologia/2023/10/22/borrasca-bernard-octubre-2023/,[],{},{}
+553,http://www.canalextremadura.es/noticias/extremadura/numerosas-incidencias-en-toda-la-region-por-la-fuerte-lluvia-y-el-viento-de,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+554,https://www.hoy.es/caceres/intensas-lluvias-caceres-provocan-caida-techo-colegio-20231201124120-nt.html,[],{},{}
+555,https://www.lasexta.com/noticias/el-tiempo/borrasca-trae-intensas-lluvias-temperaturas-suaves-21-espana-puente-diciembre_20231205656f096962c50d0001b936a2.html,[],{},{}
+556,https://www.diariodecadiz.es/cadiz/imagenes-lluvias-Cadiz_3_1826547332.html,[],{},{}
+557,https://www.europapress.es/esandalucia/cadiz/noticia-finaliza-situacion-preemergencia-plan-emergencia-riesgo-inundaciones-provincia-cadiz-20230903184404.html,['Transporte'],{'Transporte': 0.1875},{8: 0.75}
+558,https://www.lavozdigital.es/provincia/video-inundaciones-san-jose-valle-fuertes-lluvias-20230903141352-viv.html,[],{},{}
+559,https://www.eldiario.es/andalucia/cadiz/activado-aviso-rojo-lluvias-campina-gaditana-120-litros-12-horas_1_10484247.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+560,https://www.lavozdelsur.es/ediciones/provincia-cadiz/fin-aviso-rojo-en-cadiz-con-coches-atascados-agua-hasta-rodillas_301353_102.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+561,https://elpais.com/espana/2023-09-03/la-dana-mantiene-a-11-comunidades-bajo-aviso-por-fuertes-lluvias-y-tormentas.html,['Transporte'],{'Transporte': 0.875},"{5: 0.75, 6: 1.0, 7: 0.75, 8: 1.0}"
+562,https://www.canalsur.es/noticias/andalucia/llega-la-dana-a-andalucia-mucha-lluvia-y-bajada-de-temperaturas/1960477.html,['Transporte'],{'Transporte': 0.5},"{7: 1.0, 8: 1.0}"
+563,https://www.diariodejerez.es/jerez/rio-Guadalete-traga-Puente-Chico-Barca-Jerez-video_0_1889811127.html,[],{},{}
+564,https://www.lavozdigital.es/provincia/video-inundaciones-chipiona-debido-fuertes-lluvias-20230903124105-viv.html,[],{},{}
+565,https://www.estadiodeportivo.com/estar-al-dia/sociedad/dana-lluvias-torrenciales-espana-directo-madrid-otras-zona-alerta-roja-20230903-427211.html,['Transporte'],{'Transporte': 0.5625},"{6: 0.25, 7: 1.0, 8: 1.0}"
+566,https://www.europapress.es/esandalucia/cadiz/noticia-junta-eleva-cadiz-plan-emergencia-fase-preemergencia-riesgo-inundaciones-paso-dana-20230903145854.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+567,https://www.diariodecadiz.es/vivir_en_cadiz/Alerta-roja-Cadiz-inundaciones-Jose-Valle-video_0_1826517789.html,"['Transporte', 'Aguas Residuales']","{'Transporte': 0.25, 'Aguas Residuales': 1.0}","{8: 1.0, 17: 1.0, 18: 1.0, 19: 1.0}"
+568,https://www.canalsur.es/noticias/andalucia/sevilla/la-dana-deja-importantes-lluvias-en-andalucia/1960620.html,"['Energia', 'Transporte']","{'Energia': 0.35714285714285715, 'Transporte': 0.5}","{0: 0.75, 7: 1.0, 8: 1.0}"
+569,https://www.portaldecadiz.com/provinciacadiz/87030-cadiz-en-el-epicentro-de-las-lluvias-en-andalucia-cinco-municipios-entre-los-mas-afectados,[],{},{}
+570,https://www.eltiempo.es/noticias/grecia-temporal-borrasca-septiembre-imagenes,['Transporte'],{'Transporte': 0.5},"{5: 1.0, 8: 1.0}"
+571,https://www.rtve.es/noticias/20230903/efectos-dana-ultima-hora-directo-madrid-toledo/2455109.shtml,"['Transporte', 'Sanidad']","{'Transporte': 0.5625, 'Sanidad': 0.6666666666666666}","{5: 0.25, 6: 0.0, 7: 1.0, 8: 1.0, 10: 1.0, 11: 1.0}"
+572,https://www.articulo66.com/2023/09/04/tres-muertos-tres-desaparecidos-lluvias-torrenciales-espana/,['Transporte'],{'Transporte': 0.5},"{7: 1.0, 8: 1.0}"
+573,https://narfgranada.wordpress.com/,[],{},{}
+574,https://www.laprensa.hn/mundo/espana-fuertes-lluvias-muertos-estragos-desaparecidos-inundaciones-OM15192194,['Transporte'],{},{}
+575,https://www.ecuavisa.com/mundo/espana-fuertes-lluvias-muertos-desaparecidos-FX5909430,['Transporte'],{'Transporte': 0.5},"{7: 1.0, 8: 1.0}"
+576,https://www.elespanol.com/sociedad/20230904/pueblo-espana-llovio-dana-litros-agua-solo-horas/791921158_0.html,['Transporte'],{'Transporte': 0.5},"{7: 1.0, 8: 1.0}"
+577,https://elpais.com/espana/2023-09-03/inundaciones-personas-atrapadas-y-carreteras-cortadas-por-el-temporal.html,"['Transporte', 'Sanidad']","{'Transporte': 0.75, 'Sanidad': 0.4166666666666667}","{6: 1.0, 7: 1.0, 8: 1.0, 10: 0.25, 11: 1.0}"
+578,https://www.diariodecadiz.es/vivir_en_cadiz/Dana-Cadiz-Aemet-alerta-amarilla-naranja-provincia_0_1826517580.html,[],{},{}
+579,https://www.europapress.es/sociedad/noticia-dana-dejara-domingo-fuertes-lluvias-tormentas-centro-suroeste-peninsula-20230902153114.html,[],{},{}
+580,https://vivacadiz.es/cadiz/1345472/la-dana-pasa-casi-de-largo-por-cadiz-capital-con-ligeras-lluvias/,['Transporte'],{'Transporte': 0.1875},{8: 0.75}
+581,https://www.diariodehuelva.es/articulo/area-metropolitana/aviso-naranja-llegada-domingo-huelva-borrasca-gran-impacto-bernard/20231021133748310014.html,[],{},{}
+582,https://www.diariodecadiz.es/noticias-provincia-cadiz/lluvia-alcanza-Grazalema-borrasca-Aline_0_1840616350.html,[],{},{}
+583,https://efeverde.com/borrasca-bernard-andalucia-muerto/,[],{},{}
+584,https://es.e-noticies.cat/sociedad/nueva-borrasca-domingo-avisos-aemet-22-octubre,[],{},{}
+585,https://www.eltiempo.es/noticias/temporal-en-huelva-y-cadiz-un-fallecido-y-numerosos-danos-materiales,[],{},{}
+586,https://www.diariodejerez.es/jerez/fuertes-obligan-bomberos-distintos-Jerez-video_0_1841216633.html,[],{},{}
+587,https://www.portaldecadiz.com/cadiz-capital/90319-el-temporal-destroza-parte-de-la-terminal-maritima-servicio-de-catamaranes-suspendido-temporalmente,['Transporte'],{'Transporte': 0.25},{6: 1.0}
+588,https://www.ondacero.es/emisoras/cantabria/noticias/inundaciones-balsas-agua-argayos-principales-incidencias-lluvia-caida-cantabria_20230912650023457caa7b0001bd830c.html,[],{},{}
+589,https://efe.com/cantabria/2023-09-12/santander-recupera-la-normalidad-tras-las-trombas-de-agua/,[],{},{}
+590,https://www.antena3.com/noticias/el-tiempo/actualidad/santander-inunda-brutal-tormenta_2023091265000a2fd60bc60001c7329f.html,"['Transporte', 'Sanidad']",{'Transporte': 0.25},{8: 1.0}
+591,https://www.eldiariomontanes.es/santander/tormenta-provoca-pequenas-inundaciones-centro-santander-20230911220321-nt.html,[],{},{}
+592,https://as.com/tag/santander/a/1,[],{},{}
+593,https://eldiariocantabria.publico.es/articulo/oriental/obras-acabar-inundaciones-comenzaran-proximo-verano-terminaran-2025/20230920141512143246.html,[],{},{}
+594,https://cadenaser.com/cantabria/2023/09/20/las-obras-del-rio-ason-en-ampuero-comenzaran-el-proximo-verano-ser-ason/,[],{},{}
+595,https://www.20minutos.es/noticia/5171549/0/tiempo-lluvias-santander-inundada-por-lluvia-trombas-agua/,['Transporte'],{'Transporte': 0.1875},{8: 0.75}
+596,https://www.cope.es/emisoras/cantabria/cantabria-provincia/santander/noticias/lluvia-inunda-varias-zonas-santander-20230912_2893360,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+597,https://eldiariocantabria.publico.es/articulo/santander/tormentas-dejan-inundaciones-brutales-santander/20230912103122142802.html,[],{},{}
+598,https://www.ondacero.es/emisoras/cantabria/noticias/llega-cantabria-nueva-borrasca-estas-son-alertas-activas-jueves-viernes_20230921650c1d6b98383a00012b7839.html,[],{},{}
+599,https://www.eldiariomontanes.es/cantabria/herido-tras-volcar-coche-altura-laredo-20230912195936-nt.html,[],{},{}
+600,https://www.aemet.es/en/conocermas/borrascas/2022-2023/estudios_e_impactos/fien,['Transporte'],{'Transporte': 0.5},"{6: 1.0, 8: 1.0}"
+601,https://www.eltiempo.es/noticias/afectara-la-borrasca-ciaran-a-espana-fuerte-viento-oleaje-lluvias-y-nieve,[],{},{}
+602,https://www.marca.com/tiramillas/actualidad/2023/10/30/653f973e22601d573a8b4588.html,[],{},{}
+603,https://metropoliabierta.elespanol.com/vivir-en-barcelona/20231028/un-avion-del-prat-con-destino-santander-regresa-barcelona-por-las-fuertes-rachas-de-viento/805419650_0.html,['Transporte'],{'Transporte': 0.125},{5: 0.5}
+604,https://www.ondacero.es/emisoras/cantabria/noticias/aemet-activa-avisos-naranjas-viento-fenomenos-costeros-cantabria_20231027653b943132dc750001489c70.html,[],{},{}
+605,https://www.elperiodicomediterraneo.com/castello-provincia/2023/05/27/temporal-historico-estragos-castellon-rescates-87937643.html,"['Transporte', 'Sanidad']","{'Transporte': 0.25, 'Sanidad': 0.6666666666666666}","{8: 1.0, 10: 1.0, 11: 1.0}"
+606,https://www.abc.es/sociedad/sequia-inundaciones-aprovechan-lluvias-torrenciales-20230527010200-nt.html,[],{},{}
+607,https://www.elplural.com/sociedad/videos-mas-espectaculares-paso-dana-espana_311507102,['Sanidad'],{'Sanidad': 0.6666666666666666},"{10: 1.0, 11: 1.0}"
+608,https://www.lasexta.com/noticias/sociedad/fuerte-reventon-termico-deja-graves-inundaciones-burriana-nules_20230913650181fe7caa7b0001c084e2.html,['Transporte'],{'Transporte': 0.1875},{8: 0.75}
+609,https://www.levante-emv.com/comunitat-valenciana/2023/09/12/intenso-temporal-provoca-caos-burriana-92010067.html,[],{},{}
+610,https://www.elperiodicomediterraneo.com/castello-provincia/2023/09/12/tiempo-castellon-lluvia-granizo-aemet-alerta-naranja-amarilla-92004960.html,"['Transporte', 'Agua y Alimentos']","{'Transporte': 0.375, 'Agua y Alimentos': 0.5833333333333334}","{7: 0.5, 8: 1.0, 14: 0.75, 16: 1.0}"
+611,https://www.20minutos.es/imagenes/nacional/5169105-imagenes-dana-lluvias-tormentas-espana/,['Transporte'],{'Transporte': 0.4375},"{7: 0.75, 8: 1.0}"
+612,https://www.antena3.com/noticias/el-tiempo/actualidad/albacete-castellon-victimas-graves-granizadas-riadas-este-domingo_2023091765073d8a4fd7bf0001a00427.html,[],{},{}
+613,https://www.lasprovincias.es/comunitat/el-tiempo/aemet-eleva-alerta-trombas-fuertes-madrugada-comunitat-20230914170457-nt.html,[],{},{}
+614,https://www.betera.com/es/2023/09/15/las-fuertes-lluvias-de-la-manana-del-viernes-tambien-se-han-hecho-notar-en-betera/,"['Transporte', 'Sanidad']","{'Transporte': 0.375, 'Sanidad': 0.25}","{7: 0.75, 8: 0.75, 10: 0.75}"
+615,https://www.elperiodicomediterraneo.com/castello-provincia/2023/09/19/dana-descarga-fuertes-tormentas-granizo-92303163.html,[],{},{}
+616,https://www.publico.es/sociedad/tormentas-provocan-caida-arboles-y-cortes-transporte-valencia-y-castello.html,['Transporte'],{'Transporte': 0.1875},{7: 0.75}
+617,https://efe.com/comunidad-valenciana/2023-09-13/burriana-intenta-recuperar-la-normalidad-tras-la-fuerte-tormenta-que-arraso-la-localidad/,['Agua y Alimentos'],{'Agua y Alimentos': 0.6666666666666666},"{14: 1.0, 16: 1.0}"
+618,https://www.elperiodicomediterraneo.com/castello-provincia/2023/09/16/llega-lluvia-castellon-esperan-tormentas-aemet-prevision-tiempo-domingo-92170069.html,[],{},{}
+619,https://www.antena3.com/programas/espejo-publico/noticias/roberto-brasero-nos-explica-que-fenomeno-reventon-soplaron-vientos-huracanados_202309136501a1457caa7b0001c0d0ec.html,[],{},{}
+620,https://castellonaldia.elmundo.es/sucesos/una-borrasca-provoca-caos-burriana-arrasa-arbol-el-pla-en-nules-un-hombre-queda-atrapado-en-su-coche-por-la-caida-de-un-arbol-PO16902386,[],{},{}
+621,https://www.telecinco.es/noticias/el-tiempo/20230913/imagenes-reventon-humedo-burriana-castellon-caida-arboles-incendios-rayos_18_010441705.html,[],{},{}
+622,https://www.levante-emv.com/comunitat-valenciana/2023/09/17/tiempo-valencia-hoy-tormentas-dana-92182060.html,[],{},{}
+623,https://cadenaser.com/nacional/2023/09/13/una-borrasca-atlantica-llega-para-aguar-el-fin-de-semana-estas-son-las-zonas-donde-mas-llovera-cadena-ser/,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+624,https://www.elperiodicomediterraneo.com/castello-provincia/2023/09/15/directo-castellon-alerta-lluvias-aemet-92119165.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+625,https://www.levante-emv.com/comunitat-valenciana/2023/09/12/lluvia-granizo-vientos-130-kilometros-92009310.html,[],{},{}
+626,https://castellonplaza.com/un-reventon-humedo-se-ceba-con-burriana-y-deja-arboles-arrasados-incendios-y-rescates,['Transporte'],{'Transporte': 0.3125},"{7: 0.25, 8: 1.0}"
+627,https://www.elperiodic.com/burriana/video-tormenta-monumental-colapsa-provincia-castellon_921965,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+628,https://www.larazon.es/comunidad-valenciana/fuertes-lluvias-granizo-comunidad-valenciana-regresa-temporal_20230917650725de1fb4a60001398322.html,"['Transporte', 'Agua y Alimentos']","{'Transporte': 0.125, 'Agua y Alimentos': 0.6666666666666666}","{7: 0.5, 14: 1.0, 16: 1.0}"
+629,https://cadenaser.com/comunitat-valenciana/2023/09/13/un-reventon-humedo-en-nules-y-burriana-deja-mas-de-100-incidencias-y-problemas-de-circulacion-radio-castellon/,['Transporte'],{'Transporte': 0.4375},"{7: 0.75, 8: 1.0}"
+630,https://www.lasprovincias.es/castellon/lluvias-litros-metro-cuadrado-rachas-viento-130-20230912190706-nt.html,[],{},{}
+631,https://www.elperiodicomediterraneo.com/castello-provincia/2023/09/12/intenso-temporal-provoca-caos-burriana-92008426.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+632,https://www.levante-emv.com/tags/temporales/pagina-6/,[],{},{}
+633,https://www.castelloninformacion.com/la-lluvia-el-granizo-y-el-viento-regresan-al-litoral-sur-de-castellon/,[],{},{}
+634,https://cadenaser.com/comunitat-valenciana/2023/09/20/un-nuevo-reventon-humedo-deja-rachas-de-viento-de-100-kmh-en-nules-y-rios-de-agua-en-municipios-del-alto-palancia-radio-castellon/,['Transporte'],{'Transporte': 0.125},{7: 0.5}
+635,https://www.elconfidencial.com/espana/comunidad-valenciana/2023-09-13/burriana-intenta-recuperar-normalidad-fuerte-tormenta-arraso-localidad_3734361/,[],{},{}
+636,https://www.elconfidencial.com/espana/comunidad-valenciana/2023-09-13/reventon-humedo-burriana-castellon-imagenes_3734449/,[],{},{}
+637,https://castellonaldia.elmundo.es/sucesos/interceptan-una-narcolancha-con-una-tonelada-de-hachis-y-el-temporal-obliga-a-los-agentes-a-resguardarse-junto-a-4-detenidos-en-las-islas-columbretes-BG17445477,[],{},{}
+638,https://www.agroclm.com/2023/11/06/caqui-citricos-olivar-y-aguacate-los-grandes-afectados-por-el-temporal-en-todas-las-comarcas-de-valencia-y-castellon/,['Agua y Alimentos'],{'Agua y Alimentos': 0.6666666666666666},"{14: 1.0, 16: 1.0}"
+639,https://www.lasprovincias.es/comunitat/tiempo-valencia-alicante-castellon-viento-20231111141922-nt.html,[],{},{}
+640,https://www.latribunadeciudadreal.es/noticia/zedf2ee7b-c0cf-523b-174769fcd24140d1/202309/la-lluvia-deja-seis-incidencias-y-casi-15-litros-en-la-capital,['Energia'],{'Energia': 0.23809523809523808},"{0: 0.25, 1: 0.5}"
+641,https://www.bbc.com/mundo/articles/cn0g331dxw4o,"['Sanidad', 'Agua y Alimentos']","{'Sanidad': 0.8333333333333334, 'Agua y Alimentos': 0.3333333333333333}","{10: 1.0, 11: 1.0, 13: 1.0, 15: 1.0}"
+642,https://www.antena3.com/noticias/el-tiempo/actualidad/video-dana-expres-inunda-100-casas-destroza-cosechas-iniesta-motilla-palancar_20230920650ac15d4fd7bf0001a62df2.html,"['Transporte', 'Agua y Alimentos']","{'Transporte': 0.1875, 'Agua y Alimentos': 0.6666666666666666}","{8: 0.75, 14: 1.0, 16: 1.0}"
+643,https://www.laprensagrafica.com/elsalvador/Lluvias-causaron-inundacion-de-calle-20230918-0086.html,[],{},{}
+644,https://efe.com/espana/2023-09-15/alerta-lluvia-espana-mediterraneo/,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+645,https://www.newtral.es/inundaciones-libia/20230916/,[],{},{}
+646,https://www.cmmedia.es/noticias/castilla-la-mancha/granizo-inundaciones-danos-pueblos-albacete-cuenca.html,['Transporte'],{'Transporte': 0.1875},{8: 0.75}
+647,https://www.latribunadeciudadreal.es/noticia/zd3578572-966d-4f78-e5e9375e978c2e46/202309/las-tablas-con-menos-de-diez-hectareas-encharcadas,[],{},{}
+648,https://www.nytimes.com/es/2023/09/12/espanol/libia-inundaciones.html,[],{},{}
+649,https://cnnespanol.cnn.com/2023/09/17/paises-territorios-graves-inundaciones-futuro-cambio-climatico-trax,[],{},{}
+650,https://www.bbc.com/mundo/articles/cn015l0n28no,[],{},{}
+651,https://es.euronews.com/2023/09/13/libia-mas-de-6200-muertos-y-10-000-desaparecidos-por-el-ciclon-daniel-inundaciones-presas,"['Energia', 'Infraestructura digital']","{'Energia': 0.7142857142857143, 'Infraestructura digital': 0.18181818181818182}","{0: 1.0, 1: 1.0, 21: 1.0}"
+652,https://www.vozdeamerica.com/a/cierran-ciudad-libia-para-buscar-10100-desaparecidos-tras-inundaciones/7269618.html,['Sanidad'],{},{}
+653,https://es.euronews.com/tag/tormenta?p=3,[],{},{}
+654,https://www.latribunadetoledo.es/noticia/z99809612-0d08-0010-efbfbb5da50bd1f2/202309/lo-que-trajo-una-dana-otra-se-lo-llevo,[],{},{}
+655,https://www.latribunadeciudadreal.es/noticia/zd1b88132-a925-eee4-3602a803462d667f/202309/sin-rastro-de-la-lluvia-en-el-pantano,['Agua y Alimentos'],{'Agua y Alimentos': 0.8333333333333334},"{14: 0.75, 15: 1.0, 16: 0.75}"
+656,https://www.lanzadigital.com/provincia/socuellamos/la-dana-provoca-siniestros-en-2-000-hectareas-agrarias-en-la-provincia-de-ciudad-real/,['Agua y Alimentos'],{'Agua y Alimentos': 0.6666666666666666},"{14: 1.0, 16: 1.0}"
+657,https://www.larazon.es/el-tiempo/asi-sera-efecto-fujiwhara-que-llegara-espana-paso-dana-que-que-zonas-afectara_2023090764f9c15283dfa50001887b6b.html,[],{},{}
+658,https://www.latribunadeciudadreal.es/noticia/zcaef883c-f891-4482-bb688caec4bb11bb/202309/junta-moviliza-700-efectivos-para-limpiar-los-danos-de-la-dana,"['Sanidad', 'Agua y Alimentos']",{'Agua y Alimentos': 0.3333333333333333},{15: 1.0}
+659,https://www.univision.com/local/miami-wltv/tiempo/la-marea-real-trae-inundaciones-costeras-a-las-calles-de-miami,[],{},{}
+660,https://www.20minutos.es/lainformacion/economia-y-finanzas/-dinero-que-podras-reclamar-si-vives-esta-ciudad-te-afecto-dana-un-fuego-5284380/,"['Energia', 'Transporte']","{'Energia': 0.4166666666666667, 'Transporte': 0.4375}","{0: 0.75, 1: 0.25, 7: 0.75, 8: 1.0}"
+661,https://www.latribunadeciudadreal.es/noticia/z3b17c4c7-f342-51c1-e95bf49c629ac9ca/202309/veintidos-pueblos-informan-de-danos-tras-el-paso-de-la-dana,[],{},{}
+662,https://www.latribunadeciudadreal.es/noticia/zbe99fbcf-92f7-9ade-fa14b6a1c5e8da46/202309/dana-provoca-perdidas-de-mas-de-dos-millones-en-los-cortijos,[],{},{}
+663,https://www.rtve.es/noticias/20230904/dana-temporal-renfe-gratis-cambio-anulacion-billete/2455087.shtml,['Transporte'],{'Transporte': 0.25},{7: 1.0}
+664,https://eldoce.tv/sociedad/fuerte-tormenta-viento-danos-peatonal-vieja-legislatura-cordoba_157247/,[],{},{}
+665,https://www.perfil.com/noticias/cordoba/arboles-caidos-y-cortes-de-luz-por-el-vendaval-en-la-ciudad-de-cordoba.phtml,['Energia'],{'Energia': 0.5952380952380952},"{0: 0.75, 1: 1.0}"
+666,https://www.diariocordoba.com/cordoba-ciudad/2023/10/24/cordoba-sufre-rachas-viento-110-93669068.html,"['Energia', 'Transporte']","{'Energia': 0.35714285714285715, 'Transporte': 0.25}","{0: 0.5, 1: 0.5, 8: 1.0}"
+667,https://www.eldiadecordoba.es/cordoba/Elrow-Cordoba-adelante-festival-destrozos-temporal_0_1841817939.html,[],{},{}
+668,https://www.cordobabn.com/articulo/cordoba/el/20231025103434175989.html,[],{},{}
+669,https://www.lavoz.com.ar/servicios/en-fotos-el-desastre-que-provoco-el-viento-en-cordoba/,['Energia'],{'Energia': 0.4166666666666667},"{0: 0.5, 1: 0.75}"
+670,http://cordoba.mitelefe.com/cordoba/advertencia-de-fuertes-vientos-en-cordoba-y-otras-nueve-provincias/,[],{},{}
+671,https://eldoce.tv/sociedad/lluvias-viento-granizo-alerta-tormenta-rige-cordoba_157233/,[],{},{}
+672,https://www.pagina12.com.ar/610461-cuales-son-las-nueve-provincias-bajo-alerta-amarillo-y-naran,[],{},{}
+673,https://semanariouniversidad.com/opinion/inundaciones-en-la-cuenca-del-rio-turrialba-procrastinacion-y-vision-futura/,['Transporte'],{'Transporte': 0.5},"{7: 1.0, 8: 1.0}"
+674,https://www.elcomercio.es/asturias/gran-tormenta-dejo-tromba-agua-miles-rayos-consecuencias-asturias-gijon-siero-agua-20230912215324-nt.html,[],{},{}
+675,https://www.elnacional.cat/es/sociedad/pantanos-catalunya-punto-llegar-nivel-mas-bajo-2008_1094994_102.html,['Agua y Alimentos'],{'Agua y Alimentos': 1.0},"{14: 1.0, 15: 1.0, 16: 1.0}"
+676,https://www.adnrionegro.com.ar/2023/09/un-rio-atmosferico-afecta-la-zona-andina-y-genera-crecidas/,[],{},{}
+677,https://elpais.com/espana/2023-09-20/un-centenar-de-casas-quedan-inundadas-por-las-lluvias-en-iniesta-cuenca.html,"['Transporte', 'Agua y Alimentos']","{'Transporte': 0.1875, 'Agua y Alimentos': 0.6666666666666666}","{8: 0.75, 14: 1.0, 16: 1.0}"
+678,https://www.lasexta.com/noticias/sociedad/mas-100-casas-inundan-iniesta-cuenca-debido-fuertes-lluvias_20230920650ab0764fd7bf0001a60439.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+679,https://efe.com/espana/2023-09-20/fuertes-lluvias-incidencias/,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+680,https://ladiaria.com.uy/politica/articulo/2023/9/inundaciones-en-cerro-largo-32-personas-continuan-evacuadas-en-rio-branco/,[],{},{}
+681,https://www.el1digital.com.ar/sociedad/cuenca-matanza-riachuelo-realizan-trabajos-de-limpieza-para-evitar-inundaciones/,[],{},{}
+682,https://www.20minutos.es/noticia/5174120/0/se-inundan-un-centenar-casas-iniesta-debido-las-fuertes-lluvias/,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+683,https://www.prensalibre.com/guatemala/comunitario/por-que-crecen-los-rios-la-grafica-que-explica-6-razones-que-provocan-el-fenomeno-en-guatemala/,[],{},{}
+684,https://www.vocesdecuenca.com/provincia/lamancha/rescates-negocios-devastados-y-nuevas-oportunidades-historias-que-dejo-la-dana-en-las-tierras-de-cuenca/,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+685,https://efe.com/castilla-la-mancha/2023-09-26/los-afectados-por-la-dana-tienen-un-mes-para-pedir-ayudas/,"['Transporte', 'Agua y Alimentos']","{'Transporte': 0.25, 'Agua y Alimentos': 0.3333333333333333}","{8: 1.0, 15: 1.0}"
+686,https://www.latribunadealbacete.es/noticia/zf682ccb6-0532-a817-45d330d4ffaba3d3/202309/la-dana-moviliza-al-sepei-en-albacete-y-el-sur-de-cuenca,['Agua y Alimentos'],{'Agua y Alimentos': 0.5833333333333334},"{14: 1.0, 16: 0.75}"
+687,https://www.elcorreo.com/sociedad/sucesos/intensas-lluvias-dejan-inundaciones-zonas-gipuzkoa-navarra-20230520134830-nt.html,[],{},{}
+688,https://www.noticiasdegipuzkoa.eus/sucesos/2023/05/20/inundaciones-bera-lluvias-torrenciales-danos-materiales-6826361.html,[],{},{}
+689,https://www.eitb.eus/es/noticias/sociedad/detalle/9208716/la-lluvia-complica-situacion-entre-gipuzkoa-y-navarra/,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+690,https://www.diariovasco.com/gipuzkoa/intensas-lluvias-dejan-inundaciones-bera-elevan-nivel-20230520095107-nt.html,[],{},{}
+691,https://www.lasexta.com/noticias/sociedad/lluvias-torrenciales-dejan-inundaciones-navarra-gipuzkoa_202305206468bb8d277db7000166b6f5.html,['Transporte'],{'Transporte': 0.1875},{8: 0.75}
+692,https://navarra.okdiario.com/articulo/sucesos/carreteras-cortadas/20230520094320478629.html,[],{},{}
+693,https://www.diariovasco.com/gipuzkoa/hernani-urnieta-erenozu-valoran-danos-pedir-ayudas-20230525205159-nt.html,[],{},{}
+694,https://www.diariovasco.com/buruntzaldea/hernani/urumea-desborda-campo-rugby-hernani-huertas-ergobia-20230520125138-nt.html,[],{},{}
+695,https://www.tiempo.com/ram/episodio-precipitaciones-intensas-mediterraneo-dana-baja-superficie-tormentas.html,[],{},{}
+696,https://www.20minutos.es/noticia/5137565/0/la-dana-deja-fuertes-tormentas-granizadas-e-inundaciones-en-espana/,"['Transporte', 'Sanidad', 'Aguas Residuales']","{'Transporte': 0.1875, 'Sanidad': 0.3333333333333333, 'Aguas Residuales': 1.0}","{8: 0.75, 10: 1.0, 17: 1.0, 18: 1.0, 19: 1.0}"
+697,https://www.publico.es/sociedad/lluvias-causan-inundaciones-obligan-cortar-carreteras-catalunya.html,"['Transporte', 'Aguas Residuales']","{'Transporte': 0.25, 'Aguas Residuales': 0.8823529411764706}","{8: 1.0, 17: 1.0, 19: 1.0}"
+698,https://cronicaglobal.elespanol.com/vida/20230613/ovejas-muertas-carreteras-cortadas-tormentas-estragos-cataluna/771172959_0.html,['Transporte'],{'Transporte': 0.25},{8: 1.0}
+699,https://www.lavanguardia.com/vida/20230916/9231508/imagenes-dejan-lluvias-ultimas-horas.html,[],{},{}
+700,https://www.elperiodico.com/es/tiempo/20230920/tiempo-catalunya-hoy-miercoles-20-septiembre-2023-92312032,[],{},{}
+701,https://www.timeout.es/barcelona/es/noticias/lluvias-y-tormentas-en-barcelona-una-dana-llega-a-la-ciudad-este-miercoles-091823,[],{},{}
+702,https://www.eltiempo.es/noticias/una-fugaz-dana-cruzara-espana-dejando-fuertes-lluvias-y-tormentas,[],{},{}
+703,https://www.xataka.com/ecologia-y-naturaleza/no-dana-tampoco-veranillo-espana-afronta-batidora-meteorologica-que-queda-septiembre,[],{},{}
+704,https://www.antena3.com/noticias/el-tiempo/la-prevision/dia-calma-antes-llegada-nueva-dana_20230918650807a54fd7bf0001a13e3c.html,[],{},{}
+705,https://www.canalsur.es/noticias/andalucia/granada/las-fuertes-lluvias-provocan-inundaciones-en-el-area-metropolitana-de-granada/1937202.html,['Transporte'],{},{}
+706,https://www.ahoragranada.com/noticias/la-tormenta-deja-mas-de-un-centenar-de-incidencias-en-granada-la-mayoria-en-atarfe/,['Transporte'],{'Transporte': 0.125},{7: 0.5}
+707,https://www.ideal.es/granada/tormenta-causa-inundaciones-distintos-puntos-granada-20230525201843-nt.html,[],{},{}
+708,https://www.granadahoy.com/granada/lluvias-mayo-Granada-media-historica_0_1797720804.html,[],{},{}
+709,https://www.eltiempo.es/noticias/ultima-hora-de-las-inundaciones-la-dana-se-ceba-con-almeria-murcia-y-granada,[],{},{}
+710,https://www.ideal.es/andalucia/alerta-llegada-borrasca-ciaran-andalucia-vientos-huracanados-20231031100135-nt.html,[],{},{}
+711,https://www.telesurtv.net/news/eeuu-golpe-estado-invasion-isla-granada-20181011-0032.html,[],{},{}
+712,https://www.eldiario.es/temas/vueling/,[],{},{}
+713,https://www.elfaromotril.es/2023/10/25/la-costa-tropical-en-aviso-amarillo-por-viento-y-fuerte-poniente-en-el-mar/,[],{},{}
+714,https://www.lanacion.com.py/columnistas/2023/11/11/tormenta-y-desastre/,[],{},{}
+715,https://www.granadahoy.com/granada/opositores-Granada-oposiciones-SAS-celador_0_1846915808.html,[],{},{}

@@ -1,0 +1,270 @@
+index,theme,start_time,end_time,sources,location,df_index
+0,Inundacion,2023-09-10,2023-09-13,"[0, 1]",A Coruna,1
+1,Luvias Intensas,2023-09-10,2023-09-13,"[1, 3]",A Coruna,1
+2,Inundacion,2023-10-20,2023-10-24,"[6, 8, 9, 10, 11]",A Coruna,2
+3,Luvias Intensas,2023-10-20,2023-10-24,"[11, 12]",A Coruna,2
+4,Desbordamientos,2023-10-20,2023-10-24,"[16, 14, 15]",A Coruna,2
+5,Crecida,2023-10-20,2023-10-24,"[16, 15]",A Coruna,2
+6,Dana,2023-10-20,2023-10-24,"[20, 6]",A Coruna,2
+7,Inundacion,2023-10-29,2023-11-03,[11],A Coruna,3
+8,Luvias Intensas,2023-10-29,2023-11-03,"[24, 25, 11]",A Coruna,3
+9,Desbordamientos,2023-10-29,2023-11-03,"[14, 15]",A Coruna,3
+10,Crecida,2023-10-29,2023-11-03,[15],A Coruna,3
+11,Dana,2023-10-29,2023-11-03,"[24, 25]",A Coruna,3
+12,Inundacion,2023-11-07,2023-11-15,"[29, 31]",A Coruna,4
+13,Desbordamientos,2023-11-07,2023-11-15,"[29, 31]",A Coruna,4
+14,Crecida,2023-11-07,2023-11-15,"[29, 31]",A Coruna,4
+15,Inundacion,2023-09-04,2023-09-08,"[41, 43, 36, 39]",Guadalajara,85
+16,Luvias Intensas,2023-09-04,2023-09-08,[45],Guadalajara,85
+17,Desbordamientos,2023-09-04,2023-09-08,"[49, 39]",Guadalajara,85
+18,Crecida,2023-09-04,2023-09-08,"[51, 53]",Guadalajara,85
+19,Dana,2023-09-04,2023-09-08,[51],Guadalajara,85
+20,Desbordamientos,2023-09-19,2023-09-26,"[58, 60, 66]",Guadalajara,86
+23,Inundacion,2023-10-20,2023-10-22,"[73, 9]",Guadalajara,87
+24,Luvias Intensas,2023-10-20,2023-10-22,[73],Guadalajara,87
+25,Dana,2023-10-20,2023-10-22,[77],Guadalajara,87
+26,Inundacion,2023-12-02,2023-12-05,"[84, 78]",Guadalajara,88
+30,Inundacion,2023-10-24,2023-10-31,[99],Huelva,89
+32,Desbordamientos,2023-10-24,2023-10-31,"[104, 103]",Huelva,89
+33,Crecida,2023-10-24,2023-10-31,"[104, 99, 103]",Huelva,89
+34,Dana,2023-10-24,2023-10-31,[105],Huelva,89
+35,Inundacion,2023-10-30,2023-11-01,[99],Huelva,90
+37,Desbordamientos,2023-10-30,2023-11-01,"[104, 103]",Huelva,90
+38,Crecida,2023-10-30,2023-11-01,"[104, 99, 103]",Huelva,90
+39,Dana,2023-10-30,2023-11-01,[105],Huelva,90
+40,Tempestad,2023-10-24,2023-11-01,[105],Huelva,91
+41,Borrasca,2023-10-24,2023-11-01,[105],Huelva,91
+42,Temporal,2023-10-24,2023-11-01,[105],Huelva,91
+43,Vientos fuertes,2023-10-24,2023-11-01,[105],Huelva,91
+45,Luvias Intensas,2023-05-26,2023-05-28,[110],Huesca,92
+48,Inundacion,2023-09-21,2023-09-24,"[114, 115]",Illes Balears,99
+49,Dana,2023-09-21,2023-09-24,"[114, 116]",Illes Balears,99
+52,Borrasca,2023-02-28,2023-03-03,"[120, 122, 119]",Illes Balears,102
+53,Temporal,2023-02-28,2023-03-03,[119],Illes Balears,102
+54,Vientos fuertes,2023-02-28,2023-03-03,"[120, 122, 119]",Illes Balears,102
+55,Tempestad,2023-08-27,2023-08-28,"[126, 127]",Illes Balears,103
+56,Borrasca,2023-08-27,2023-08-28,"[128, 129, 130, 131, 134, 126]",Illes Balears,103
+57,Vientos fuertes,2023-08-27,2023-08-28,"[128, 135]",Illes Balears,103
+58,Inundacion,2023-09-15,2023-09-17,"[136, 137]",Jaen,104
+59,Luvias Intensas,2023-09-15,2023-09-17,[138],Jaen,104
+60,Desbordamientos,2023-09-15,2023-09-17,"[136, 137, 139]",Jaen,104
+61,Dana,2023-09-15,2023-09-17,"[138, 146, 143]",Jaen,104
+68,Inundacion,2023-12-03,2023-12-07,[155],Las Palmas,109
+69,Desbordamientos,2023-12-03,2023-12-07,"[157, 158]",Las Palmas,109
+72,Inundacion,2023-06-30,2023-07-03,[166],Lleida,112
+73,Crecida,2023-06-30,2023-07-03,"[168, 167]",Lleida,112
+74,Tempestad,2023-07-27,2023-07-28,[169],Lleida,113
+75,Inundacion,2023-01-06,2023-01-12,"[170, 171, 172, 173]",Lugo,114
+76,Desbordamientos,2023-01-06,2023-01-12,"[171, 173, 174, 175, 176, 177]",Lugo,114
+77,Crecida,2023-01-06,2023-01-12,"[180, 170, 179, 172]",Lugo,114
+79,Crecida,2023-01-20,2023-01-25,[184],Lugo,115
+80,Inundacion,2023-06-05,2023-06-08,[185],Lugo,116
+81,Desbordamientos,2023-06-05,2023-06-08,[186],Lugo,116
+82,Inundacion,2023-10-28,2023-10-29,"[8, 11]",Lugo,117
+83,Luvias Intensas,2023-10-28,2023-10-29,"[8, 25]",Lugo,117
+84,Dana,2023-10-28,2023-10-29,[25],Lugo,117
+85,Tempestad,2023-01-23,2023-02-02,[188],Lugo,118
+87,Borrasca,2023-10-24,2023-11-01,"[25, 11, 190]",Lugo,119
+88,Temporal,2023-10-24,2023-11-01,"[8, 25]",Lugo,119
+89,Vientos fuertes,2023-10-24,2023-11-01,"[8, 190]",Lugo,119
+90,Borrasca,2023-11-05,2023-11-10,[196],Lugo,120
+91,Temporal,2023-11-05,2023-11-10,[196],Lugo,120
+92,Desbordamientos,2023-06-02,2023-06-11,[197],Madrid,121
+93,Crecida,2023-06-02,2023-06-11,"[200, 199]",Madrid,121
+95,Dana,2023-09-17,2023-10-04,[116],Madrid,124
+96,Inundacion,2023-10-23,2023-10-29,[203],Madrid,125
+97,Inundacion,2023-12-01,2023-12-03,"[208, 211, 206]",Madrid,126
+99,Desbordamientos,2023-12-01,2023-12-03,[216],Madrid,126
+101,Luvias Intensas,2023-09-15,2023-09-16,[218],Malaga,131
+102,Desbordamientos,2023-09-15,2023-09-16,[137],Malaga,131
+103,Inundacion,2023-09-17,2023-09-20,[116],Murcia,134
+105,Dana,2023-09-17,2023-09-20,"[114, 116]",Murcia,134
+106,Inundacion,2023-05-22,2023-05-26,"[225, 223]",Navarra,137
+107,Dana,2023-05-22,2023-05-26,[223],Navarra,137
+108,Inundacion,2023-05-31,2023-06-05,[225],Navarra,138
+109,Inundacion,2023-07-07,2023-07-10,"[227, 228]",Navarra,141
+110,Luvias Intensas,2023-07-07,2023-07-10,[230],Navarra,141
+111,Desbordamientos,2023-07-07,2023-07-10,"[228, 230]",Navarra,141
+112,Inundacion,2023-09-06,2023-09-12,"[233, 234]",Navarra,142
+113,Desbordamientos,2023-09-06,2023-09-12,"[234, 236]",Navarra,142
+114,Dana,2023-09-06,2023-09-12,"[233, 239]",Navarra,142
+115,Inundacion,2023-09-11,2023-09-15,[234],Navarra,143
+116,Desbordamientos,2023-09-11,2023-09-15,"[234, 236]",Navarra,143
+117,Inundacion,2023-01-17,2023-01-19,"[240, 242, 171, 243]",Ourense,146
+118,Desbordamientos,2023-01-17,2023-01-19,"[242, 171, 243]",Ourense,146
+119,Crecida,2023-01-17,2023-01-19,"[240, 242, 179]",Ourense,146
+120,Inundacion,2023-06-01,2023-06-07,"[248, 247]",Ourense,147
+121,Borrasca,2023-11-05,2023-11-11,[249],Ourense,148
+122,Temporal,2023-11-05,2023-11-11,"[250, 31]",Ourense,148
+123,Inundacion,2023-06-12,2023-06-17,[252],Palencia,149
+124,Inundacion,2023-10-20,2023-10-23,"[256, 6, 8, 15, 253, 254]",Pontevedra,151
+125,Luvias Intensas,2023-10-20,2023-10-23,"[8, 257, 20, 15]",Pontevedra,151
+126,Desbordamientos,2023-10-20,2023-10-23,"[256, 253, 254, 15]",Pontevedra,151
+127,Crecida,2023-10-20,2023-10-23,"[256, 253, 254, 15]",Pontevedra,151
+128,Dana,2023-10-20,2023-10-23,"[20, 6]",Pontevedra,151
+129,Desbordamientos,2023-11-06,2023-11-19,"[259, 260]",Pontevedra,152
+130,Crecida,2023-11-06,2023-11-19,[260],Pontevedra,152
+131,Borrasca,2023-10-24,2023-11-01,"[25, 11, 262, 254]",Pontevedra,153
+132,Temporal,2023-10-24,2023-11-01,"[8, 253, 6]",Pontevedra,153
+133,Vientos fuertes,2023-10-24,2023-11-01,"[8, 24, 267, 15]",Pontevedra,153
+134,Borrasca,2023-11-05,2023-11-10,[268],Pontevedra,154
+135,Temporal,2023-11-05,2023-11-10,[268],Pontevedra,154
+136,Fuerte Oleaje,2023-08-13,2023-08-15,[273],Santa Cruz de Tenerife,157
+137,Inundacion,2023-06-18,2023-06-20,[276],Segovia,158
+138,Desbordamientos,2023-06-18,2023-06-20,[276],Segovia,158
+139,Inundacion,2023-09-04,2023-09-08,"[281, 284, 285, 289]",Segovia,159
+140,Luvias Intensas,2023-09-04,2023-09-08,"[51, 290, 291]",Segovia,159
+141,Desbordamientos,2023-09-04,2023-09-08,"[281, 284, 292, 289]",Segovia,159
+142,Crecida,2023-09-04,2023-09-08,"[51, 53, 285, 294]",Segovia,159
+143,Dana,2023-09-04,2023-09-08,"[281, 284, 297]",Segovia,159
+147,Inundacion,2023-09-05,2023-09-09,"[136, 302]",Sevilla,162
+148,Desbordamientos,2023-09-05,2023-09-09,"[136, 53]",Sevilla,162
+149,Crecida,2023-09-05,2023-09-09,"[305, 285]",Sevilla,162
+151,Inundacion,2023-09-15,2023-09-17,[136],Sevilla,163
+152,Desbordamientos,2023-09-15,2023-09-17,"[136, 137]",Sevilla,163
+153,Inundacion,2023-10-20,2023-10-24,"[312, 9, 310, 311]",Sevilla,164
+154,Luvias Intensas,2023-10-20,2023-10-24,"[9, 20, 310]",Sevilla,164
+155,Desbordamientos,2023-10-20,2023-10-24,[310],Sevilla,164
+157,Dana,2023-10-20,2023-10-24,"[320, 322, 323, 324, 312, 318, 319]",Sevilla,164
+159,Borrasca,2023-10-24,2023-11-01,[325],Sevilla,165
+166,Inundacion,2023-09-06,2023-09-13,"[333, 334]",Tarragona,168
+167,Luvias Intensas,2023-09-06,2023-09-13,"[336, 333]",Tarragona,168
+168,Desbordamientos,2023-09-06,2023-09-13,"[338, 339]",Tarragona,168
+169,Dana,2023-09-06,2023-09-13,[333],Tarragona,168
+170,Inundacion,2023-09-20,2023-09-27,[340],Tarragona,169
+172,Dana,2023-09-20,2023-09-27,[218],Tarragona,169
+173,Luvias Intensas,2023-10-20,2023-10-26,[20],Tarragona,170
+175,Desbordamientos,2023-07-07,2023-07-09,[349],Teruel,174
+176,Tempestad,2023-07-06,2023-07-07,"[350, 351]",Teruel,175
+177,Desbordamientos,2023-06-02,2023-06-11,[353],Toledo,176
+179,Desbordamientos,2023-06-05,2023-06-07,[353],Toledo,177
+185,Dana,2023-09-15,2023-09-30,[359],Toledo,179
+186,Inundacion,2023-10-23,2023-10-28,"[362, 363]",Toledo,180
+188,Desbordamientos,2023-10-23,2023-10-28,"[362, 366]",Toledo,180
+189,Dana,2023-10-23,2023-10-28,[368],Toledo,180
+190,Inundacion,2023-12-01,2023-12-04,[371],Toledo,181
+191,Desbordamientos,2023-12-01,2023-12-04,[371],Toledo,181
+192,Crecida,2023-12-01,2023-12-04,[371],Toledo,181
+195,Desbordamientos,2023-05-26,2023-05-30,"[376, 377]",Valencia,182
+196,Crecida,2023-05-26,2023-05-30,"[380, 381]",Valencia,182
+197,Inundacion,2023-08-27,2023-08-29,[382],Valencia,185
+198,Crecida,2023-08-27,2023-08-29,[383],Valencia,185
+199,Inundacion,2023-09-09,2023-09-20,"[384, 387, 389, 390]",Valencia,186
+200,Luvias Intensas,2023-09-09,2023-09-20,[3],Valencia,186
+201,Desbordamientos,2023-09-09,2023-09-20,[338],Valencia,186
+202,Crecida,2023-09-09,2023-09-20,"[400, 401, 404]",Valencia,186
+203,Dana,2023-09-09,2023-09-20,"[408, 3]",Valencia,186
+204,Inundacion,2023-09-19,2023-09-27,[390],Valencia,187
+205,Luvias Intensas,2023-09-19,2023-09-27,[3],Valencia,187
+206,Dana,2023-09-19,2023-09-27,"[408, 3]",Valencia,187
+207,Tempestad,2023-08-26,2023-08-27,"[417, 414]",Valencia,189
+208,Temporal,2023-08-26,2023-08-27,"[424, 426]",Valencia,189
+209,Inundacion,2023-09-06,2023-09-12,[302],Valladolid,193
+210,Inundacion,2023-09-07,2023-09-13,[428],Zaragoza,197
+211,Luvias Intensas,2023-09-07,2023-09-13,[429],Zaragoza,197
+212,Desbordamientos,2023-09-07,2023-09-13,[430],Zaragoza,197
+213,Crecida,2023-09-07,2023-09-13,[431],Zaragoza,197
+214,Dana,2023-09-07,2023-09-13,[428],Zaragoza,197
+216,Borrasca,2023-10-24,2023-11-01,"[11, 436, 438]",A Coruna,7
+217,Temporal,2023-10-24,2023-11-01,"[6, 439]",A Coruna,7
+218,Vientos fuertes,2023-10-24,2023-11-01,"[24, 441, 436]",A Coruna,7
+219,Tempestad,2023-11-05,2023-11-10,[442],A Coruna,8
+222,Luvias Intensas,2023-09-15,2023-09-16,[449],Alicante,10
+224,Temporal,2023-01-23,2023-02-02,[452],Almeria,14
+225,Borrasca,2023-10-24,2023-11-01,"[24, 436]",Almeria,15
+226,Temporal,2023-10-24,2023-11-01,[24],Almeria,15
+227,Vientos fuertes,2023-10-24,2023-11-01,"[24, 457, 436]",Almeria,15
+230,Inundacion,2023-01-20,2023-01-26,[465],Asturias,21
+231,Crecida,2023-01-20,2023-01-26,"[465, 466]",Asturias,21
+232,Luvias Intensas,2023-09-15,2023-09-23,[1],Asturias,22
+233,Desbordamientos,2023-09-15,2023-09-23,[1],Asturias,22
+234,Dana,2023-09-15,2023-09-23,[469],Asturias,22
+235,Tempestad,2023-10-24,2023-11-01,[24],Asturias,24
+237,Temporal,2023-10-24,2023-11-01,[471],Asturias,24
+239,Desbordamientos,2023-06-06,2023-06-15,"[475, 476]",Avila,26
+240,Crecida,2023-06-06,2023-06-15,[478],Avila,26
+242,Inundacion,2023-09-03,2023-09-06,"[481, 483]",Badajoz,28
+243,Desbordamientos,2023-09-03,2023-09-06,[485],Badajoz,28
+244,Crecida,2023-09-03,2023-09-06,[485],Badajoz,28
+245,Dana,2023-09-03,2023-09-06,"[488, 489, 485]",Badajoz,28
+246,Inundacion,2023-10-20,2023-10-24,"[490, 492, 495]",Badajoz,29
+248,Desbordamientos,2023-10-20,2023-10-24,[500],Badajoz,29
+249,Dana,2023-10-20,2023-10-24,[320],Badajoz,29
+251,Desbordamientos,2023-07-01,2023-07-05,[230],Barcelona,36
+252,Borrasca,2023-11-05,2023-11-10,"[504, 505]",Barcelona,38
+253,Vientos fuertes,2023-11-05,2023-11-10,[504],Barcelona,38
+254,Inundacion,2023-01-17,2023-01-20,[509],Bizkaia,39
+255,Luvias Intensas,2023-01-17,2023-01-20,[511],Bizkaia,39
+258,Luvias Intensas,2023-06-20,2023-06-24,[514],Bizkaia,40
+259,Inundacion,2023-09-12,2023-09-16,"[515, 516, 517, 519, 520]",Bizkaia,41
+260,Luvias Intensas,2023-09-12,2023-09-16,"[516, 517, 519]",Bizkaia,41
+261,Desbordamientos,2023-09-12,2023-09-16,"[528, 529, 530]",Bizkaia,41
+262,Dana,2023-09-12,2023-09-16,[520],Bizkaia,41
+263,Inundacion,2023-09-16,2023-09-17,"[515, 516, 517, 519, 520]",Bizkaia,42
+264,Luvias Intensas,2023-09-16,2023-09-17,"[516, 517, 519]",Bizkaia,42
+265,Desbordamientos,2023-09-16,2023-09-17,[533],Bizkaia,42
+266,Tempestad,2023-11-05,2023-11-10,[535],Bizkaia,44
+267,Crecida,2023-06-21,2023-06-26,[537],Burgos,47
+271,Inundacion,2023-10-20,2023-10-22,"[548, 495]",Caceres,49
+275,Inundacion,2023-12-01,2023-12-03,[553],Caceres,50
+276,Luvias Intensas,2023-12-01,2023-12-03,[553],Caceres,50
+277,Desbordamientos,2023-12-01,2023-12-03,[553],Caceres,50
+278,Inundacion,2023-09-03,2023-09-05,"[557, 559, 560, 561, 562, 565, 566, 567, 383]",Cadiz,53
+279,Luvias Intensas,2023-09-03,2023-09-05,"[568, 561, 562, 51]",Cadiz,53
+280,Desbordamientos,2023-09-03,2023-09-05,"[485, 294, 567, 570, 571, 284]",Cadiz,53
+281,Crecida,2023-09-03,2023-09-05,"[576, 577, 485, 383, 561, 572, 575]",Cadiz,53
+282,Dana,2023-09-03,2023-09-05,"[568, 562, 580]",Cadiz,53
+283,Inundacion,2023-10-20,2023-10-22,"[312, 325]",Cadiz,54
+284,Luvias Intensas,2023-10-20,2023-10-22,[20],Cadiz,54
+285,Dana,2023-10-20,2023-10-22,"[312, 323, 324]",Cadiz,54
+286,Tempestad,2023-10-24,2023-11-01,"[587, 325]",Cadiz,55
+287,Borrasca,2023-10-24,2023-11-01,[325],Cadiz,55
+289,Inundacion,2023-09-12,2023-09-15,"[595, 596, 590]",Cantabria,57
+290,Luvias Intensas,2023-09-12,2023-09-15,"[1, 590]",Cantabria,57
+291,Desbordamientos,2023-09-12,2023-09-15,[1],Cantabria,57
+292,Borrasca,2023-01-23,2023-02-02,[600],Cantabria,58
+294,Borrasca,2023-10-24,2023-11-01,[24],Cantabria,59
+295,Temporal,2023-10-24,2023-11-01,"[24, 603]",Cantabria,59
+296,Vientos fuertes,2023-10-24,2023-11-01,"[24, 603]",Cantabria,59
+297,Inundacion,2023-05-27,2023-06-01,[605],Castellon,61
+299,Desbordamientos,2023-05-27,2023-06-01,[607],Castellon,61
+301,Dana,2023-05-27,2023-06-01,[605],Castellon,61
+302,Inundacion,2023-09-04,2023-09-08,"[608, 51]",Castellon,62
+303,Luvias Intensas,2023-09-04,2023-09-08,[610],Castellon,62
+304,Desbordamientos,2023-09-04,2023-09-08,[608],Castellon,62
+305,Crecida,2023-09-04,2023-09-08,"[51, 611, 285, 383]",Castellon,62
+306,Inundacion,2023-09-13,2023-09-15,"[608, 390]",Castellon,63
+307,Luvias Intensas,2023-09-13,2023-09-15,[390],Castellon,63
+308,Desbordamientos,2023-09-13,2023-09-15,"[608, 338]",Castellon,63
+309,Crecida,2023-09-13,2023-09-15,"[400, 401, 404, 614]",Castellon,63
+311,Tempestad,2023-09-12,2023-09-13,"[610, 616, 617, 400, 404]",Castellon,64
+312,Borrasca,2023-09-12,2023-09-13,"[617, 623]",Castellon,64
+313,Temporal,2023-09-12,2023-09-13,"[624, 626, 627, 628, 629, 631]",Castellon,64
+314,Vientos fuertes,2023-09-12,2023-09-13,"[608, 610, 626, 404, 629, 634]",Castellon,64
+315,Temporal,2023-11-05,2023-11-10,[638],Castellon,65
+316,Inundacion,2023-09-07,2023-09-14,"[640, 641, 642, 644, 646]",Ciudad Real,66
+317,Luvias Intensas,2023-09-07,2023-09-14,"[641, 218, 644]",Ciudad Real,66
+318,Desbordamientos,2023-09-07,2023-09-14,"[641, 651]",Ciudad Real,66
+320,Dana,2023-09-07,2023-09-14,"[642, 655, 656, 658, 218]",Ciudad Real,66
+321,Inundacion,2023-09-16,2023-09-21,"[642, 646]",Ciudad Real,67
+322,Luvias Intensas,2023-09-16,2023-09-21,[218],Ciudad Real,67
+324,Dana,2023-09-16,2023-09-21,"[218, 660, 642]",Ciudad Real,67
+325,Temporal,2023-09-03,2023-09-04,[663],Ciudad Real,68
+326,Tempestad,2023-10-24,2023-11-01,[665],Cordoba,70
+327,Borrasca,2023-10-24,2023-11-01,[666],Cordoba,70
+328,Temporal,2023-10-24,2023-11-01,[666],Cordoba,70
+329,Vientos fuertes,2023-10-24,2023-11-01,[669],Cordoba,70
+330,Desbordamientos,2023-06-11,2023-06-15,[673],Cuenca,72
+331,Luvias Intensas,2023-09-06,2023-09-12,[675],Cuenca,73
+333,Inundacion,2023-09-20,2023-09-22,"[642, 677, 678, 679, 408]",Cuenca,74
+334,Desbordamientos,2023-09-20,2023-09-22,[682],Cuenca,74
+336,Dana,2023-09-20,2023-09-22,"[642, 359, 684, 685, 686, 408]",Cuenca,74
+337,Inundacion,2023-05-20,2023-05-21,"[689, 223]",Gipuzkoa,75
+338,Luvias Intensas,2023-05-20,2023-05-21,"[689, 223]",Gipuzkoa,75
+339,Desbordamientos,2023-05-20,2023-05-21,"[689, 691]",Gipuzkoa,75
+341,Dana,2023-05-20,2023-05-21,[223],Gipuzkoa,75
+342,Inundacion,2023-06-13,2023-06-14,"[696, 697]",Girona,78
+343,Desbordamientos,2023-06-13,2023-06-14,[698],Girona,78
+344,Crecida,2023-06-13,2023-06-14,[698],Girona,78
+349,Inundacion,2023-05-23,2023-05-26,[706],Granada,80
+351,Crecida,2023-05-23,2023-05-26,[706],Granada,80
